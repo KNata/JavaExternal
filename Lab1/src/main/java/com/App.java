@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
@@ -45,7 +42,7 @@ public class App
             }
             System.out.println();
             System.out.println("The persantage of odd Fibonacci numbers: " + showPersantageOfOddNumbers(fibonacciNumberSize, startPoint, endPoint));
-            System.out.println("The persantage of even Fibonacci numbers: " + showPersantageOfEvenNumbers(fibonacciNumberSize, startPoint, endPoint));
+            System.out.println("The persantage of even Fibonacci numbers: " + (100 - showPersantageOfOddNumbers(fibonacciNumberSize, startPoint, endPoint)));
 
         } else {
             System.out.println("End point can't be lower than a start point");
@@ -155,22 +152,6 @@ public class App
         return thePersantage;
     }
 
-    public static double showPersantageOfEvenNumbers(int n, long theBiggestOddNumber, long theBiggestEvenNumber) {
-        ArrayList<Long> evenNumbersList = new ArrayList<Long>();
-        long temp = 0;
-        if (n == 0) {
-            return theBiggestOddNumber;
-        }
-        for (int i = 2; i <= n; i++) {
-            temp = theBiggestOddNumber + theBiggestEvenNumber;
-            theBiggestOddNumber = theBiggestEvenNumber;
-            theBiggestEvenNumber = temp;
-            if (!isEven((int)theBiggestEvenNumber)) {
-                evenNumbersList.add(theBiggestEvenNumber);
-            }
-        }
-        double thePersantage = (evenNumbersList.size() * 100) / n;
-        return thePersantage;
-    }
+
 }
 
