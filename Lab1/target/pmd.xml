@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.4.0" timestamp="2018-10-07T13:31:20.739">
+<file name="/Users/nataliakiselyk/Documents/GitHub/JavaExternal/Lab1/src/main/java/com/App.java">
+<violation beginline="56" endline="56" begincolumn="17" endcolumn="34" rule="UselessParentheses" ruleset="Code Style" package="com" class="App" method="isEven" externalInfoUrl="https://pmd.github.io/pmd-6.4.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="56" endline="56" begincolumn="18" endcolumn="28" rule="UselessParentheses" ruleset="Code Style" package="com" class="App" method="isEven" externalInfoUrl="https://pmd.github.io/pmd-6.4.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+</file>
+</pmd>
