@@ -39,10 +39,12 @@ public class App
                 for (int i = 0; i < theFibonacciNumbersList.size(); i++) {
                     System.out.println(theFibonacciNumbersList.get(i));
                 }
+                System.out.println();
+                double thePesentageOfOddNumbers = showPersantageOfOddNumbers(fibonacciNumberSize, theFibonacciNumbersList);
+                System.out.println("The persentage of odd Fibonacci numbers: " + thePesentageOfOddNumbers);
+                System.out.println("The persentage of even Fibonacci numbers: " + (100 - thePesentageOfOddNumbers));
             }
-            System.out.println();
-            System.out.println("The persantage of odd Fibonacci numbers: " + showPersantageOfOddNumbers(fibonacciNumberSize, startPoint, endPoint));
-            System.out.println("The persantage of even Fibonacci numbers: " + (100 - showPersantageOfOddNumbers(fibonacciNumberSize, startPoint, endPoint)));
+
 
         } else {
             System.out.println("End point can't be lower than a start point");
@@ -50,7 +52,7 @@ public class App
 
     }
 
-    private static boolean isEven (int aNumber) {
+    private static boolean isEven (long aNumber) {
         return ((aNumber % 2) == 0); // (aNumber & 1) == 0)
     }
 
@@ -134,18 +136,11 @@ public class App
     }
 
 
-    public static double showPersantageOfOddNumbers(int n, long theBiggestOddNumber, long theBiggestEvenNumber) {
+    public static double showPersantageOfOddNumbers(int n, ArrayList<Long> fibonacciNumbersList) {
         ArrayList<Long> oddNumbersList = new ArrayList<Long>();
-        long temp = 0;
-        if (n == 0) {
-            return theBiggestOddNumber;
-        }
-        for (int i = 2; i <= n; i++) {
-            temp = theBiggestOddNumber + theBiggestEvenNumber;
-            theBiggestOddNumber = theBiggestEvenNumber;
-            theBiggestEvenNumber = temp;
-            if (isEven((int)theBiggestEvenNumber)) {
-                oddNumbersList.add(theBiggestEvenNumber);
+        for (int i = 2; i < fibonacciNumbersList.size(); i++) {
+            if (isEven(fibonacciNumbersList.get(i))) {
+                oddNumbersList.add(fibonacciNumbersList.get(i));
             }
         }
         double thePersantage = (oddNumbersList.size() * 100) / n;
