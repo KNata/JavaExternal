@@ -10,9 +10,11 @@ public class App
     {
         Bird theCuckoo = new Cuckoo();
         theCuckoo.fly();
+        theCuckoo.sing();
         theCuckoo.madeEggs();
-
+        System.out.println();
         Bird hen = new Hen();
+        hen.sing();
         hen.madeEggs();
         hen.fly();
     }

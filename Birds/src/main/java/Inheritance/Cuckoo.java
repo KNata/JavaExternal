@@ -4,16 +4,17 @@ public class Cuckoo extends Bird {
 
     Cuckoo() {
         super();
+        System.out.println("Cuckoo was created");
     }
 
     @Override
     public void fly() {
-        System.out.println("Cuckoo fly");
+        System.out.println("Cuckoo flies");
     }
 
     @Override
     public void sing() {
-        System.out.println("Cuckoo sing");
+        System.out.println("Cuckoo sings");
     }
 
     @Override

@@ -2,27 +2,19 @@ package Inheritance;
 
 public class Bird {
 
-    private String name;
-
     Bird() {
-
+        System.out.println("New bird was created...");
     }
 
     public void fly() {
-        System.out.println("Fly");
+        System.out.println("Bird flies...");
     }
 
     public void sing() {
-        System.out.println("Doo Doo Doo");
+        System.out.println("Bird sing...");
     }
 
     public void madeEggs() {
-        System.out.println("1 egg");
+        System.out.println("1 egg...");
     }
 }
-
-
-/*
-Создать объект класса Наседка, используя классы Птица, Кукушка.
-Методы: летать, петь, нести яйца, высиживать птенцов.
- */
