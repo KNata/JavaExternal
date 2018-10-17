@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa3e874d-0ec8-4988-b61e-8dcb8e940454" name="Default Changelist" comment="" />
+    <list default="true" id="aa3e874d-0ec8-4988-b61e-8dcb8e940454" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Birds/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Birds/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Cuckoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Cuckoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Hen.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Birds/src/main/java/Inheritance/Hen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,10 +21,11 @@
     <session id="1803429557">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -35,12 +43,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="3106" />
+          <entry key="java" value="3306" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3106" />
+          <entry key="JAVA" value="3306" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -48,25 +56,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+            <state relative-caret-position="404">
+              <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/VechicleService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="e#1376#1384#0" expanded="true" />
-                <element signature="e#1845#1851#0" expanded="true" />
-                <element signature="e#2309#2316#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-375">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -91,10 +94,10 @@
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/CCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/CPlane.java" />
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/CShip.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/BetCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/AmfibianCar.java" />
         <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/VechicleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java" />
       </list>
     </option>
   </component>
@@ -105,8 +108,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="697" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -167,12 +170,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539724001387" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539724445415" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -226,18 +230,19 @@
       <workItem from="1539343418106" duration="64000" />
       <workItem from="1539355045834" duration="7229000" />
       <workItem from="1539714052892" duration="78000" />
-      <workItem from="1539714237145" duration="3362000" />
+      <workItem from="1539714237145" duration="3740000" />
+      <workItem from="1539802452784" duration="533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11373000" />
+    <option name="totallyTimeSpent" value="12284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26510575" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2688822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -328,22 +333,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/VechicleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+        <state relative-caret-position="-375">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/VechicleService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/AbctractVechicle/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#1376#1384#0" expanded="true" />
-            <element signature="e#1845#1851#0" expanded="true" />
-            <element signature="e#2309#2316#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="404">
+          <caret line="68" column="62" selection-start-line="68" selection-start-column="62" selection-end-line="68" selection-end-column="62" />
         </state>
       </provider>
     </entry>
