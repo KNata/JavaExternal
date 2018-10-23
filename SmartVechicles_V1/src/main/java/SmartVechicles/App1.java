@@ -52,7 +52,7 @@ public class App1
 
         System.out.println();
         System.out.println("Interface ISwimable");
-        ArrayList<BetMobile> bmListS = theControler.checkInstanceOfISwimableInterfaceToBetmobile();
+        ArrayList<BetMobile> bmListS = theControler.checkForMaxSpeedInSwimmableBetweenBetMobiles();
         System.out.println("Bet Mobile with max speed " + bmListS.get(0).getVechicleSpeed());
         ArrayList<AmfibianCar> amListS = theControler.checkInstanceOfISwimableInterfaceToAmphibianCar();
         System.out.println("Amphibian car with max speed " + amListS.get(0).getVechicleSpeed());

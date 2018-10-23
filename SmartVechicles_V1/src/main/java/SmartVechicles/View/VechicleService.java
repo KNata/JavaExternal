@@ -80,7 +80,7 @@ public class VechicleService {
     }
 
  //найти в полученных масивах механизмы с максимальной скоростью
-    public ArrayList<BetMobile> checkInstanceOfIMovebbleInterfaceToBetmobile() {
+    public ArrayList<BetMobile> checkForMaxSpeedInMovableBetweenBetMobiles() {
         ArrayList<BetMobile> betMobileList = new ArrayList<BetMobile>();
         for (int i = 0; i < movableList.size(); i++) {
             if (movableList.get(i) instanceof BetMobile) {
@@ -91,7 +91,7 @@ public class VechicleService {
         return betMobileList;
     }
 
-    public ArrayList<AmfibianCar> checkInstanceOfIMovebbleInterfaceToAmphibianCar() {
+    public ArrayList<AmfibianCar> checkForMaxSpeedInMovableBetweenAmphibianCars() {
         ArrayList<AmfibianCar> amphibianCarList = new ArrayList<AmfibianCar>();
         for (int i = 0; i < movableList.size(); i++) {
             if (movableList.get(i) instanceof AmfibianCar) {
@@ -102,33 +102,33 @@ public class VechicleService {
         return amphibianCarList;
     }
 
-    public ArrayList<BetMobile> checkInstanceOfISwimableInterfaceToBetmobile() {
+    public ArrayList<BetMobile> checkForMaxSpeedInSwimmableBetweenBetMobiles() {
         ArrayList<BetMobile> betMobileList = new ArrayList<BetMobile>();
-        for (int i = 0; i < movableList.size(); i++) {
-            if (movableList.get(i) instanceof BetMobile) {
-                betMobileList.add((BetMobile) movableList.get(i));
+        for (int i = 0; i < swimmableList.size(); i++) {
+            if (swimmableList.get(i) instanceof BetMobile) {
+                betMobileList.add((BetMobile) swimmableList.get(i));
             }
         }
         Collections.sort(betMobileList, BetMobile.vechicleComparator);
         return betMobileList;
     }
 
-    public ArrayList<AmfibianCar> checkInstanceOfISwimableInterfaceToAmphibianCar() {
+    public ArrayList<AmfibianCar> checkForMaxSpeedInSwimmableBetweenAmphibianCars() {
         ArrayList<AmfibianCar> amphibianCarList = new ArrayList<AmfibianCar>();
-        for (int i = 0; i < movableList.size(); i++) {
-            if (movableList.get(i) instanceof AmfibianCar) {
-                amphibianCarList.add((AmfibianCar) movableList.get(i));
+        for (int i = 0; i < swimmableList.size(); i++) {
+            if (swimmableList.get(i) instanceof AmfibianCar) {
+                amphibianCarList.add((AmfibianCar) swimmableList.get(i));
             }
         }
         Collections.sort(amphibianCarList, AmfibianCar.vechicleComparator);
         return amphibianCarList;
     }
 
-    public ArrayList<BetMobile> checkInstanceOfIFlyvableInterfaceToBetmobile() {
+    public ArrayList<BetMobile> checkForMaxSpeedInSFlyvableBetweenBetMobiles() {
         ArrayList<BetMobile> betMobileList = new ArrayList<BetMobile>();
-        for (int i = 0; i < movableList.size(); i++) {
-            if (movableList.get(i) instanceof BetMobile) {
-                betMobileList.add((BetMobile) movableList.get(i));
+        for (int i = 0; i < flyvableList.size(); i++) {
+            if (flyvableList.get(i) instanceof BetMobile) {
+                betMobileList.add((BetMobile) flyvableList.get(i));
             }
         }
         Collections.sort(betMobileList, BetMobile.vechicleComparator);

@@ -22,23 +22,23 @@ public class VechicleController {
     }
 
     public ArrayList<BetMobile> checkInstanceOfIMovebbleInterfaceToBetmobile() {
-        return theService.checkInstanceOfIMovebbleInterfaceToBetmobile();
+        return theService.checkForMaxSpeedInMovableBetweenBetMobiles();
     }
 
     public ArrayList<AmfibianCar> checkInstanceOfIMovebbleInterfaceToAmphibianCar() {
-        return theService.checkInstanceOfIMovebbleInterfaceToAmphibianCar();
+        return theService.checkForMaxSpeedInMovableBetweenAmphibianCars();
     }
 
-    public ArrayList<BetMobile> checkInstanceOfISwimableInterfaceToBetmobile() {
-        return theService.checkInstanceOfISwimableInterfaceToBetmobile();
+    public ArrayList<BetMobile> checkForMaxSpeedInSwimmableBetweenBetMobiles() {
+        return theService.checkForMaxSpeedInSwimmableBetweenBetMobiles();
     }
 
     public ArrayList<AmfibianCar> checkInstanceOfISwimableInterfaceToAmphibianCar() {
-        return theService.checkInstanceOfISwimableInterfaceToAmphibianCar();
+        return theService.checkForMaxSpeedInSwimmableBetweenAmphibianCars();
     }
 
     public ArrayList<BetMobile> checkInstanceOfIFlyvableInterfaceToBetmobile() {
-        return theService.checkInstanceOfIFlyvableInterfaceToBetmobile();
+        return theService.checkForMaxSpeedInSFlyvableBetweenBetMobiles();
     }
 
 }
