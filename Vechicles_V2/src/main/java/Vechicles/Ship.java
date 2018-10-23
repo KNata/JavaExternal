@@ -1,72 +1,19 @@
 package Vechicles;
 
+import java.util.Comparator;
+
+
 public class Ship extends Vechicle {
 
     private int maxCountOfPassengers;
     private String portOfRegistration;
 
 
-    public static class Builder implements javafx.util.Builder<Ship> {
-
-        private double pointX;
-        private double pointY;
-        private double vechiclePrice;
-        private double vechicleSpeed;
-        private int vechicleYearOfProduction;
-        private int maxCountOfPassengers;
-        private String portOfRegistration;
-
-
-        public Builder setCoordinates(double aPointX, double aPointY) {
-            pointX = aPointX;
-            pointY = aPointY;
-            return this;
-        }
-
-        public Builder setPrice(double aPrice) {
-            vechiclePrice = aPrice;
-            return this;
-        }
-
-        public Builder setSpeed(double aSpeed) {
-            vechicleSpeed = aSpeed;
-            return this;
-        }
-
-        public Builder setYeatOfProduction(int aYearOfProduction) {
-            vechicleYearOfProduction = aYearOfProduction;
-            return this;
-        }
-
-        public Builder setMaxCountOfPassagers(int aMaxCountOfPassagers) {
-            maxCountOfPassengers = aMaxCountOfPassagers;
-            return this;
-        }
-
-        public Builder setPort(String aPortOfRegistration) {
-            portOfRegistration = aPortOfRegistration;
-            return this;
-        }
-
-        public Builder build(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction, int maxCounfOfPass, String aPortOfRegistration) {
-            pointX = aPointX;
-            pointY = aPointY;
-            vechicleSpeed = aVechicleSpeed;
-            vechiclePrice = aVechiclePrice;
-            vechicleYearOfProduction = aVechicleYearOfProduction;
-            maxCountOfPassengers = maxCounfOfPass;
-            portOfRegistration = aPortOfRegistration;
-            return this;
-        }
-
-        public Ship build() {
-            return new Ship(this, maxCountOfPassengers, portOfRegistration);
-        }
-
-    }
-
-    private Ship(Builder builder, int aMaxCountOfPass, String aPortOfRegistration) {
-        super(builder.pointX, builder.pointY, builder.vechiclePrice, builder.vechicleSpeed, builder.vechicleYearOfProduction);
+    Ship(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction,
+         int aMaxCountOfPass, String aPortOfRegistration) {
+        super(aPointX, aPointY, aVechiclePrice, aVechicleSpeed, aVechicleYearOfProduction);
+        maxCountOfPassengers = aMaxCountOfPass;
+        portOfRegistration = aPortOfRegistration;
     }
 
     public int getMaxCountOfPassengers() {
@@ -84,6 +31,12 @@ public class Ship extends Vechicle {
     public void setPortOfRegistration(String portOfRegistration) {
         this.portOfRegistration = portOfRegistration;
     }
+
+    public static Comparator<Ship> shipComparator = new Comparator<Ship>() {
+        public int compare(Ship ship1, Ship ship2) {
+            return (int)(ship1.getVechicleSpeed() - ship2.getVechicleSpeed());
+        }
+    };
 
     @Override
     public String toString() {
