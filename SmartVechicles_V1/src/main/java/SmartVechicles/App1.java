@@ -1,4 +1,4 @@
-package SmartVechicles.Init;
+package SmartVechicles;
 
 import java.util.ArrayList;
 
@@ -7,10 +7,7 @@ import SmartVechicles.Model.*;
 import SmartVechicles.Model.Interfaces.*;
 import SmartVechicles.View.VechicleService;
 
-/**
- * Hello world!
- *
- */
+
 public class App1
 {
     public static void main( String[] args )
@@ -36,7 +33,7 @@ public class App1
 //        System.out.println("Vechicles with max speed:");
 //        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
 //        for (int i = 0; i < vechicleList.size()-1; i++) {
-//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() + "(" + vechicleResList.get(i).getClass() + ")");
+//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() );
 //        }
         System.out.println();
         System.out.println("Interface IMovable");
@@ -56,8 +53,7 @@ public class App1
         System.out.println("Bet Mobile with max speed " + bmListS.get(0).getVechicleSpeed());
         ArrayList<AmfibianCar> amListS = theControler.checkInstanceOfISwimableInterfaceToAmphibianCar();
         System.out.println("Amphibian car with max speed " + amListS.get(0).getVechicleSpeed());
-        /*
-         */
+
     }
 
     public static void initTypicalVechicles(ArrayList<Vechicle> vechicleList, ArrayList<Plane> planeList) {

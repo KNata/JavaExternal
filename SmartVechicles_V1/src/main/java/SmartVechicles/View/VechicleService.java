@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+import SmartVechicles.CustomExeptions.EmptyVechicleListExeption;
+import SmartVechicles.CustomExeptions.MyIndexOfBoundExeption;
 import SmartVechicles.Model.*;
 import SmartVechicles.Model.Interfaces.*;
 
@@ -51,7 +53,7 @@ public class VechicleService {
      *  3. найти механизмы с максимальной скоростью в диапазоне 200 - 500, но не Plane
      */
 
-    private ArrayList<Vechicle> checkInstanceForAClass() {
+    private ArrayList<Vechicle> checkInstanceForAClass() throws EmptyVechicleListExeption {
         ArrayList<Vechicle> resultList = new ArrayList<Vechicle>();
         for (int i = 0; i < vechiclesList.size(); i++) {
             if (vechiclesList.get(i) instanceof Car || vechiclesList.get(i) instanceof Ship) {
@@ -61,7 +63,7 @@ public class VechicleService {
         return resultList;
     }
 
-    private ArrayList<Vechicle> checkVechicleByCiteria(ArrayList<Vechicle> vechiclesList) {
+    private ArrayList<Vechicle> checkVechicleByCiteria(ArrayList<Vechicle> vechiclesList) throws MyIndexOfBoundExeption {
         ArrayList<Vechicle> vechiclesWithMaxSpeedInRange = new ArrayList<Vechicle>();
         if (vechiclesList.size() > 0) {
             for (int i = 0; i < vechiclesList.size(); i++) {
@@ -74,7 +76,7 @@ public class VechicleService {
         return vechiclesWithMaxSpeedInRange;
     }
 
-    public ArrayList<Vechicle> returnListOfVechiclesWithMaxSppedExeptPlanes() {
+    public ArrayList<Vechicle> returnListOfVechiclesWithMaxSppedExeptPlanes() throws MyIndexOfBoundExeption {
         ArrayList<Vechicle> vechiclesWithMaxSpeedInRange = checkInstanceForAClass();
         return checkVechicleByCiteria(vechiclesWithMaxSpeedInRange);
     }
