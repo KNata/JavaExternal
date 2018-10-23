@@ -6,33 +6,6 @@
       <change beforePath="$PROJECT_DIR$/../Lab1/out/production/main/com/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/out/production/main/com/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1/src/test/java/com/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/src/test/java/com/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/AmfibianCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/AmfibianCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/BetMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/BetMobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/Vechicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/Vechicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Vechicles/VechicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Vechicles/VechicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/AmfibianCar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/AmfibianCar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/AmfibianCar$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/AmfibianCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/AmfibianCar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/BetMobile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/BetMobile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/BetMobile$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/BetMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/BetMobile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Car$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Car$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Plane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Plane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Plane$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Plane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Ship$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Ship$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Ship$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Ship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/Vechicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/Vechicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Vechicles/VechicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Vechicles/VechicleService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -46,7 +19,7 @@
     <session id="-382839930">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.26" value="1" />
@@ -95,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Vechicles/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="33" column="11" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="33" selection-end-column="11" />
+              <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
               <folding>
                 <element signature="method#initTypicalVechicles#0;class#App#0" />
                 <element signature="method#initSuperCars#0;class#App#0" />
@@ -195,7 +168,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540301892051" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540301921099" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -261,7 +234,7 @@
       <workItem from="1540109241377" duration="8688000" />
       <workItem from="1540246588666" duration="573000" />
       <workItem from="1540280789151" duration="9076000" />
-      <workItem from="1540301345467" duration="491000" />
+      <workItem from="1540301345467" duration="600000" />
     </task>
     <servers />
   </component>
@@ -274,7 +247,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18828000" />
+    <option name="totallyTimeSpent" value="18937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -289,7 +262,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34813753" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34813753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39971346" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -434,7 +407,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Vechicles/App.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="33" selection-end-column="11" />
+          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
           <folding>
             <element signature="method#initTypicalVechicles#0;class#App#0" />
             <element signature="method#initSuperCars#0;class#App#0" />
