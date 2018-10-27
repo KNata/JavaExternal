@@ -1,7 +1,5 @@
 package SmartVechicles.Model;
 
-
-
 public abstract class Vechicle {
 
     private double pointX;
@@ -10,53 +8,70 @@ public abstract class Vechicle {
     private double vechicleSpeed;
     private int vechicleYearOfProduction;
 
-    public Vechicle(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction) {
-        pointX = aPointX;
-        pointY = aPointY;
-        vechicleSpeed = aVechicleSpeed;
-        vechiclePrice = aVechiclePrice;
-        vechicleYearOfProduction = aVechicleYearOfProduction;
-    }
-
     public double getPointX() {
         return pointX;
-    }
-
-    public void setPointX(double pointX) {
-        this.pointX = pointX;
     }
 
     public double getPointY() {
         return pointY;
     }
 
-    public void setPointY(double pointY) {
-        this.pointY = pointY;
-    }
-
     public double getVechiclePrice() {
         return vechiclePrice;
-    }
-
-    public void setVechiclePrice(double vechiclePrice) {
-        this.vechiclePrice = vechiclePrice;
     }
 
     public double getVechicleSpeed() {
         return vechicleSpeed;
     }
 
-    public void setVechicleSpeed(double vechicleSpeed) {
-        this.vechicleSpeed = vechicleSpeed;
-    }
-
     public int getVechicleYearOfProduction() {
         return vechicleYearOfProduction;
     }
 
-    public void setVechicleYearOfProduction(int vechicleYearOfProduction) {
-        this.vechicleYearOfProduction = vechicleYearOfProduction;
+//    public static Builder newBuilder() {
+//        return new Vechicles().new Builder();
+//    }
+
+
+
+    public class Builder {
+
+        private Builder() {
+            // private constructor
+        }
+
+        public Builder setPointX(double aPointX) {
+            pointX = aPointX;
+            return this;
+        }
+
+        public Builder setPointY(double aPointY) {
+            pointY = aPointY;
+            return this;
+        }
+
+        public Builder setVechiclePrice(double aPrice) {
+            vechiclePrice = aPrice;
+            return this;
+        }
+
+        public Builder setVechicleSpeed(double aSpeed) {
+            vechicleSpeed = aSpeed;
+            return this;
+        }
+
+        public Builder setYearOfProduction(int aYearOfProduction) {
+            vechicleYearOfProduction = aYearOfProduction;
+            return this;
+        }
+
+        public Vechicle build() {
+            return Vechicle.this;
+        }
+
     }
+
+
 
     @Override
     public String toString() {

@@ -7,8 +7,56 @@ import SmartVechicles.Model.Interfaces.*;
 
 public class BetMobile extends Vechicle implements ISwimmable, IMovebble, IFlyvable {
 
-    public BetMobile(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction) {
-        super(aPointX, aPointY, aVechiclePrice, aVechicleSpeed, aVechicleYearOfProduction);
+    private double pointX;
+    private double pointY;
+    private double vechiclePrice;
+    private double vechicleSpeed;
+    private int vechicleYearOfProduction;
+
+    public BetMobile() {}
+
+    public double getPointX() {
+        return pointX;
+    }
+
+    public double getPointY() {
+        return pointY;
+    }
+
+    public double getVechiclePrice() {
+        return vechiclePrice;
+    }
+
+    public double getVechicleSpeed() {
+        return vechicleSpeed;
+    }
+
+    public int getVechicleYearOfProduction() {
+        return vechicleYearOfProduction;
+    }
+
+    public void setPointX(double pointX) {
+        this.pointX = pointX;
+    }
+
+    public void setPointY(double pointY) {
+        this.pointY = pointY;
+    }
+
+    public void setVechiclePrice(double vechiclePrice) {
+        this.vechiclePrice = vechiclePrice;
+    }
+
+    public void setVechicleSpeed(double vechicleSpeed) {
+        this.vechicleSpeed = vechicleSpeed;
+    }
+
+    public void setVechicleYearOfProduction(int vechicleYearOfProduction) {
+        this.vechicleYearOfProduction = vechicleYearOfProduction;
+    }
+
+    public static void setVechicleComparator(Comparator<BetMobile> vechicleComparator) {
+        BetMobile.vechicleComparator = vechicleComparator;
     }
 
     @Override

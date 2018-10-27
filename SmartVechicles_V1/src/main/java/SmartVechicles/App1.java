@@ -1,5 +1,6 @@
 package SmartVechicles;
 
+
 import java.util.ArrayList;
 
 import SmartVechicles.Controller.VechicleController;
@@ -25,6 +26,7 @@ public class App1
         VechicleService theService = new VechicleService(planeList, vechicleList, movableList, swimmableList, flyvableList);
         VechicleController theControler = new VechicleController(theService);
         ArrayList<Plane> planeResList = theControler.findPlanedByConditions();
+        System.out.println(planeResList.size() + " list of planes");
         for (int i = 0; i < planeResList.size(); i++) {
             System.out.println("Plane with height under sea " + planeResList.get(i).getHeighOfFlightUnderSea() +
                     " and " + planeResList.get(i).getVechicleYearOfProduction() + " year of production");
@@ -33,7 +35,7 @@ public class App1
 //        System.out.println("Vechicles with max speed:");
 //        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
 //        for (int i = 0; i < vechicleList.size()-1; i++) {
-//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() );
+//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() + "(" + vechicleResList.get(i).getClass() + ")");
 //        }
         System.out.println();
         System.out.println("Interface IMovable");
@@ -59,28 +61,47 @@ public class App1
     public static void initTypicalVechicles(ArrayList<Vechicle> vechicleList, ArrayList<Plane> planeList) {
 
         // create cars
-        Car bmw = new Car(32.6, 100, 34000, 200, 2018);
-        Car audi = new Car(0.0, 200, 100000, 550, 2010);
-        Car toyota = new Car(1.6, 9000.8, 76000, 700, 2018);
-        Car hundai = new Car(32.6, 100, 900000, 551, 2018);
-        Car pegeoue = new Car(32.6, 100, 87655, 300, 2018);
-        Car porshe = new Car(32.6, 100, 34000, 200, 2018);
+
+        Car bmw = Car.newBuilder().setPointX(43.9).setPointY(0).setVechiclePrice(222222.8).setVechicleSpeed(100)
+                .setYearOfProduction(2009).build();
+        Car audi = Car.newBuilder().setPointX(21.5).setPointY(76.9).setVechiclePrice(563634).setVechicleSpeed(200)
+                .setYearOfProduction(2018).build();
+        Car toyota = Car.newBuilder().setPointX(00.00).setPointY(00.00).setVechiclePrice(10000).setVechicleSpeed(5000)
+                .setYearOfProduction(2000).build();
+        Car hundai = Car.newBuilder().setPointX(21.5).setPointY(76.9).setVechiclePrice(21899).setVechicleSpeed(400)
+                .setYearOfProduction(2016).build();
+        Car pegeoue = Car.newBuilder().setPointX(21.5).setPointY(76.9).setVechiclePrice(20999).setVechicleSpeed(100)
+                .setYearOfProduction(2007).build();
+        Car porshe = Car.newBuilder().setPointX(21.5).setPointY(76.9).setVechiclePrice(900000).setVechicleSpeed(550)
+                .setYearOfProduction(1999).build();
 
         // create ships
-        Ship ship1 = new Ship(32.6, 44.4, 230000, 300, 1999, 200, "Edinburg");
-        Ship ship2 = new Ship(0.6, 400.4, 780000, 500, 2010, 100, "Ostende");
-        Ship ship3 = new Ship(322.6, 1000.4, 100000, 550, 2018, 200, "Odessa");
-        Ship ship4 = new Ship(90.6, 900.4, 632456, 330, 2017, 200, "Gdansk");
-        Ship ship5 = new Ship(32.6, 44.4, 230000, 300, 1999, 200, "Edinburg");
-        Ship ship6 = new Ship(345, 0.02, 123487, 700, 1999, 200, "Kherson");
+        Ship ship1 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(30000).setVechicleSpeed(400.0)
+                .setYearOfProduction(2018).setMaxCountOfPass(300).setPortOfRegistration("Ostende").build();
+        Ship ship2 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(67899).setVechicleSpeed(500.9)
+                .setYearOfProduction(2017).setMaxCountOfPass(100).setPortOfRegistration("Edinburg").build();
+        Ship ship3 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(23000).setVechicleSpeed(400.0)
+                .setYearOfProduction(2000).setMaxCountOfPass(600).setPortOfRegistration("Odessa").build();
+        Ship ship4 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(12000).setVechicleSpeed(1000.0)
+                .setYearOfProduction(1998).setMaxCountOfPass(300).setPortOfRegistration("Mikolaiv").build();
+        Ship ship5 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(56666).setVechicleSpeed(900.0)
+                .setYearOfProduction(2003).setMaxCountOfPass(260).setPortOfRegistration("Kherson").build();
+        Ship ship6 = Ship.newBuilder().setPointX(30.0).setPointY(30.0).setVechiclePrice(22778).setVechicleSpeed(200.0)
+                .setYearOfProduction(2018).setMaxCountOfPass(600).setPortOfRegistration("Istambul").build();
 
         // create planes
-        Plane plane1 = new Plane(43.7, 233.3, 45600, 400, 2019, 500, 455.7);
-        Plane plane2 = new Plane(21, 432, 65432, 550, 2014, 800, 6000);
-        Plane plane3 = new Plane(43.7, 233.3, 23444, 600, 1999, 500, 9000.7);
-        Plane plane4 = new Plane(43.7, 233.3, 100000, 400, 2013, 500, 9001.7);
-        Plane plane5 = new Plane(43.7, 233.3, 45600, 400, 2019, 500, 455.7);
-        Plane plane6 = new Plane(43.7, 233.3, 45600, 400, 2019, 500, 8000);
+        Plane plane1 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(56000).setVechicleSpeed(1000)
+                .setYearOfProduction(2018).setMaxCountOfPass(400).setMaxHeighUnderSea(6000.0).build();
+        Plane plane2 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(6488).setVechicleSpeed(600)
+                .setYearOfProduction(2000).setMaxCountOfPass(400).setMaxHeighUnderSea(7000.0).build();
+        Plane plane3 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(239000).setVechicleSpeed(2000)
+                .setYearOfProduction(2011).setMaxCountOfPass(200).setMaxHeighUnderSea(1000.0).build();
+        Plane plane4 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(123455).setVechicleSpeed(400)
+                .setYearOfProduction(2001).setMaxCountOfPass(300).setMaxHeighUnderSea(5000.0).build();
+        Plane plane5 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(90000).setVechicleSpeed(900)
+                .setYearOfProduction(2014).setMaxCountOfPass(1000).setMaxHeighUnderSea(4000.0).build();
+        Plane plane6 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(100000).setVechicleSpeed(9000)
+                .setYearOfProduction(2018).setMaxCountOfPass(4000).setMaxHeighUnderSea(1000.9).build();
 
         planeList.add(plane1);
         planeList.add(plane2);
@@ -107,17 +128,62 @@ public class App1
         vechicleList.add(audi);
         vechicleList.add(toyota);
         vechicleList.add(hundai);
+
     }
 
     public static void initSuperCars(ArrayList<IMovebble> movableList, ArrayList<IFlyvable> flyvableList, ArrayList<ISwimmable> swimmableList) {
-        BetMobile betMobile1 = new BetMobile(32.2, 200, 45678888, 900, 2000);
-        AmfibianCar amfibianCar1 = new AmfibianCar(32.0, 400, 60000, 500, 2009);
-        BetMobile betMobile2 = new BetMobile(32.2, 200, 45678888, 800, 2000);
-        AmfibianCar amfibianCar2 = new AmfibianCar(32.0, 400, 60000, 500, 2009);
-        BetMobile betMobile3 = new BetMobile(32.2, 200, 45678888, 700, 2000);
-        AmfibianCar amfibianCar3 = new AmfibianCar(32.0, 400, 60000, 500, 2009);
-        BetMobile betMobile4 = new BetMobile(32.2, 200, 45678888, 100, 2000);
-        AmfibianCar amfibianCar4 = new AmfibianCar(32.0, 400, 60000, 500, 2009);
+
+        BetMobile betMobile1 = new BetMobile();
+        betMobile1.setPointX(32.2);
+        betMobile1.setPointY(0.00);
+        betMobile1.setVechiclePrice(23000.8);
+        betMobile1.setVechicleSpeed(3000);
+        betMobile1.setVechicleYearOfProduction(2017);
+
+        AmfibianCar amfibianCar1 = new AmfibianCar();
+        amfibianCar1.setPointX(0.00);
+        amfibianCar1.setPointY(0.00);
+        amfibianCar1.setVechiclePrice(20000);
+        amfibianCar1.setVechicleSpeed(1000);
+        amfibianCar1.setVechicleYearOfProduction(2018);
+
+        BetMobile betMobile2 = new BetMobile();
+        betMobile2.setPointX(132.2);
+        betMobile2.setPointY(10.00);
+        betMobile2.setVechiclePrice(10000.8);
+        betMobile2.setVechicleSpeed(2000);
+        betMobile2.setVechicleYearOfProduction(2019);
+
+
+        AmfibianCar amfibianCar2 = new AmfibianCar();
+        amfibianCar2.setPointX(0.00);
+        amfibianCar2.setPointY(0.00);
+        amfibianCar2.setVechiclePrice(10000);
+        amfibianCar2.setVechicleSpeed(300);
+        amfibianCar2.setVechicleYearOfProduction(2014);
+
+        BetMobile betMobile3 = new BetMobile();
+        betMobile3.setPointX(0.2);
+        betMobile3.setPointY(0.00);
+        betMobile3.setVechiclePrice(10000);
+        betMobile3.setVechicleSpeed(2000);
+        betMobile3.setVechicleYearOfProduction(2016);
+
+        AmfibianCar amfibianCar3 = new AmfibianCar();
+        amfibianCar3.setPointX(0.00);
+        amfibianCar3.setPointY(0.00);
+        amfibianCar3.setVechiclePrice(20000);
+        amfibianCar3.setVechicleSpeed(800);
+        amfibianCar3.setVechicleYearOfProduction(2016);
+
+        BetMobile betMobile4 = new BetMobile();
+        betMobile4.setPointX(0.2);
+        betMobile4.setPointY(0.00);
+        betMobile4.setVechiclePrice(10000);
+        betMobile4.setVechicleSpeed(1000);
+        betMobile4.setVechicleYearOfProduction(1018);
+
+        AmfibianCar amfibianCar4 = new AmfibianCar();
 
         movableList.add(betMobile1);
         movableList.add(amfibianCar1);

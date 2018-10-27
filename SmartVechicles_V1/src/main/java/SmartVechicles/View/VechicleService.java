@@ -32,7 +32,8 @@ public class VechicleService {
         movableList = aMovableList;
         swimmableList = aSwimmableList;
         flyvableList = aFlyvableList;
-    }
+
+}
 
 
     /**
@@ -43,7 +44,7 @@ public class VechicleService {
         for (int i = 0; i < planesList.size(); i++) {
             if (planesList.get(i).getHeighOfFlightUnderSea() > MAX_FLIGHT_HEIGHT &&
                     planesList.get(i).getVechicleYearOfProduction() > FLIGHT_YEAR_OF_PRODUCTION) {
-                resultList.add(planesList.get(i));
+            	resultList.add(planesList.get(i));
             }
         }
         return resultList;

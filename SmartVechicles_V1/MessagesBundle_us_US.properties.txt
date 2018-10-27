@@ -1,0 +1,11 @@
+Plane with height under sea = Plane with height under sea
+and = and
+year of production = year of production
+Interface IMovable = Interface IMovable
+Bet Mobile with max speed = Bet Mobile with max speed
+Amphibian car with max speed = Amphibian car with max speed
+Interface IFlywable = Interface IFlywable
+Bet Mobile with max speed = Bet Mobile with max speed
+Interface ISwimable = Interface ISwimable
+Bet Mobile with max speed = Bet Mobile with max speed
+Amphibian car with max speed = Amphibian car with max speed

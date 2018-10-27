@@ -1,0 +1,11 @@
+Plane with height under sea = Літак з найбільшою висотою над рівнем моря
+and = і
+year of production = рів випуску
+Interface IMovable = Інтерфейс IMovable
+Bet Mobile with max speed = Найшвидший Bet Mobile
+Amphibian car with max speed = Найшвидший Amphibian car 
+Interface IFlywable =   IFlywable
+Bet Mobile with max speed = Найшвидший Bet Mobile 
+Interface ISwimable = Інтерфейс ISwimable
+Bet Mobile with max speed = Найшвидший Bet Mobile
+Amphibian car with max speed = Найшвидший Amphibian

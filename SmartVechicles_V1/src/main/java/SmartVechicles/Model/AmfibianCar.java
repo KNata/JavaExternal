@@ -6,8 +6,59 @@ import SmartVechicles.Model.Interfaces.*;
 public class AmfibianCar extends Vechicle implements IMovebble, ISwimmable {
 
 
-   public AmfibianCar(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction) {
-        super(aPointX, aPointY, aVechiclePrice, aVechicleSpeed, aVechicleYearOfProduction);
+    private double pointX;
+    private double pointY;
+    private double vechiclePrice;
+    private double vechicleSpeed;
+    private int vechicleYearOfProduction;
+
+    public AmfibianCar(){
+
+    }
+
+
+    public double getPointX() {
+        return pointX;
+    }
+
+    public double getPointY() {
+        return pointY;
+    }
+
+    public double getVechiclePrice() {
+        return vechiclePrice;
+    }
+
+    public double getVechicleSpeed() {
+        return vechicleSpeed;
+    }
+
+    public int getVechicleYearOfProduction() {
+        return vechicleYearOfProduction;
+    }
+
+    public void setPointX(double pointX) {
+        this.pointX = pointX;
+    }
+
+    public void setPointY(double pointY) {
+        this.pointY = pointY;
+    }
+
+    public void setVechiclePrice(double vechiclePrice) {
+        this.vechiclePrice = vechiclePrice;
+    }
+
+    public void setVechicleSpeed(double vechicleSpeed) {
+        this.vechicleSpeed = vechicleSpeed;
+    }
+
+    public void setVechicleYearOfProduction(int vechicleYearOfProduction) {
+        this.vechicleYearOfProduction = vechicleYearOfProduction;
+    }
+
+    public static void setVechicleComparator(Comparator<AmfibianCar> vechicleComparator) {
+        AmfibianCar.vechicleComparator = vechicleComparator;
     }
 
     @Override

@@ -8,28 +8,98 @@ public class Ship extends Vechicle {
     private int maxCountOfPassengers;
     private String portOfRegistration;
 
+    private double pointX;
+    private double pointY;
+    private double vechiclePrice;
+    private double vechicleSpeed;
+    private int vechicleYearOfProduction;
 
-    public Ship(double aPointX, double aPointY, double aVechiclePrice, double aVechicleSpeed, int aVechicleYearOfProduction,
-         int aMaxCountOfPass, String aPortOfRegistration) {
-        super(aPointX, aPointY, aVechiclePrice, aVechicleSpeed, aVechicleYearOfProduction);
-        maxCountOfPassengers = aMaxCountOfPass;
-        portOfRegistration = aPortOfRegistration;
-    }
 
     public int getMaxCountOfPassengers() {
         return maxCountOfPassengers;
-    }
-
-    public void setMaxCountOfPassengers(int maxCountOfPassengers) {
-        this.maxCountOfPassengers = maxCountOfPassengers;
     }
 
     public String getPortOfRegistration() {
         return portOfRegistration;
     }
 
-    public void setPortOfRegistration(String portOfRegistration) {
-        this.portOfRegistration = portOfRegistration;
+
+    public double getPointX() {
+        return pointX;
+    }
+
+    public double getPointY() {
+        return pointY;
+    }
+
+    public double getVechiclePrice() {
+        return vechiclePrice;
+    }
+
+    public double getVechicleSpeed() {
+        return vechicleSpeed;
+    }
+
+    public int getVechicleYearOfProduction() {
+        return vechicleYearOfProduction;
+    }
+
+    public static Comparator<Ship> getShipComparator() {
+        return shipComparator;
+    }
+
+
+
+    public class Builder {
+
+        private Builder() {
+            // private constructor
+        }
+
+        public Builder setPointX(double aPointX) {
+            pointX = aPointX;
+            return this;
+        }
+
+        public Builder setPointY(double aPointY) {
+            pointY = aPointY;
+            return this;
+        }
+
+        public Builder setVechiclePrice(double aPrice) {
+            vechiclePrice = aPrice;
+            return this;
+        }
+
+        public Builder setVechicleSpeed(double aSpeed) {
+            vechicleSpeed = aSpeed;
+            return this;
+        }
+
+        public Builder setYearOfProduction(int aYearOfProduction) {
+            vechicleYearOfProduction = aYearOfProduction;
+            return this;
+        }
+
+        public Builder setMaxCountOfPass(int aMaxCountOfPass) {
+            maxCountOfPassengers = aMaxCountOfPass;
+            return this;
+        }
+
+        public Builder setPortOfRegistration(String aPortOfRegistration) {
+            portOfRegistration = aPortOfRegistration;
+            return this;
+        }
+
+
+        public Ship build() {
+            return Ship.this;
+        }
+
+    }
+
+    public static Builder newBuilder() {
+        return new Ship().new Builder();
     }
 
     public static Comparator<Ship> shipComparator = new Comparator<Ship>() {
