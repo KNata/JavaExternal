@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20998456-7cc2-4f9b-ac95-280b13a0cdd9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessagesBundle_ua_UA.properties.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MessagesBundle_us_US.properties.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/AmfibianCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/AmfibianCar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/BetMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/BetMobile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Plane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Plane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Ship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Vechicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Vechicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SmartVechicles/View/VechicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SmartVechicles/View/VechicleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/App1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/App1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SmartVechicles/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Controller/VechicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Controller/VechicleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" afterDir="false" />
@@ -24,16 +17,17 @@
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/BetMobile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/BetMobile$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/BetMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/BetMobile.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car$Builder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Plane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Plane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Plane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship$Builder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Vechicle$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Vechicle$Builder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Vechicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/Model/Vechicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SmartVechicles/View/VechicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SmartVechicles/View/VechicleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/SmartVechicles/VechicleServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SmartVechicles/VechicleServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vechicles_V2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vechicles_V2/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Vechicles_V2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Vechicles_V2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SmartVechicles/AppTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,120 +41,65 @@
     <session id="-1551512644">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="43" />
+          <entry key="java" value="57" />
+          <entry key="properties" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="43" />
+          <entry key="JAVA" value="57" />
+          <entry key="Properties" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2449" />
+          <entry key="java" value="4106" />
+          <entry key="properties" value="401" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2449" />
+          <entry key="JAVA" value="4106" />
+          <entry key="Properties" value="401" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#initTypicalVechicles#0;class#App1#0" />
                 <element signature="method#initSuperCars#0;class#App1#0" />
+                <element signature="method#doInternalizedService#0;class#App1#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/Controller/VechicleController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding>
-                <element signature="e#280#281#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/View/VechicleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-              <folding>
-                <element signature="e#1529#1536#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="189" column="44" selection-start-line="189" selection-start-column="44" selection-end-line="189" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/Model/BetMobile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-              <folding>
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Plane.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-              <folding>
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#843#844#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+            <state relative-caret-position="90">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -192,11 +131,18 @@
         <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Ship.java" />
         <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/BetMobile.java" />
         <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/AmfibianCar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/Model/Plane.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java" />
         <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/View/VechicleService.java" />
         <option value="$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/language.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/View/copy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/App.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/languageUA.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/languageEN.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/languagePL.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/languageRU.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java" />
       </list>
     </option>
   </component>
@@ -263,37 +209,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="SmartVechicles" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="CustomExeptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartVechicles_V1" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartVechicles_V1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SmartVechicles" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartVechicles_V1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartVechicles_V1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartVechicles_V1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartVechicles_V1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartVechicles_V1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartVechicles_V1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SmartVechicles" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,12 +229,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540644015789" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540647665190" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -319,6 +245,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -333,8 +262,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.VechicleServiceTest.checkForMaxSpeedInSFlyvableBetweenBetMobiles">
-    <configuration name="VechicleServiceTest.checkForMaxSpeedInMovableBetweenAmphibianCars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App1">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SmartVechicles.App" />
       <module name="SmartVechicles_V1" />
       <extension name="coverage">
         <pattern>
@@ -342,15 +272,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SmartVechicles" />
-      <option name="MAIN_CLASS_NAME" value="SmartVechicles.VechicleServiceTest" />
-      <option name="METHOD_NAME" value="checkForMaxSpeedInMovableBetweenAmphibianCars" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VechicleServiceTest.checkForMaxSpeedInMovableBetweenBetMobiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="App1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SmartVechicles.App1" />
       <module name="SmartVechicles_V1" />
       <extension name="coverage">
         <pattern>
@@ -358,10 +285,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SmartVechicles" />
-      <option name="MAIN_CLASS_NAME" value="SmartVechicles.VechicleServiceTest" />
-      <option name="METHOD_NAME" value="checkForMaxSpeedInMovableBetweenBetMobiles" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -415,19 +338,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInMovableBetweenBetMobiles" />
-      <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInMovableBetweenAmphibianCars" />
       <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenBetMobiles" />
       <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenAmphibianCars" />
       <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSFlyvableBetweenBetMobiles" />
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.App1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App1" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSFlyvableBetweenBetMobiles" />
         <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenAmphibianCars" />
         <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenBetMobiles" />
-        <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInMovableBetweenAmphibianCars" />
-        <item itemvalue="JUnit.VechicleServiceTest.checkForMaxSpeedInMovableBetweenBetMobiles" />
       </list>
     </recent_temporary>
   </component>
@@ -448,20 +371,12 @@
       <workItem from="1540456099953" duration="530000" />
       <workItem from="1540633568106" duration="5039000" />
       <workItem from="1540639165127" duration="529000" />
-      <workItem from="1540639870422" duration="1683000" />
+      <workItem from="1540639870422" duration="4163000" />
+      <workItem from="1540647710840" duration="7281000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VechicleServiceTest_findPlanedByConditionSpeed - 2018.10.27 at 15h 34m 08s.xml">
-      <configuration name="VechicleServiceTest.findPlanedByConditionSpeed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VechicleServiceTest_findPlanedByConditionSpeed - 2018.10.27 at 15h 35m 19s.xml">
-      <configuration name="VechicleServiceTest.findPlanedByConditionSpeed" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VechicleServiceTest_findPlanedByConditionYear - 2018.10.27 at 15h 35m 30s.xml">
-      <configuration name="VechicleServiceTest.findPlanedByConditionYear" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VechicleServiceTest_returnListOfVechiclesWithMaxSppedExeptPlanes - 2018.10.27 at 15h 36m 45s.xml">
       <configuration name="VechicleServiceTest.returnListOfVechiclesWithMaxSppedExeptPlanes" configurationId="JUnit" />
     </history-entry>
@@ -483,15 +398,24 @@
     <history-entry file="VechicleServiceTest_checkForMaxSpeedInSwimmableBetweenBetMobiles - 2018.10.27 at 15h 39m 44s.xml">
       <configuration name="VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenBetMobiles" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VechicleServiceTest_checkForMaxSpeedInSwimmableBetweenAmphibianCars - 2018.10.27 at 15h 40m 07s.xml">
+      <configuration name="VechicleServiceTest.checkForMaxSpeedInSwimmableBetweenAmphibianCars" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VechicleServiceTest_checkForMaxSpeedInSFlyvableBetweenBetMobiles - 2018.10.27 at 15h 40m 17s.xml">
+      <configuration name="VechicleServiceTest.checkForMaxSpeedInSFlyvableBetweenBetMobiles" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VechicleServiceTest_checkForMaxSpeedInSFlyvableBetweenBetMobiles - 2018.10.27 at 16h 10m 25s.xml">
+      <configuration name="VechicleServiceTest.checkForMaxSpeedInSFlyvableBetweenBetMobiles" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18629000" />
+    <option name="totallyTimeSpent" value="28390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2688822" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27265862" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -500,14 +424,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21776505" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2679083" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.11318052" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -520,36 +444,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2688822" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.55873924" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.11318052" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -567,13 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
           <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -612,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/Controller/VechicleController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -628,17 +508,6 @@
             <element signature="e#324#325#0" expanded="true" />
             <element signature="e#380#381#0" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initSuperCars#0;class#App1#0" />
           </folding>
         </state>
       </provider>
@@ -665,6 +534,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1466">
+          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/View/VechicleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -675,19 +551,207 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SmartVechicles/VechicleServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="189" column="44" selection-start-line="189" selection-start-column="44" selection-end-line="189" selection-end-column="44" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/Messages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/Locale.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36355">
+          <caret line="493" column="37" selection-start-line="493" selection-start-column="31" selection-end-line="493" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/View/Copy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initTypicalVechicles#0;class#App1#0" />
+            <element signature="method#initSuperCars#0;class#App1#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/util/ResourceBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="449" selection-start-line="449" selection-end-line="449" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/languageUA.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/languagePL.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/language.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/languageEN.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/languageRU.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SmartVechicles/App1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initTypicalVechicles#0;class#App1#0" />
+            <element signature="method#initSuperCars#0;class#App1#0" />
+            <element signature="method#doInternalizedService#0;class#App1#0" />
+          </folding>
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SmartVechicles_V1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

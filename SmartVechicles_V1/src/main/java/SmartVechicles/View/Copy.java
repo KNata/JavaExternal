@@ -7,17 +7,24 @@ import java.util.ResourceBundle;
 import java.util.Scanner;
 
 import SmartVechicles.Controller.VechicleController;
-import SmartVechicles.CustomExeptions.NoCurrentLanguageExeption;
 import SmartVechicles.Model.*;
 import SmartVechicles.Model.Interfaces.*;
 import SmartVechicles.View.VechicleService;
 
 
-public class App1
+public class Copy
 {
     public static void main( String[] args )
     {
 
+        // init data
+        ArrayList<Plane> planeList = new ArrayList<Plane>();
+        ArrayList<Vechicle> vechicleList = new ArrayList<Vechicle>();
+        initTypicalVechicles(vechicleList, planeList);
+        ArrayList<IMovebble> movableList = new ArrayList<IMovebble>();
+        ArrayList<IFlyvable> flyvableList = new ArrayList<IFlyvable>();
+        ArrayList<ISwimmable> swimmableList = new ArrayList<ISwimmable>();
+        initSuperCars(movableList, flyvableList, swimmableList);
 
         //
         Locale theLocale = Locale.getDefault();
@@ -27,38 +34,63 @@ public class App1
         System.out.println("To choose English language, press 2");
         System.out.println("To choose Polish language, press 3");
         System.out.println("To choose Russian language, press 4");
-
-
-            Scanner sc = new Scanner(System.in);
-            int codeToChoose = sc.nextInt();
-            if (codeToChoose > 4) {
-                new NoCurrentLanguageExeption("No such language avaliable. Please enter 1-4 to choose preferable language of interface");
-            }
-            if (codeToChoose == 1) {
+        Scanner sc = new Scanner(System.in);
+        int codeToChoose = sc.nextInt();
+        switch (codeToChoose) {
+            case 1:
                 theLocale = new Locale("");
                 currentLanguageBungle = ResourceBundle.getBundle(
                         "languageUA", theLocale);
-                doInternalizedService(currentLanguageBungle);
-            } else if (codeToChoose == 2) {
+
+
+            case 2:
                 theLocale = new Locale("EN");
                 currentLanguageBungle = ResourceBundle.getBundle(
                         "languageEN", theLocale);
-                doInternalizedService(currentLanguageBungle);
-            } else if (codeToChoose == 3) {
+            case 3:
                 theLocale = new Locale("PL");
                 currentLanguageBungle = ResourceBundle.getBundle(
                         "languagePL", theLocale);
-                doInternalizedService(currentLanguageBungle);
-            } else if (codeToChoose == 4) {
+            case 4:
                 theLocale = new Locale("RU");
                 currentLanguageBungle = ResourceBundle.getBundle(
                         "languageRU", theLocale);
-                doInternalizedService(currentLanguageBungle);
-            }
+        }
 
+        // service
+        VechicleService theService = new VechicleService(planeList, vechicleList, movableList, swimmableList, flyvableList);
+        VechicleController theControler = new VechicleController(theService);
+        ArrayList<Plane> planeResList = theControler.findPlanedByConditions();
+        for (int i = 0; i < planeResList.size(); i++) {
+            System.out.println("Plane with height under sea " + planeResList.get(i).getHeighOfFlightUnderSea() +
+                    " and " + planeResList.get(i).getVechicleYearOfProduction() + " year of production");
+        }
+//        System.out.println();
+//        System.out.println("Vechicles with max speed:");
+//        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
+//        for (int i = 0; i < vechicleList.size()-1; i++) {
+//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() + "(" + vechicleResList.get(i).getClass() + ")");
+//        }
+        System.out.println();
+        System.out.println("Interface IMovable");
+        ArrayList<BetMobile> bmList = theControler.checkInstanceOfIMovebbleInterfaceToBetmobile();
+        System.out.println("Bet Mobile with max speed " + bmList.get(0).getVechicleSpeed());
+        ArrayList<AmfibianCar> amList = theControler.checkInstanceOfIMovebbleInterfaceToAmphibianCar();
+        System.out.println("Amphibian car with max speed " + amList.get(0).getVechicleSpeed());
 
-}
+        System.out.println();
+        System.out.println("Interface IFlywable");
+        ArrayList<BetMobile> bmListF = theControler.checkInstanceOfIFlyvableInterfaceToBetmobile();
+        System.out.println("Bet Mobile with max speed " + bmListF.get(0).getVechicleSpeed());
 
+        System.out.println();
+        System.out.println("Interface ISwimable");
+        ArrayList<BetMobile> bmListS = theControler.checkForMaxSpeedInSwimmableBetweenBetMobiles();
+        System.out.println("Bet Mobile with max speed " + bmListS.get(0).getVechicleSpeed());
+        ArrayList<AmfibianCar> amListS = theControler.checkInstanceOfISwimableInterfaceToAmphibianCar();
+        System.out.println("Amphibian car with max speed " + amListS.get(0).getVechicleSpeed());
+
+    }
 
     public static void initTypicalVechicles(ArrayList<Vechicle> vechicleList, ArrayList<Plane> planeList) {
 
@@ -209,63 +241,7 @@ public class App1
 
     }
 
-    public static void doInternalizedService(ResourceBundle aCurrentLanguageBungle) {
-
-        // init data
-        ArrayList<Plane> planeList = new ArrayList<Plane>();
-        ArrayList<Vechicle> vechicleList = new ArrayList<Vechicle>();
-        initTypicalVechicles(vechicleList, planeList);
-        ArrayList<IMovebble> movableList = new ArrayList<IMovebble>();
-        ArrayList<IFlyvable> flyvableList = new ArrayList<IFlyvable>();
-        ArrayList<ISwimmable> swimmableList = new ArrayList<ISwimmable>();
-        initSuperCars(movableList, flyvableList, swimmableList);
-
-        // service
-        VechicleService theService = new VechicleService(planeList, vechicleList, movableList, swimmableList, flyvableList);
-        VechicleController theControler = new VechicleController(theService);
-        ArrayList<Plane> planeResList = theControler.findPlanedByConditions();
-        for (int i = 0; i < planeResList.size(); i++) {
-            System.out.println(aCurrentLanguageBungle.getString("Plane") + " "+
-                    aCurrentLanguageBungle.getString("with") + " " + aCurrentLanguageBungle.getString("height") +
-                    " " + aCurrentLanguageBungle.getString("under")+ " "+ aCurrentLanguageBungle.getString("sea") +
-                    " "+ planeResList.get(i).getHeighOfFlightUnderSea() +
-                    " " + aCurrentLanguageBungle.getString("and") + " " + planeResList.get(i).getVechicleYearOfProduction()
-                    + " " + aCurrentLanguageBungle.getString("year") + " " + aCurrentLanguageBungle.getString("of")
-                    + " "+ aCurrentLanguageBungle.getString("production"));
-        }
-
-//        System.out.println();
-//        System.out.println("Vechicles with max speed:");
-//        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
-//        for (int i = 0; i < vechicleList.size()-1; i++) {
-//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() + "(" + vechicleResList.get(i).getClass() + ")");
-//        }
-        System.out.println();
-        System.out.println(aCurrentLanguageBungle.getString("Interface") + " IMovable");
-        ArrayList<BetMobile> bmList = theControler.checkInstanceOfIMovebbleInterfaceToBetmobile();
-        System.out.println(aCurrentLanguageBungle.getString("with") +  aCurrentLanguageBungle.getString("max") +
-                " " + aCurrentLanguageBungle.getString("speed") + " " + bmList.get(0).getVechicleSpeed());
-        ArrayList<AmfibianCar> amList = theControler.checkInstanceOfIMovebbleInterfaceToAmphibianCar();
-        System.out.println("Amphibian car " + aCurrentLanguageBungle.getString("with") + " " + aCurrentLanguageBungle.getString("max")
-                + " " + aCurrentLanguageBungle.getString("speed") +  " "+ amList.get(0).getVechicleSpeed());
-
-        System.out.println();
-        System.out.println(aCurrentLanguageBungle.getString("Interface") + " IFlywable");
-        ArrayList<BetMobile> bmListF = theControler.checkInstanceOfIFlyvableInterfaceToBetmobile();
-        System.out.println("Bet Mobile " + aCurrentLanguageBungle.getString("with") + " " +
-                aCurrentLanguageBungle.getString("max") + " " + aCurrentLanguageBungle.getString("speed") +
-                " " + bmListF.get(0).getVechicleSpeed());
-
-        System.out.println();
-        System.out.println(aCurrentLanguageBungle.getString("Interface") + " ISwimable");
-        ArrayList<BetMobile> bmListS = theControler.checkForMaxSpeedInSwimmableBetweenBetMobiles();
-        System.out.println("Bet Mobile " + aCurrentLanguageBungle.getString("with")  + " " +
-                aCurrentLanguageBungle.getString("max") + " " + aCurrentLanguageBungle.getString("speed") + " "
-                + bmListS.get(0).getVechicleSpeed());
-        ArrayList<AmfibianCar> amListS = theControler.checkInstanceOfISwimableInterfaceToAmphibianCar();
-        System.out.println("Amphibian car " + aCurrentLanguageBungle.getString("with") + " " +
-                aCurrentLanguageBungle.getString("max") +  " " + aCurrentLanguageBungle.getString("speed")
-                + " " + amListS.get(0).getVechicleSpeed());
+    public static void doInternalizedService(ResourceBundle currentLanguageBungle) {
 
     }
 }

@@ -1,6 +1,8 @@
 package SmartVechicles;
 
-import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
+import java.util.ResourceBundle;
 
 import SmartVechicles.Controller.VechicleController;
 import SmartVechicles.Model.Plane;
@@ -8,26 +10,45 @@ import SmartVechicles.View.VechicleService;
 
 public class App {
 
-	public static void main(String[] args) {
-		Plane plane1 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(56000).setVechicleSpeed(1000)
-                .setYearOfProduction(2018).setMaxCountOfPass(400).setMaxHeighUnderSea(1000.0).build();
-        Plane plane2 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(6488).setVechicleSpeed(600)
-                .setYearOfProduction(2000).setMaxCountOfPass(400).setMaxHeighUnderSea(1000.0).build();
-        Plane plane3 = Plane.newBuilder().setPointX(21.0).setPointY(32.2).setVechiclePrice(239000).setVechicleSpeed(2000)
-                .setYearOfProduction(2011).setMaxCountOfPass(200).setMaxHeighUnderSea(1000.0).build();
-        System.out.println(plane1.getVechicleYearOfProduction());
-        System.out.println(plane2.getVechicleYearOfProduction());
-        System.out.println(plane3.getVechicleYearOfProduction());
-//        ArrayList<Plane> planeList = new ArrayList<Plane>();
-//        planeList.add(plane3);
-//        planeList.add(plane2);
-//        planeList.add(plane1);
-//        VechicleService theService = new VechicleService(planeList, null, null, null, null);
-//        VechicleController theController = new VechicleController(theService);
-//
-//        ArrayList<Plane> l1 = theController.findPlanedByConditions();
-//        System.out.println(l1.size());
-//
+    public enum LANGUAGES {Ukrainian, English, Polish, Russian}
+
+    public static void main(String[] args) {
+        Locale theLocale = Locale.getDefault();
+        ResourceBundle currentLanguageBungle;
+        System.out.println("Choose the interface language");
+        System.out.println("To choose Ukrainian language, press 1");
+        System.out.println("To choose English language, press 2");
+        System.out.println("To choose Polish language, press 3");
+        System.out.println("To choose Russian language, press 4");
+        Scanner sc = new Scanner(System.in);
+        int codeToChoose = sc.nextInt();
+        switch (codeToChoose) {
+            case 1:
+                theLocale = new Locale("UA");
+                currentLanguageBungle = ResourceBundle.getBundle(
+                        "language", theLocale);
+
+               System.out.println(currentLanguageBungle.getString("greetings"));
+
+            case 2:
+                theLocale = new Locale("EN");
+                currentLanguageBungle = ResourceBundle.getBundle(
+                        "languageEN", theLocale);
+            case 3:
+                theLocale = new Locale("PL");
+                currentLanguageBungle = ResourceBundle.getBundle(
+                        "languagePL", theLocale);
+            case 4:
+                theLocale = new Locale("RU");
+                currentLanguageBungle = ResourceBundle.getBundle(
+                        "languageRU", theLocale);
+                default:
+        }
+       // System.out.println(currentLanguageBungle.getString("greetings"));
+
+
+
+
 	}
 
 }
