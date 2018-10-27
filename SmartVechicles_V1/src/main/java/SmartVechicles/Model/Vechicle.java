@@ -28,11 +28,6 @@ public abstract class Vechicle {
         return vechicleYearOfProduction;
     }
 
-//    public static Builder newBuilder() {
-//        return new Vechicles().new Builder();
-//    }
-
-
 
     public class Builder {
 
@@ -75,7 +70,7 @@ public abstract class Vechicle {
 
     @Override
     public String toString() {
-        return "Vechicle{ " +
+        return "Vechicle { " +
                 "pointX = " + pointX +
                 ", pointY = " + pointY +
                 ", vechiclePrice = " + vechiclePrice +

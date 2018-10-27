@@ -53,7 +53,6 @@ public class Ship extends Vechicle {
     public class Builder {
 
         private Builder() {
-            // private constructor
         }
 
         public Builder setPointX(double aPointX) {
@@ -110,7 +109,7 @@ public class Ship extends Vechicle {
 
     @Override
     public String toString() {
-        return "Ship {" +
+        return "Ship { " +
                 " maxCountOfPassengers =" + maxCountOfPassengers +
                 ", portOfRegistration = '" + portOfRegistration + '\'' +
                 '}';

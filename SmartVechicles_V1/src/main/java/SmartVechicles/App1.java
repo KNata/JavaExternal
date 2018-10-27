@@ -17,9 +17,6 @@ public class App1
 {
     public static void main( String[] args )
     {
-
-
-        //
         Locale theLocale = Locale.getDefault();
         ResourceBundle currentLanguageBungle;
         System.out.println("Choose the interface language");
@@ -55,9 +52,7 @@ public class App1
                         "languageRU", theLocale);
                 doInternalizedService(currentLanguageBungle);
             }
-
-
-}
+    }
 
 
     public static void initTypicalVechicles(ArrayList<Vechicle> vechicleList, ArrayList<Plane> planeList) {
@@ -234,12 +229,14 @@ public class App1
                     + " "+ aCurrentLanguageBungle.getString("production"));
         }
 
-//        System.out.println();
-//        System.out.println("Vechicles with max speed:");
-//        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
-//        for (int i = 0; i < vechicleList.size()-1; i++) {
-//            System.out.println(i+1 + ". " + vechicleResList.get(i).getVechicleSpeed() + "(" + vechicleResList.get(i).getClass() + ")");
-//        }
+        System.out.println();
+        System.out.println(aCurrentLanguageBungle.getString("Vechicles") + " " +
+                aCurrentLanguageBungle.getString("with") + " " + aCurrentLanguageBungle.getString("max") + " "
+                + aCurrentLanguageBungle.getString("speed") + ":");
+        ArrayList<Vechicle> vechicleResList = theControler.returnListOfVechiclesWithMaxSppedExeptPlanes();
+        for (int i = 0; i < vechicleResList.size(); i++) {
+            System.out.println(vechicleResList.get(i).toString());
+        }
         System.out.println();
         System.out.println(aCurrentLanguageBungle.getString("Interface") + " IMovable");
         ArrayList<BetMobile> bmList = theControler.checkInstanceOfIMovebbleInterfaceToBetmobile();

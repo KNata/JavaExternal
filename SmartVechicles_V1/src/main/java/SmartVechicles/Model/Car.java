@@ -85,12 +85,12 @@ public class Car extends Vechicle {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "pointX=" + pointX +
-                ", pointY=" + pointY +
-                ", vechiclePrice=" + vechiclePrice +
-                ", vechicleSpeed=" + vechicleSpeed +
-                ", vechicleYearOfProduction=" + vechicleYearOfProduction +
+        return "Car {" +
+                " pointX = " + pointX +
+                ", pointY = " + pointY +
+                ", vechiclePrice = " + vechiclePrice +
+                ", vechicleSpeed = " + vechicleSpeed +
+                ", vechicleYearOfProduction = " + vechicleYearOfProduction +
                 '}';
     }
 }

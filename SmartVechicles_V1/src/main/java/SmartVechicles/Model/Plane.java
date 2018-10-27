@@ -52,7 +52,6 @@ public class Plane extends Vechicle {
 	public class Builder {
 
         private Builder() {
-            // private constructor
         }
 
         public Builder setPointX(double aPointX) {
@@ -108,7 +107,7 @@ public class Plane extends Vechicle {
 
     @Override
     public String toString() {
-        return "Plane{" +
+        return "Plane {" +
                 " maxCountOfPassengers = " + maxCountOfPassengers +
                 ", heighOfFlightUnderSea = " + heighOfFlightUnderSea +
                 '}';
