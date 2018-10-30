@@ -3,7 +3,6 @@ package StringOperations;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,11 +11,8 @@ public class StringSevice {
     public static String BEGINNING_STRING_TEMPLATE = "h"; // check for the correct template
     public static String END_STRING_TEMPLATE = "y"; // check for the correct template
 
-    public List<String> selectedStingList;
-
 
     StringSevice() {
-        selectedStingList = new ArrayList<String>();
     }
 
     private static boolean checkWithRegExp(String userNameString){
