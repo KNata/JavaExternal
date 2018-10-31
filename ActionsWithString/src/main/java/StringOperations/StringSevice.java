@@ -8,18 +8,18 @@ import java.util.regex.Pattern;
 
 public class StringSevice {
 
-    public static String BEGINNING_STRING_TEMPLATE = "h"; // check for the correct template
-    public static String END_STRING_TEMPLATE = "y"; // check for the correct template
+    public static String BEGINNING_STRING_TEMPLATE = "h";
+    public static String END_STRING_TEMPLATE = "y";
 
 
     StringSevice() {
     }
 
-    private static boolean checkWithRegExp(String userNameString){
-        Pattern p = Pattern.compile("^[a-c_-]{y}$");
-        Matcher m = p.matcher(userNameString);
-        return m.matches();
-    }
+//    private static boolean checkWithRegExp(String userNameString){
+//        Pattern p = Pattern.compile("^[a-c_-]{y}$");
+//        Matcher m = p.matcher(userNameString);
+//        return m.matches();
+//    }
 
     public List<String> findByTemplate(List<String> wordList) {
         List<String> resultStringList = new ArrayList<String>();
