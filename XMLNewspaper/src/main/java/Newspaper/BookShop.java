@@ -8,12 +8,24 @@ public class BookShop {
     private ArrayList<Magazine> magazinesList;
     private ArrayList<PermanentPaper> booksList;
 
-    BookShop(ArrayList<Newspaper> aNewspapersList, ArrayList<Magazine> aMagazinesList, ArrayList<PermanentPaper> aBooksList) {
-        newspapersList = aNewspapersList;
-        magazinesList = aMagazinesList;
-        booksList = aBooksList;
+    BookShop() {
+        newspapersList = new ArrayList<Newspaper>();
+        magazinesList = new ArrayList<Magazine>();
+        booksList = new ArrayList<PermanentPaper>();
     }
 
-    
+    public void readAllPapers () {}
+
+    public void sortPapersByType() {}
+
+    public void addNewPaperToNeededListAndFile(String aPaperTitleToAdd) {}
+
+    public void removeAPaperFromXML(String aPaperTitleToRemove) {}
+
+    public void createNewspapersXML() {}
+
+    public void createMagazinesXML() {}
+
+    public void createPermanentPapersXML() {}
 
 }

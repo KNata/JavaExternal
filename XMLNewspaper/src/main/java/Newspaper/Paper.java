@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public abstract class Paper {
 
+    private int paperID;
     private String paperTitle;
     private String typeOfPaper;
     private boolean isPeriodic;
@@ -16,6 +17,8 @@ public abstract class Paper {
         isPeriodic = aPeriodicity;
         isPeriodic = color;
         numberOfPages = aNumOfPages;
+
+        paperID++;
     }
 
     public String getPaperTitle() {
@@ -42,13 +45,39 @@ public abstract class Paper {
         isPeriodic = periodic;
     }
 
+    public int getPaperID() {
+        return paperID;
+    }
+
+    public void setPaperID(int paperID) {
+        this.paperID = paperID;
+    }
+
+    public boolean isColoful() {
+        return isColoful;
+    }
+
+    public void setColoful(boolean coloful) {
+        isColoful = coloful;
+    }
+
+    public int getNumberOfPages() {
+        return numberOfPages;
+    }
+
+    public void setNumberOfPages(int numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
 
     @Override
     public String toString() {
-        return "Paper {" +
-                "paperTitle = '" + paperTitle + '\'' +
+        return "Paper{" +
+                "paperID = " + paperID +
+                ", paperTitle = '" + paperTitle + '\'' +
                 ", typeOfPaper = '" + typeOfPaper + '\'' +
                 ", isPeriodic = " + isPeriodic +
+                ", isColoful = " + isColoful +
+                ", numberOfPages = " + numberOfPages +
                 '}';
     }
 }
