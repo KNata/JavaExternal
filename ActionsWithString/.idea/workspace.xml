@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="44c21059-fc3f-41af-bd87-3d428f30e4d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TestFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StringOperations/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringOperations/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StringOperations/StringSevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringOperations/StringSevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StringOperations/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringOperations/App.class" afterDir="false" />
-    </list>
+    <list default="true" id="44c21059-fc3f-41af-bd87-3d428f30e4d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +14,7 @@
     <session id="1673939355">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="1" />
@@ -72,7 +66,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/StringOperations/StringSevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="-174">
               <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -224,12 +218,12 @@
       <workItem from="1540846048470" duration="2742000" />
       <workItem from="1540854236626" duration="806000" />
       <workItem from="1540896381787" duration="11100000" />
-      <workItem from="1541014153502" duration="2116000" />
+      <workItem from="1541014153502" duration="2198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16764000" />
+    <option name="totallyTimeSpent" value="16846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -242,7 +236,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19197708" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19197708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3982808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,7 +296,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StringOperations/StringSevice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="-174">
           <caret line="10" column="57" lean-forward="true" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
