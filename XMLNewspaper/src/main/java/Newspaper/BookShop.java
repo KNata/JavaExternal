@@ -27,5 +27,6 @@ public class BookShop {
     public void createMagazinesXML() {}
 
     public void createPermanentPapersXML() {}
+    //
 
 }
