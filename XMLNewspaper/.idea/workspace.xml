@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="90f41b4f-9235-4551-8db1-6c47ef759566" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Papers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Papers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Newspaper/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/BookShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Newspaper/BookShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/Magazine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/Newspaper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/Paper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Newspaper/Paper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/PeriodicPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Newspaper/PeriodicPaper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Newspaper/PermanentPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Newspaper/PermanentPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Newspaper/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Newspaper/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Newspaper/BookShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Newspaper/BookShop.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,89 +23,71 @@
     <session id="709499748">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="20" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="28" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="20" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="28" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3110" />
-          <entry key="xml" value="8" />
+          <entry key="dummy" value="16" />
+          <entry key="java" value="4434" />
+          <entry key="xml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3110" />
-          <entry key="XML" value="8" />
+          <entry key="JAVA" value="4434" />
+          <entry key="PLAIN_TEXT" value="16" />
+          <entry key="XML" value="17" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/App.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Papers.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+            <state relative-caret-position="122">
+              <caret line="58" column="12" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/BookServiceUsingSAX.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#506#513#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Papers.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Paper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/BookShop.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+            <state relative-caret-position="229">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
-                <element signature="method#readAllPapers#0;class#BookShop#0" />
-                <element signature="method#collectInformation#0;class#BookShop#0" />
-                <element signature="e#9368#9369#0" expanded="true" />
-                <element signature="e#9408#9409#0" expanded="true" />
-                <element signature="e#9605#9606#0" expanded="true" />
-                <element signature="e#9637#9638#0" expanded="true" />
-                <element signature="e#9706#9707#0" expanded="true" />
-                <element signature="e#9748#9749#0" expanded="true" />
-                <element signature="e#9795#9796#0" expanded="true" />
-                <element signature="e#9828#9829#0" expanded="true" />
-                <element signature="e#9890#9891#0" expanded="true" />
-                <element signature="e#9934#9935#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,10 +113,15 @@
         <option value="$PROJECT_DIR$/src/main/java/Newspaper/PermanentPaper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Newspaper/PeriodicPaper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Newspaper/Paper.java" />
-        <option value="$PROJECT_DIR$/Papers.xml" />
         <option value="$PROJECT_DIR$/newspapers.xml" />
+        <option value="$PROJECT_DIR$/Papers.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Newspaper/DOM/BookShop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Newspaper/DOM/PermanentPaper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Newspaper/DOM/Paper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Newspaper/DOM/PeriodicPaper.java" />
         <option value="$PROJECT_DIR$/src/main/java/Newspaper/BookShop.java" />
         <option value="$PROJECT_DIR$/src/main/java/Newspaper/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Newspaper/BookServiceUsingSAX.java" />
       </list>
     </option>
   </component>
@@ -161,6 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -199,7 +187,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,25 +239,26 @@
       <option name="presentableId" value="Default" />
       <updated>1541454461346</updated>
       <workItem from="1541454463013" duration="2508000" />
-      <workItem from="1541506074961" duration="9349000" />
+      <workItem from="1541506074961" duration="13665000" />
+      <workItem from="1541524993866" duration="1822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11857000" />
+    <option name="totallyTimeSpent" value="17995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28653294" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15329513" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,7 +267,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.15759312" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32131147" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -306,20 +294,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Magazine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="83" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Newspaper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Magazine.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Newspaper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/PermanentPaper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -347,20 +323,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Paper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newspapers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/newspapers.xml" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/com/sun/org/apache/xerces/internal/dom/CoreDocumentImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -368,41 +331,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Papers.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/Paper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="10" lean-forward="true" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+        <state relative-caret-position="406">
+          <caret line="85" column="77" selection-start-line="85" selection-start-column="77" selection-end-line="85" selection-end-column="77" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/DOM/BookShop.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/DOM/PermanentPaper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/DOM/Paper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/DOM/PeriodicPaper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/BookShop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="163">
+          <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding>
-            <element signature="method#readAllPapers#0;class#BookShop#0" />
-            <element signature="method#collectInformation#0;class#BookShop#0" />
-            <element signature="e#9368#9369#0" expanded="true" />
-            <element signature="e#9408#9409#0" expanded="true" />
-            <element signature="e#9605#9606#0" expanded="true" />
-            <element signature="e#9637#9638#0" expanded="true" />
-            <element signature="e#9706#9707#0" expanded="true" />
-            <element signature="e#9748#9749#0" expanded="true" />
-            <element signature="e#9795#9796#0" expanded="true" />
-            <element signature="e#9828#9829#0" expanded="true" />
-            <element signature="e#9890#9891#0" expanded="true" />
-            <element signature="e#9934#9935#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#createPermanentPapersXML#0;class#BookShop#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Papers.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        <state relative-caret-position="229">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#506#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Newspaper/BookServiceUsingSAX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

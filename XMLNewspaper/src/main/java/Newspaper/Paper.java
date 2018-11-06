@@ -11,7 +11,7 @@ public abstract class Paper {
     private boolean isColoful;
     private int numberOfPages;
 
-    Paper (String aPaperTitle, String aTypeOfPaper, boolean aPeriodicity, boolean color, int aNumOfPages) {
+    public Paper (String aPaperTitle, String aTypeOfPaper, boolean aPeriodicity, boolean color, int aNumOfPages) {
         paperTitle = aPaperTitle;
         typeOfPaper = aTypeOfPaper;
         isPeriodic = aPeriodicity;

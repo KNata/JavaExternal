@@ -1,9 +1,10 @@
 package Newspaper;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -13,14 +14,8 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class BookShop {
@@ -31,54 +26,57 @@ public class BookShop {
 
     private Element staff;
 
-    private static final String PERIODIC = "periodic";
-    private static final String PERMANENT = "permanent";
-
-    BookShop(ArrayList<Paper> papers) {
+   BookShop() {
         periodicPaperList = new ArrayList<PeriodicPaper>();
         booksList = new ArrayList<PermanentPaper>();
-        papersList = papers;
+        papersList = new ArrayList<Paper>();
     }
 
-    public void readAllPapers (String theFileToRead) throws ParserConfigurationException, IOException, SAXException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-        Document document = builder.parse(new File(theFileToRead));
-        collectInformation(document, PERIODIC);
-        collectInformation(document, PERMANENT);
+    public void readAllPapers(String theFileToRead) throws ParserConfigurationException, IOException, SAXException {
+       DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+      // dbf.setValidating(true);
+       DocumentBuilder db = dbf.newDocumentBuilder();
+       Document document = db.parse(new File("Papers.xml"));
+       Element root = document.getDocumentElement();
+       System.out.println(document.getDocumentElement());
+       if (root.getTagName().equals("Library")) {
+           NodeList listOfPapers = root.getElementsByTagName("staff");
+           for (int i = 0; i < listOfPapers.getLength(); i++) {
+               Element paper = (Element)listOfPapers.item(i);
+               if (Boolean.valueOf(paper.getAttribute("Periodicity")) == true) {
+                   String title = paper.getAttribute("Title");
+                   String typeOfPaper = paper.getAttribute("TypeofPaper");
+                   boolean periodic = Boolean.valueOf(paper.getAttribute("Periodicity"));
+                   boolean color = Boolean.valueOf(paper.getAttribute("Color"));
+                   int numberOfPages = Integer.getInteger(paper.getAttribute("NumberofPages"));
+                   int zip = Integer.getInteger(paper.getAttribute("Zip"));
+                   PeriodicPaper periodicPaper = new PeriodicPaper(title, typeOfPaper, periodic, color, numberOfPages, zip);
+                   papersList.add(periodicPaper);
+               } else {
+                   String title = paper.getAttribute("Title");
+                   String typeOfPaper = paper.getAttribute("TypeofPaper");
+                   boolean periodic = Boolean.valueOf(paper.getAttribute("Periodicity"));
+                   boolean color = Boolean.valueOf(paper.getAttribute("Color"));
+                   int numberOfPages = Integer.getInteger(paper.getAttribute("NumberofPages"));
+                   PermanentPaper permanentPaper = new PermanentPaper(title, typeOfPaper, periodic, color, numberOfPages);
+                   papersList.add(permanentPaper);
+               }
+
+           }
+       }
     }
 
-    private void collectInformation(Document document, final String element) {
-        NodeList elements = document.getElementsByTagName(element);
-        for (int i = 0; i < elements.getLength(); i++) {
-            NamedNodeMap attributes = elements.item(i).getAttributes();
-            String library = attributes.getNamedItem("Library").getNodeValue();
-            switch (element) {
-                case PERIODIC: {
-                    String title = attributes.getNamedItem("Title").getNodeValue();
-                    String typeOfPaper = attributes.getNamedItem("Type of Paper").getNodeValue();
-                    boolean periodicity = Boolean.valueOf(attributes.getNamedItem("Periodicity").getNodeValue());
-                    boolean color = Boolean.valueOf(attributes.getNamedItem("Color").getNodeValue());
-                    int numberOfPages = Integer.getInteger(attributes.getNamedItem("Number of Pages").getNodeValue());
-                    int zipIndex = Integer.getInteger(attributes.getNamedItem("Zip Index for subscription").getNodeValue());
+            /*    System.out.println("Staff id : " + eElement.getAttribute("id"));
+                System.out.println("First Name : " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
+                System.out.println("Last Name : " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
+                System.out.println("Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
+                System.out.println("Salary : " + eElement.getElementsByTagName("salary").item(0).getTextContent());
+*/
 
-                    papersList.add(new PeriodicPaper(title, typeOfPaper, periodicity, color, numberOfPages, zipIndex));
-                }
-                break;
-                case PERMANENT: {
-                    String title = attributes.getNamedItem("Title").getNodeValue();
-                    String typeOfPaper = attributes.getNamedItem("Type of Paper").getNodeValue();
-                    boolean periodicity = Boolean.valueOf(attributes.getNamedItem("Periodicity").getNodeValue());
-                    boolean color = Boolean.valueOf(attributes.getNamedItem("Color").getNodeValue());
-                    int numberOfPages = Integer.getInteger(attributes.getNamedItem("Number of Pages").getNodeValue());
 
-                    papersList.add(new PermanentPaper(title, typeOfPaper, periodicity, color, numberOfPages));
-                }
-                break;
-            }
-        }
-    }
+
+
+
 
     public void sortPapers() {
         for (int i = 0; i < papersList.size(); i++) {
@@ -156,7 +154,6 @@ public class BookShop {
                 staff = doc.createElement("Newspapers");
                 rootElement.appendChild(staff);
                 for (int i = 0; i < booksList.size(); i++) {
-
                     Attr id = doc.createAttribute("id");
                     id.setValue(String.valueOf(booksList.get(i).getPaperID()));
                     staff.setAttributeNode(id);
