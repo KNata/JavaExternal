@@ -1,6 +1,6 @@
 package Newspaper;
 
-import java.util.HashMap;
+import java.util.Comparator;
 
 public abstract class Paper {
 
@@ -80,4 +80,10 @@ public abstract class Paper {
                 ", numberOfPages = " + numberOfPages +
                 '}';
     }
+
+    public static Comparator<Paper> paperComparator = new Comparator<Paper>() {
+        public int compare(Paper paper1, Paper paper2) {
+            return (paper1.getPaperTitle().compareTo(paper2.getPaperTitle()));
+        }
+    };
 }
