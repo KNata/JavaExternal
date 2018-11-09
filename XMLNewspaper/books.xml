@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Books>
     <Details>
-        <Title>Thinking in Java</Title>
-        <TypeOfPaper>Book</TypeOfPaper>
-        <Periodicity>true</Periodicity>
-        <Color>false</Color>
-        <NumberofPages>1000</NumberofPages>
         <Title>Java Algorithms</Title>
         <TypeOfPaper>Book</TypeOfPaper>
         <Periodicity>true</Periodicity>
         <Color>false</Color>
         <NumberofPages>10000</NumberofPages>
-        <Title>Pride and Predjuce</Title>
-        <TypeOfPaper>Book</TypeOfPaper>
-        <Periodicity>false</Periodicity>
-        <Color>false</Color>
-        <NumberofPages>400</NumberofPages>
-        <Title>Something</Title>
-        <TypeOfPaper>Book</TypeOfPaper>
-        <Periodicity>false</Periodicity>
-        <Color>false</Color>
-        <NumberofPages>20</NumberofPages>
         <Title>Phantom of the Opera</Title>
         <TypeOfPaper>Book</TypeOfPaper>
         <Periodicity>false</Periodicity>
         <Color>false</Color>
         <NumberofPages>560</NumberofPages>
+        <Title>Pride and Predjuce</Title>
+        <TypeOfPaper>Book</TypeOfPaper>
+        <Periodicity>false</Periodicity>
+        <Color>false</Color>
+        <NumberofPages>400</NumberofPages>
         <Title>Pudewko z marzeniamy</Title>
         <TypeOfPaper>Book</TypeOfPaper>
         <Periodicity>true</Periodicity>
         <Color>false</Color>
         <NumberofPages>300</NumberofPages>
+        <Title>Something</Title>
+        <TypeOfPaper>Book</TypeOfPaper>
+        <Periodicity>false</Periodicity>
+        <Color>false</Color>
+        <NumberofPages>20</NumberofPages>
+        <Title>Thinking in Java</Title>
+        <TypeOfPaper>Book</TypeOfPaper>
+        <Periodicity>true</Periodicity>
+        <Color>false</Color>
+        <NumberofPages>1000</NumberofPages>
     </Details>
 </Books>

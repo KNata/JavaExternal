@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PeriodicPapers>
     <Details>
-        <Title>Young technic</Title>
-        <TypeOfPaper>Magazine</TypeOfPaper>
-        <Periodicity>true</Periodicity>
-        <Color>false</Color>
-        <NumberofPages>20</NumberofPages>
-        <Zip>20</Zip>
         <Title>Express</Title>
         <TypeOfPaper>Newslatter</TypeOfPaper>
         <Periodicity>true</Periodicity>
@@ -17,6 +11,12 @@
         <TypeOfPaper>Magazine</TypeOfPaper>
         <Periodicity>true</Periodicity>
         <Color>true</Color>
+        <NumberofPages>20</NumberofPages>
+        <Zip>20</Zip>
+        <Title>Young technic</Title>
+        <TypeOfPaper>Magazine</TypeOfPaper>
+        <Periodicity>true</Periodicity>
+        <Color>false</Color>
         <NumberofPages>20</NumberofPages>
         <Zip>20</Zip>
     </Details>

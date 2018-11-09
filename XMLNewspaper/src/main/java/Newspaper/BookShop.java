@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class BookShop {
 
@@ -77,6 +78,8 @@ public class BookShop {
 
     public void createPermanentPapersXML () throws IOException, TransformerException, TransformerConfigurationException,
             ParserConfigurationException {
+        Collections.sort(booksList, PermanentPaper.permanentPaperComparator);
+
         DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
         DocumentBuilder build = dFact.newDocumentBuilder();
         Document doc = build.newDocument();
@@ -124,9 +127,9 @@ public class BookShop {
         System.out.println("File was successfully saved");
     }
 
-        public void createPeriodicPapersList() throws  IOException, ParserConfigurationException, TransformerConfigurationException,
+    public void createPeriodicPapersList() throws  IOException, ParserConfigurationException, TransformerConfigurationException,
                 TransformerException {
-
+            Collections.sort(periodicPaperList, PeriodicPaper.periodicPaperComparator);
             DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
             DocumentBuilder build = dFact.newDocumentBuilder();
             Document doc = build.newDocument();
