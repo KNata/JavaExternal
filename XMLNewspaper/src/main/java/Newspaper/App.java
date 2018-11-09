@@ -3,6 +3,7 @@ package Newspaper;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -13,7 +14,7 @@ import java.util.Iterator;
  */
 public class App 
 {
-    public static void main( String[] args ) throws SAXException, ParserConfigurationException, IOException {
+    public static void main( String[] args ) throws SAXException, ParserConfigurationException, IOException, TransformerException {
         System.out.println("Using SAX parser");
         BookServiceUsingSAX bs = new BookServiceUsingSAX();
         bs.readXML("Papers.xml");
@@ -32,6 +33,12 @@ public class App
         }
 
         System.out.println("Using DOM parser");
+        BookShop theShop = new BookShop();
+        ArrayList<Paper> paperList = theShop.readPapers("Papers.xml");
+        theShop.sortPapers();
+        theShop.createPermanentPapersXML();
+        theShop.createPeriodicPapersList();
+
 
     }
 }

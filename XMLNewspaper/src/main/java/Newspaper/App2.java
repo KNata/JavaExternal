@@ -12,8 +12,5 @@ public class App2 {
         BookShop bookShop = new BookShop();
         ArrayList<Paper> paperList = bookShop.readPapers("Papers.xml");
         bookShop.sortPapers();
-        bookShop.createNewspapersXML();
-        bookShop.createPermanentPapersXML();
-
     }
 }
