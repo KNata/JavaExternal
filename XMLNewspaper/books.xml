@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><Newspapers><Newspapers Color="false" NumberofPages="789" Periodicity="false" Title="One" TypeofPaper="Book" id="1"/></Newspapers>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Newspapers>
+    <Newspapers
+            Color="false"
+            NumberofPages="300"
+            Periodicity="true"
+            Title="Pudewko z marzeniamy"
+            TypeofPaper="Book" id="1"/>
+</Newspapers>

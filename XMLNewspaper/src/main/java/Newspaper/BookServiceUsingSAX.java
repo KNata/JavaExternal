@@ -2,106 +2,97 @@ package Newspaper;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 
-public class BookServiceUsingSAX {
+public class BookServiceUsingSAX extends DefaultHandler {
+
+    private PeriodicPaper periodicPapers;
+    private PermanentPaper book;
 
     private ArrayList<PeriodicPaper> periodicPaperList;
     private ArrayList<PermanentPaper> booksList;
     private ArrayList<Paper> papersList;
 
+    private String temp;
+
+
     BookServiceUsingSAX() {
+        papersList = new ArrayList<Paper>();
+        periodicPaperList = new ArrayList<PeriodicPaper>();
+        booksList = new ArrayList<PermanentPaper>();
 
     }
 
-    public void readXML() throws SAXException, ParserConfigurationException, IOException {
+    public void readXML(String aFile) throws SAXException, ParserConfigurationException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser = factory.newSAXParser();
 
-        DefaultHandler handler = new DefaultHandler() {
-            boolean isTitlePresent = false;
-            boolean whatType = false;
-            boolean isPeriodic = false;
-            boolean isColorful = false;
-            boolean hasZipCode = false;
-            boolean hasNumberOfPages = false;
+        BookServiceUsingSAX handler = new BookServiceUsingSAX();
+        saxParser.parse(aFile, handler);
+        handler.readList();
+    }
+
+    public void characters(char[] buffer, int start, int length) {
+        temp = new String(buffer, start, length);
+    }
+
+    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        temp = "";
+        if (qName.equalsIgnoreCase("Periodicity")) {
+            periodicPapers = new PeriodicPaper(null, null, false, false, 0,0);
+        } else {
+            book = new PermanentPaper(null, null, false, false, 0);
+        }
+    }
 
 
-            public void startElement(String uri, String localName,String qName,
-                                     Attributes attributes) throws SAXException {
-
-              //  System.out.println("Start Element :" + qName);
-
-                if (qName.equalsIgnoreCase("Title")) {
-                    isTitlePresent = true;
-                }
-
-                if (qName.equalsIgnoreCase("TypeofPaperr")) {
-                    whatType = true;
-                }
-
-                if (qName.equalsIgnoreCase("Periodicity")) {
-                    isPeriodic = true;
-                }
-
-                if (qName.equalsIgnoreCase("Color")) {
-                    isColorful = true;
-                }
-                if (qName.equalsIgnoreCase("NumberofPages")) {
-                    hasNumberOfPages = true;
-                }
-                if (qName.equalsIgnoreCase("Zip")) {
-                    hasZipCode = true;
-                }
-
+    public void endElement(String uri, String localName, String qName) throws SAXException {
+        if (qName.equalsIgnoreCase("Periodicity")) {
+            if (qName.equalsIgnoreCase("Title")) {
+                periodicPapers.setPaperTitle(temp);
+            } else if (qName.equalsIgnoreCase("TypeofPaper")) {
+                periodicPapers.setTypeOfPaper(temp);
+            } else if (qName.equalsIgnoreCase("Periodicity")) {
+                periodicPapers.setPeriodic(Boolean.valueOf(temp));
+            } else if (qName.equalsIgnoreCase("Color")) {
+                periodicPapers.setColoful(Boolean.valueOf(temp));
+            } else if (qName.equalsIgnoreCase("NumberofPages")) {
+                periodicPapers.setNumberOfPages(Integer.valueOf(temp));
+            } else if (qName.equalsIgnoreCase("Zip")) {
+                periodicPapers.setIndex(Integer.parseInt(temp));
             }
-
-            public void endElement(String uri, String localName,
-                                   String qName) throws SAXException {
-
-               //System.out.println("End Element :" + qName);
-                System.out.println();
-
+            papersList.add(periodicPapers);
+        } else {
+            if (qName.equalsIgnoreCase("Title")) {
+                book.setPaperTitle(temp);
+            } else if (qName.equalsIgnoreCase("TypeofPaper")) {
+                book.setTypeOfPaper(temp);
+            } else if (qName.equalsIgnoreCase("Periodicity")) {
+                book.setPeriodic(Boolean.valueOf(temp));
+            } else if (qName.equalsIgnoreCase("Color")) {
+                book.setColoful(Boolean.valueOf(temp));
+            } else if (qName.equalsIgnoreCase("NumberofPages")) {
+                book.setNumberOfPages(Integer.valueOf(temp));
             }
+            papersList.add(book);
+        }
+    }
 
-            public void characters(char ch[], int start, int length) throws SAXException {
-
-                if () {}
-
-                if (isTitlePresent) {
-                    System.out.println("First Name : " + new String(ch, start, length));
-                    isTitlePresent = false;
-                    System.out.println();
-                }
-
-                if (whatType) {
-                    System.out.println("Last Name : " + new String(ch, start, length));
-                    whatType = false;
-                    System.out.println();
-                }
-
-                if (isPeriodic) {
-                    System.out.println("Nick Name : " + new String(ch, start, length));
-                    isPeriodic = false;
-                    System.out.println();
-                }
-
-                if (isColorful) {
-                    System.out.println("Salary : " + new String(ch, start, length));
-                    isColorful = false;
-                    System.out.println();
-                }
-
-            }
-
-        };
-        saxParser.parse("Papers.xml", handler);
+    private void readList() {
+        System.out.println("Paper's count: " + papersList.size());
+        Iterator<Paper> it = papersList.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next().toString());
+        }
     }
 
     public void sortPapers() {
@@ -114,6 +105,11 @@ public class BookServiceUsingSAX {
         }
     }
 
+    public ArrayList<PeriodicPaper> getPeriodicPaperList() {
+        return periodicPaperList;
+    }
 
-
+    public ArrayList<PermanentPaper> getBooksList() {
+        return booksList;
+    }
 }

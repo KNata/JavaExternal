@@ -1,9 +1,6 @@
 package Newspaper;
 
-import org.w3c.dom.Attr;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -22,7 +19,7 @@ public class BookShop {
 
     private ArrayList<PeriodicPaper> periodicPaperList;
     private ArrayList<PermanentPaper> booksList;
-    private ArrayList<Paper> papersList;
+    private static ArrayList<Paper> papersList;
 
     private Element staff;
 
@@ -30,53 +27,45 @@ public class BookShop {
         periodicPaperList = new ArrayList<PeriodicPaper>();
         booksList = new ArrayList<PermanentPaper>();
         papersList = new ArrayList<Paper>();
+
     }
 
-    public void readAllPapers(String theFileToRead) throws ParserConfigurationException, IOException, SAXException {
-       DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-      // dbf.setValidating(true);
-       DocumentBuilder db = dbf.newDocumentBuilder();
-       Document document = db.parse(new File("Papers.xml"));
-       Element root = document.getDocumentElement();
-       System.out.println(document.getDocumentElement());
-       if (root.getTagName().equals("Library")) {
-           NodeList listOfPapers = root.getElementsByTagName("staff");
-           for (int i = 0; i < listOfPapers.getLength(); i++) {
-               Element paper = (Element)listOfPapers.item(i);
-               if (Boolean.valueOf(paper.getAttribute("Periodicity")) == true) {
-                   String title = paper.getAttribute("Title");
-                   String typeOfPaper = paper.getAttribute("TypeofPaper");
-                   boolean periodic = Boolean.valueOf(paper.getAttribute("Periodicity"));
-                   boolean color = Boolean.valueOf(paper.getAttribute("Color"));
-                   int numberOfPages = Integer.getInteger(paper.getAttribute("NumberofPages"));
-                   int zip = Integer.getInteger(paper.getAttribute("Zip"));
-                   PeriodicPaper periodicPaper = new PeriodicPaper(title, typeOfPaper, periodic, color, numberOfPages, zip);
-                   papersList.add(periodicPaper);
-               } else {
-                   String title = paper.getAttribute("Title");
-                   String typeOfPaper = paper.getAttribute("TypeofPaper");
-                   boolean periodic = Boolean.valueOf(paper.getAttribute("Periodicity"));
-                   boolean color = Boolean.valueOf(paper.getAttribute("Color"));
-                   int numberOfPages = Integer.getInteger(paper.getAttribute("NumberofPages"));
-                   PermanentPaper permanentPaper = new PermanentPaper(title, typeOfPaper, periodic, color, numberOfPages);
-                   papersList.add(permanentPaper);
-               }
-
-           }
-       }
+    public static ArrayList<Paper> readPapers(String fileName) throws ParserConfigurationException, SAXException, IOException {
+        PermanentPaper book = null;
+        PeriodicPaper periodicPaper = null;
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        Document document = builder.parse(new File(fileName));
+        document.getDocumentElement().normalize();
+        NodeList nList = document.getElementsByTagName("staff");
+        for (int temp = 0; temp < nList.getLength(); temp++) {
+            Node node = nList.item(temp);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) node;
+                //Create new Employee Object
+                boolean isPeriodic = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
+                if (isPeriodic) {
+                    String periodicPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
+                    String periodicPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
+                    boolean isPeriodicP = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
+                    boolean hasColor = Boolean.valueOf(eElement.getElementsByTagName("Color").item(0).getTextContent());
+                    int numberOfPages = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
+                    int zipCode = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
+                    periodicPaper = new PeriodicPaper(periodicPaperTitle, periodicPaperType, isPeriodicP, hasColor, numberOfPages, zipCode);
+                    papersList.add(periodicPaper);
+                } else {
+                    String periodicPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
+                    String periodicPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
+                    boolean isPeriodicP = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
+                    boolean hasColor = Boolean.valueOf(eElement.getElementsByTagName("Color").item(0).getTextContent());
+                    int numberOfPages = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
+                    book = new PermanentPaper(periodicPaperTitle, periodicPaperType, isPeriodicP, hasColor, numberOfPages);
+                    papersList.add(book);
+                }
+            }
+        }
+        return papersList;
     }
-
-            /*    System.out.println("Staff id : " + eElement.getAttribute("id"));
-                System.out.println("First Name : " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
-                System.out.println("Last Name : " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
-                System.out.println("Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
-                System.out.println("Salary : " + eElement.getElementsByTagName("salary").item(0).getTextContent());
-*/
-
-
-
-
-
 
     public void sortPapers() {
         for (int i = 0; i < papersList.size(); i++) {

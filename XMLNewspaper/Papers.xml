@@ -37,14 +37,14 @@
 	</staff>
 	<staff id="6">
 		<Title>Pudewko z marzeniamy</Title>
-		<TypeofPaperr>Book</TypeofPaperr>
+		<TypeofPaper>Book</TypeofPaper>
 		<Periodicity>false</Periodicity>
 		<Color>true</Color>
 		<NumberofPages>300</NumberofPages>
 	</staff>
 	<staff id="7">
 		<Title>Young technic</Title>
-		<TypeofPaperr>Magazine</TypeofPaperr>
+		<TypeofPaper>Magazine</TypeofPaper>
 		<Periodicity>true</Periodicity>
 		<Color>100000</Color>
 		<NumberofPages>20</NumberofPages>
@@ -52,7 +52,7 @@
 	</staff>
 	<staff id="8">
 		<Title>Express</Title>
-		<TypeofPaperr>Newslatter</TypeofPaperr>
+		<TypeofPaper>Newslatter</TypeofPaper>
 		<Periodicity>true</Periodicity>
 		<Color>true</Color>
 		<NumberofPages>10</NumberofPages>
@@ -60,7 +60,7 @@
 	</staff>
 	<staff id="9">
 		<Title>Viva</Title>
-		<TypeofPaperr>Magazine</TypeofPaperr>
+		<TypeofPaper>Magazine</TypeofPaper>
 		<Periodicity>true</Periodicity>
 		<Color>true</Color>
 		<NumberofPages>20</NumberofPages>

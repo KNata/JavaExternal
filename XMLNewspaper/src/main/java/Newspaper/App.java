@@ -5,6 +5,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Hello world!
@@ -13,9 +14,24 @@ import java.util.ArrayList;
 public class App 
 {
     public static void main( String[] args ) throws SAXException, ParserConfigurationException, IOException {
-        System.out.println("Hello World!");
+        System.out.println("Using SAX parser");
         BookServiceUsingSAX bs = new BookServiceUsingSAX();
-        bs.readXML();
+        bs.readXML("Papers.xml");
+        bs.sortPapers();
+        System.out.println();
+        System.out.println("List of periodic papers");
+        Iterator<PeriodicPaper> periodicPaperIterator = bs.getPeriodicPaperList().iterator();
+        while (periodicPaperIterator.hasNext()) {
+            System.out.println(periodicPaperIterator.next().toString());
+        }
+        System.out.println();
+        System.out.println("List of books");
+        Iterator<PermanentPaper> bookIterator = bs.getBooksList().iterator();
+        while (bookIterator.hasNext()) {
+            System.out.println(bookIterator.next().toString());
+        }
+
+        System.out.println("Using DOM parser");
 
     }
 }
