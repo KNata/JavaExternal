@@ -87,5 +87,49 @@ public class PeriodicPaper extends Paper {
         }
     };
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((paperTitle == null) ? 0 : paperTitle.hashCode());
+        result = prime * result + ((typeOfPaper == null) ? 0 : typeOfPaper.hashCode());
+        result = prime * result + ((numberOfPages == 0) ? 0 : numberOfPages);
+        result = prime * result + (isPeriodic ? 1 : 0);
+        result = prime * result + (isColoful ? 1 : 0);
+        result = prime * result + ((index == 0) ? 0 : index);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        PeriodicPaper otherPaper = (PeriodicPaper) obj;
+        if (paperTitle == null) {
+            if (otherPaper.paperTitle != null)
+                return false;
+        } else if (!paperTitle.equals(otherPaper.paperTitle))
+            return false;
+        if (numberOfPages == 0) {
+            if (otherPaper.numberOfPages != 0)
+                return false;
+        } else if (numberOfPages != otherPaper.numberOfPages)
+            return false;
+        if (isColoful != otherPaper.isColoful)
+            return false;
+        if (isPeriodic != otherPaper.isPeriodic)
+            return false;
+        if (index == 0) {
+            return false;
+        } else if (index != otherPaper.index) {
+            return false;
+        }
+        return true;
+    }
+
 
 }
