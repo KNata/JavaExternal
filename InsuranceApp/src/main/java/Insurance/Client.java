@@ -3,18 +3,17 @@ package Insurance;
 public class Client {
 
     private String clientName;
-    private int clientAge;
-    private String clientAddress;
-    private Issue clientIssue;
-    private long priceForInsurance;
+    private boolean isInshuranced;
+    private String policeID;
+    private int moneyNeedToPay;
+    private Issue issue;
 
-
-    Client(String aClientName, int aClientAge, String aClientAddress, Issue aClientIssue, long aPriceForInsuance) {
+    Client(String aClientName, boolean hasInsurance, String aPoliceID, int aMoneyNeedToPay, Issue anIssue) {
         clientName = aClientName;
-        clientAge = aClientAge;
-        clientAddress = aClientAddress;
-        clientIssue = aClientIssue;
-        priceForInsurance = aPriceForInsuance;
+        isInshuranced = hasInsurance;
+        policeID = aPoliceID;
+        moneyNeedToPay = aMoneyNeedToPay;
+        issue = anIssue;
     }
 
     public String getClientName() {
@@ -25,46 +24,46 @@ public class Client {
         this.clientName = clientName;
     }
 
-    public int getClientAge() {
-        return clientAge;
+    public boolean isInshuranced() {
+        return isInshuranced;
     }
 
-    public void setClientAge(int clientAge) {
-        this.clientAge = clientAge;
+    public void setInshuranced(boolean inshuranced) {
+        isInshuranced = inshuranced;
     }
 
-    public String getClientAddress() {
-        return clientAddress;
+    public String getPoliceID() {
+        return policeID;
     }
 
-    public void setClientAddress(String clientAddress) {
-        this.clientAddress = clientAddress;
+    public void setPoliceID(String policeID) {
+        this.policeID = policeID;
     }
 
-    public Issue getClientIssue() {
-        return clientIssue;
+    public int getMoneyNeedToPay() {
+        return moneyNeedToPay;
     }
 
-    public void setClientIssue(Issue clientIssue) {
-        this.clientIssue = clientIssue;
+    public void setMoneyNeedToPay(int moneyNeedToPay) {
+        this.moneyNeedToPay = moneyNeedToPay;
     }
 
-    public long getPriceForInsurance() {
-        return priceForInsurance;
+    public Issue getIssue() {
+        return issue;
     }
 
-    public void setPriceForInsurance(long priceForInsurance) {
-        this.priceForInsurance = priceForInsurance;
+    public void setIssue(Issue issue) {
+        this.issue = issue;
     }
 
     @Override
     public String toString() {
         return "Client{" +
                 "clientName='" + clientName + '\'' +
-                ", clientAge=" + clientAge +
-                ", clientAddress='" + clientAddress + '\'' +
-                ", clientIssue=" + clientIssue +
-                ", priceForInsurance=" + priceForInsurance +
+                ", isInshuranced=" + isInshuranced +
+                ", policeID='" + policeID + '\'' +
+                ", moneyNeedToPay=" + moneyNeedToPay +
+                ", issue=" + issue.toString() +
                 '}';
     }
 }

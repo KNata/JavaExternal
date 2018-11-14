@@ -4,68 +4,69 @@ import java.util.ArrayList;
 
 public class InsuranceCompany {
 
-    String companyTitle;
-    String contract;
-    String location;
-    ArrayList<Client> clientList;
-    ArrayList<Issue> insuranceIssuesList;
+    private String companyName;
+    private String companyPhone;
+    private String companyAddress;
+    private ArrayList<Issue> issuesList;
+    private ArrayList<Client> clientsList;
 
-    InsuranceCompany(String aCompanyTitle, String aContract, String aLocation, ArrayList<Client> aClientList, ArrayList<Issue> anIssuesList) {
-        companyTitle = aCompanyTitle;
-        contract = aContract;
-        location = aLocation;
-        clientList = aClientList;
-        insuranceIssuesList = anIssuesList;
+    public InsuranceCompany(String aCompanyName, String aCompanyPhone, String aCompanyAddress,
+                     ArrayList<Issue> anIssuesList, ArrayList<Client> aClientsList) {
+        companyName = aCompanyName;
+        companyPhone = aCompanyPhone;
+        companyAddress = aCompanyAddress;
+        issuesList = anIssuesList;
+        clientsList = aClientsList;
     }
 
-    public String getCompanyTitle() {
-        return companyTitle;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setCompanyTitle(String companyTitle) {
-        this.companyTitle = companyTitle;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
-    public String getContract() {
-        return contract;
+    public String getCompanyPhone() {
+        return companyPhone;
     }
 
-    public void setContract(String contract) {
-        this.contract = contract;
+    public void setCompanyPhone(String companyPhone) {
+        this.companyPhone = companyPhone;
     }
 
-    public String getLocation() {
-        return location;
+    public String getCompanyAddress() {
+        return companyAddress;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setCompanyAddress(String companyAddress) {
+        this.companyAddress = companyAddress;
     }
 
-    public ArrayList<Client> getClientList() {
-        return clientList;
+    public ArrayList<Issue> getIssuesList() {
+        return issuesList;
     }
 
-    public void setClientList(ArrayList<Client> clientList) {
-        this.clientList = clientList;
+    public void setIssuesList(ArrayList<Issue> issuesList) {
+        this.issuesList = issuesList;
     }
 
-    public ArrayList<Issue> getInsuranceIssuesList() {
-        return insuranceIssuesList;
+    public ArrayList<Client> getClientsList() {
+        return clientsList;
     }
 
-    public void setInsuranceIssuesList(ArrayList<Issue> insuranceIssuesList) {
-        this.insuranceIssuesList = insuranceIssuesList;
+    public void setClientsList(ArrayList<Client> clientsList) {
+        this.clientsList = clientsList;
     }
 
     @Override
     public String toString() {
         return "InsuranceCompany{" +
-                "companyTitle='" + companyTitle + '\'' +
-                ", contract='" + contract + '\'' +
-                ", location='" + location + '\'' +
-                ", clientList=" + clientList.toString() +
-                ", insuranceIssuesList=" + insuranceIssuesList.toString() +
+                "companyName='" + companyName + '\'' +
+                ", companyPhone='" + companyPhone + '\'' +
+                ", companyAddress='" + companyAddress + '\'' +
+                ", issuesList=" + issuesList.toArray() +
+                ", clientsList=" + clientsList.toArray() +
                 '}';
     }
 }
