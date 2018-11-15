@@ -1,4 +1,4 @@
-package Insurance;
+package NewYearPresent;
 
 /**
  * Hello world!

@@ -4,11 +4,12 @@ import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.events.Attribute;
+import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class BookServiceUsingStAX {
@@ -28,68 +29,68 @@ public class BookServiceUsingStAX {
     }
 
     public ArrayList<Paper> readAllPapersWithStAX(String fileName) throws XMLStreamException, IOException {
-        XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
         String title = "";
         String paperType = "";
         boolean isPeriodicP = false;
         boolean hasColor = false;
         int numberOfPages = 0;
         int zipCode = 0;
-        XMLEventReader xmlEventReader = xmlInputFactory.createXMLEventReader(new FileInputStream(fileName));
-        while (xmlEventReader.hasNext()) {
-            XMLEvent xmlEvent = xmlEventReader.nextEvent();
-            if (xmlEvent.isStartElement()) {
-                StartElement startElement = xmlEvent.asStartElement();
-                if (startElement.getName().getLocalPart().equals("staff")) {
-                    Attribute idAttr = startElement.getAttributeByName(new QName("Title"));
-                    System.out.println(idAttr);
-                    if (Boolean.valueOf(idAttr.getValue())) {
-                        if (startElement.getName().getLocalPart().equals("Title")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            title = xmlEvent.asCharacters().getData();
-                        } else if (startElement.getName().getLocalPart().equals("TypeofPaper")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            paperType = xmlEvent.asCharacters().getData();
-                        } else if (startElement.getName().getLocalPart().equals("Periodicity")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            isPeriodicP = Boolean.valueOf(xmlEvent.asCharacters().getData());
-                        } else if (startElement.getName().getLocalPart().equals("Color")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            hasColor = Boolean.valueOf(xmlEvent.asCharacters().getData());
-                        } else if (startElement.getName().getLocalPart().equals("NumberofPages")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            numberOfPages = Integer.valueOf(xmlEvent.asCharacters().getData());
-                        } else if (startElement.getName().getLocalPart().equals("Zip")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            zipCode = Integer.valueOf(xmlEvent.asCharacters().getData());
-                        }
-                        periodicPapers = new PeriodicPaper(title, paperType, isPeriodicP, hasColor, numberOfPages, zipCode);
-                        papersList.add(periodicPapers);
-                    } else {
-                        if (startElement.getName().getLocalPart().equals("Title")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            title = xmlEvent.asCharacters().getData();
-                        } else if (startElement.getName().getLocalPart().equals("TypeofPaper")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            paperType = xmlEvent.asCharacters().getData();
-                        } else if (startElement.getName().getLocalPart().equals("Periodicity")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            isPeriodicP = Boolean.valueOf(xmlEvent.asCharacters().getData());
-                        } else if (startElement.getName().getLocalPart().equals("Color")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            hasColor = Boolean.valueOf(xmlEvent.asCharacters().getData());
-                        } else if (startElement.getName().getLocalPart().equals("NumberofPages")) {
-                            xmlEvent = xmlEventReader.nextEvent();
-                            numberOfPages = Integer.valueOf(xmlEvent.asCharacters().getData());
-                        }
-                        book = new PermanentPaper(title, paperType, isPeriodicP, hasColor, numberOfPages);
-                        papersList.add(book);
+        Paper thePaper = null;
+        PermanentPaper employee = null;
+
+        XMLInputFactory factory = XMLInputFactory.newInstance();
+        XMLStreamReader streamReader = factory.createXMLStreamReader(new FileReader(fileName));
+
+
+        while(streamReader.hasNext())
+        {
+            //Move to next event
+            streamReader.next();
+
+            //Check if its 'START_ELEMENT'
+            if(streamReader.getEventType() == XMLStreamReader.START_ELEMENT)
+            {
+                //employee tag - opened
+                if(streamReader.getLocalName().equalsIgnoreCase("employee")) {
+
+                    //Create new employee object asap tag is open
+                    employee = new PermanentPaper("", "", false, false, 0);
+
+                    //Read attributes within employee tag
+                    if(streamReader.getAttributeCount() > 0) {
+                        String id = streamReader.getAttributeValue(null,"id");
+                       // employee.setId(Integer.valueOf(id));
                     }
                 }
 
+                //Read name data
+                if(streamReader.getLocalName().equalsIgnoreCase("Title")) {
+                   // employee.setPaperTitle(streamReader.getElementText());
+                    System.out.println(streamReader.getElementText());
+                }
+
+                //Read title data
+                if(streamReader.getLocalName().equalsIgnoreCase("title")) {
+                  //  employee.setTypeOfPaper(streamReader.getElementText());
+                    System.out.println(streamReader.getElementText());
+                }
             }
 
+            //If employee tag is closed then add the employee object to list
+            if(streamReader.getEventType() == XMLStreamReader.END_ELEMENT)
+            {
+                if(streamReader.getLocalName().equalsIgnoreCase("staff")) {
+                    papersList.add(employee);
+                }
+            }
         }
+        //Verify read data
+        System.out.println(papersList.toArray());
+    //}
+        return papersList;
+    }
+
+    public ArrayList<Paper> getPapersList() {
         return papersList;
     }
 }

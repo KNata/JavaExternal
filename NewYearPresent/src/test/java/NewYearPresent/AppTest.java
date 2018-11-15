@@ -1,4 +1,4 @@
-package Insurance;
+package NewYearPresent;
 
 import static org.junit.Assert.assertTrue;
 

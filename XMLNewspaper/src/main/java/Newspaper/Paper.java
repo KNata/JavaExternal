@@ -2,7 +2,7 @@ package Newspaper;
 
 import java.util.Comparator;
 
-public abstract class Paper {
+public class Paper {
 
     private int paperID;
     private String paperTitle;
@@ -11,7 +11,9 @@ public abstract class Paper {
     private boolean isColoful;
     private int numberOfPages;
 
-    public Paper (String aPaperTitle, String aTypeOfPaper, boolean aPeriodicity, boolean color, int aNumOfPages) {
+    Paper(){}
+
+    Paper (String aPaperTitle, String aTypeOfPaper, boolean aPeriodicity, boolean color, int aNumOfPages) {
         paperTitle = aPaperTitle;
         typeOfPaper = aTypeOfPaper;
         isPeriodic = aPeriodicity;
