@@ -8,12 +8,16 @@ import NewYearPresent.Fruits.Kiwi;
 import NewYearPresent.Fruits.Tangerine;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 
 public class PakingOffice {
 
     private ArrayList<Candy> candyList;
     private ArrayList<Fruits> fruitList;
+
+    private static int MIN_COUNT_OF_OBJECTS_IN_PRESENT_PACK = 6;
+    private static int MAX_COUNT_OF_OBJECTS_IN_PRESENT_PACK = 50;
 
 
     PakingOffice(ArrayList<Candy> aCandyList, ArrayList<Fruits> aFruitList) {
@@ -38,9 +42,22 @@ public class PakingOffice {
         return resultCandy;
     }
 
+    public ArrayList<Candy> findNeededCandies(int minCountOfSugar, int maxCountOfSugar) {
+        ArrayList<Candy> resultListOfCandies = new ArrayList<Candy>();
+        for (int i = 0; i < candyList.size(); i++) {
+            if (candyList.get(i).getCountOfSugar() >= minCountOfSugar && candyList.get(i).getCountOfSugar() <= maxCountOfSugar ) {
+                resultListOfCandies.add(candyList.get(i));            }
+        }
+        if (resultListOfCandies == null) {
+            throw new CandyNotFoundExeption("Wrong parameters. Try again");
+        }
+        return resultListOfCandies;
+    }
+
     public ArrayList<Candy> generatePackOfCandies() {
         ArrayList<Candy> candyPresentPack = new ArrayList<Candy>();
-        int randCountOfSweets = (int)Math.random()*20;
+        Collections.shuffle(candyList);
+        int randCountOfSweets = (int)Math.random()*MAX_COUNT_OF_OBJECTS_IN_PRESENT_PACK + MIN_COUNT_OF_OBJECTS_IN_PRESENT_PACK;
         int sameCountOfSweets = randCountOfSweets / 3;
         for (int i = 0; i < randCountOfSweets; i++) {
             if (candyList.get(i) instanceof StarLight) {
@@ -67,7 +84,7 @@ public class PakingOffice {
 
     public ArrayList<Fruits> generatePackOfFruit() {
         ArrayList<Fruits> fruitPresentPack = new ArrayList<Fruits>();
-        int randCountOfFruit = (int)Math.random()*15;
+        int randCountOfFruit = (int)Math.random()*MAX_COUNT_OF_OBJECTS_IN_PRESENT_PACK + MIN_COUNT_OF_OBJECTS_IN_PRESENT_PACK;
         int sameCountOfFruit = randCountOfFruit / 4;
         for (int i = 0; i < sameCountOfFruit; i++) {
             if (fruitList.get(i) instanceof Banana) {
@@ -88,5 +105,7 @@ public class PakingOffice {
         }
         return fruitPresentPack;
     }
+
+
 
 }

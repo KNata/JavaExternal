@@ -5,7 +5,7 @@ public class Truffels extends Candy {
     private boolean hasTopping;
     private boolean isChocolate;
 
-    Truffels(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aTopping, boolean chocolateOrNo) {
+    public Truffels(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aTopping, boolean chocolateOrNo) {
         super(aCandyName, aWeight, aCandySugar, aCandyPrice);
         hasTopping = aTopping;
         isChocolate = chocolateOrNo;

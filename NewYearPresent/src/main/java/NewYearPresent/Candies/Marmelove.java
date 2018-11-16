@@ -4,7 +4,7 @@ public class Marmelove extends Candy {
 
     private boolean isChocolate;
 
-    Marmelove(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aTopping, boolean chocolateOrNo) {
+    public Marmelove(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aTopping, boolean chocolateOrNo) {
         super(aCandyName, aWeight, aCandySugar, aCandyPrice);
         isChocolate = chocolateOrNo;
     }

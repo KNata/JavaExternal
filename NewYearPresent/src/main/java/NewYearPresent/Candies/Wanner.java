@@ -5,7 +5,7 @@ public class Wanner extends Candy {
     private boolean isWaffles;
 
 
-    Wanner(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aWaffles) {
+    public Wanner(String aCandyName, int aWeight, int aCandySugar, double aCandyPrice, boolean aWaffles) {
         super(aCandyName, aWeight, aCandySugar, aCandyPrice);
         isWaffles = aWaffles;
     }
