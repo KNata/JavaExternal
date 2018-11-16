@@ -100,7 +100,7 @@ public class Helper {
         }
         System.out.println("Enter max count of sugar: ");
         String maxCountOfSugarinCandy = theScanner.nextLine();
-        if (!maxCountOfSugarinCandy.matches("-?\\d+")) {
+        if (!maxCountOfSugarinCandy.matches("\\d+")) {
             throw new InvalidInputExeption("You need to enter a numbers");
         }
         if (Integer.parseInt(minCountOfSugarinCandy) > Integer.parseInt(maxCountOfSugarinCandy)) {
