@@ -84,8 +84,9 @@ public class PakingOffice {
 
     public ArrayList<Fruits> generatePackOfFruit() {
         ArrayList<Fruits> fruitPresentPack = new ArrayList<Fruits>();
+        Collections.shuffle(fruitList);
         int randCountOfFruit = (int)Math.random()*MAX_COUNT_OF_OBJECTS_IN_PRESENT_PACK + MIN_COUNT_OF_OBJECTS_IN_PRESENT_PACK;
-        int sameCountOfFruit = randCountOfFruit / 4;
+        int sameCountOfFruit = randCountOfFruit / 3;
         for (int i = 0; i < sameCountOfFruit; i++) {
             if (fruitList.get(i) instanceof Banana) {
                 for (int j = 0; j < sameCountOfFruit; j++) {

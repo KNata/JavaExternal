@@ -117,18 +117,26 @@ public class Helper {
             System.out.println(c.getCandyName() + " with sugar: " + c.getCountOfSugar());
         }
         System.out.println();
-        System.out.println("Sweet pack of candies");
+        int weightPacageOfCandies = 0;
+        System.out.println("Sweet pack of Fruit");
         ArrayList<Candy> newYearPackageList = theOffice.generatePackOfCandies();
         for (Candy c : newYearPackageList) {
             System.out.println(c.getCandyName());
+            weightPacageOfCandies+= c.getWeight();
         }
+        System.out.println("Weight of pack of Fruit = " + weightPacageOfCandies);
         System.out.println();
         System.out.println();
         System.out.println("Sweet pack of candies");
+        int weightPacageOfFruit = 0;
         ArrayList<Fruits> newYearPackageListOfFruts = theOffice.generatePackOfFruit();
         for (Fruits c : newYearPackageListOfFruts) {
             System.out.println(c.getFryitName());
+            weightPacageOfFruit+=c.getWeight();
         }
+        System.out.println("Weight of pack of Fruit = " + weightPacageOfFruit);
+        System.out.println("Weight of pack of Fruit and Candies together = " + (weightPacageOfFruit + weightPacageOfCandies));
+
 
     }
 }
