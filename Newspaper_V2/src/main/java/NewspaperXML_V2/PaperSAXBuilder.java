@@ -10,7 +10,6 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class PaperSAXBuilder extends DefaultHandler {
 
-    //List to hold Employees object
     private ArrayList<PeriodicPaper> periodicPaperList;
     private ArrayList<PermanentPaper> permanenPaperList;
     private List<Paper> paperList;
@@ -35,7 +34,6 @@ public class PaperSAXBuilder extends DefaultHandler {
         bZip = false;
     }
 
-    //getter method for employee list
     public List<Paper> getEmpList() {
         return paperList;
     }
@@ -45,16 +43,12 @@ public class PaperSAXBuilder extends DefaultHandler {
             throws SAXException {
 
         if (qName.equalsIgnoreCase("staff")) {
-            //create a new Employee and put it in Map
             String id = attributes.getValue("id");
-            //initialize Employee object and set id attribute
             thePaper = new Paper();
             thePaper.setPaperID(Integer.parseInt(id));
-            //initialize list
             if (paperList == null)
                 paperList = new ArrayList<>();
         } else if (qName.equalsIgnoreCase("Title")) {
-            //set boolean values for fields, will be used in setting Employee variables
             bTitle = true;
         } else if (qName.equalsIgnoreCase("TypeofPaper")) {
             bTypeOfPaper = true;
@@ -72,7 +66,6 @@ public class PaperSAXBuilder extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (qName.equalsIgnoreCase("staff")) {
-            //add Employee object to list
             paperList.add(thePaper);
         }
     }
