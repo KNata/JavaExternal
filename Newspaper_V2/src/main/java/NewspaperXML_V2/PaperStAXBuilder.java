@@ -99,9 +99,7 @@ public class PaperStAXBuilder {
         return periodicPaperList;
     }
 
-    public void setPeriodicPaperList(ArrayList<PeriodicPaper> periodicPaperList) {
-        this.periodicPaperList = periodicPaperList;
-    }
+
 
     public ArrayList<PermanentPaper> getPermanenPaperList() {
         return permanenPaperList;

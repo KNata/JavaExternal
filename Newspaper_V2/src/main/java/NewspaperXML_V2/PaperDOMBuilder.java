@@ -43,7 +43,7 @@ public class PaperDOMBuilder {
                 Element eElement = (Element) node;
                 boolean isPeriodic = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
                 if (isPeriodic) {
-                   // int periodicPaperID =  Integer.valueOf(eElement.getElementsByTagName("staff id").item(0).getTextContent());
+                  //  int periodicPaperID =  Integer.valueOf(eElement.getElementsByTagName("id").item(0).getTextContent());
                     String periodicPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
                     String periodicPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
                     boolean isPeriodicP = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());

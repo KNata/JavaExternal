@@ -1,5 +1,7 @@
 package ThreadsJava;
 
+import java.util.concurrent.Semaphore;
+
 public class Plane extends Thread {
 
     private String nameOfMachine;
@@ -8,11 +10,15 @@ public class Plane extends Thread {
     private int maxCountOfPassengers;
     private Airport theAirport;
 
+    private final Semaphore semaphore;
+
+
     Plane(String aNameOfMachine, String aCodeOfFlight, String aDirection, int aMaxCountOfPassengers) {
         nameOfMachine = aNameOfMachine;
         codeOfFlight = aCodeOfFlight;
         direction = aDirection;
         maxCountOfPassengers = aMaxCountOfPassengers;
+        semaphore = new Semaphore(2, true);
     }
 
 
