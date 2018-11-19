@@ -1,96 +1,81 @@
 package Newspaper;
 
-import javax.xml.namespace.QName;
-import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
-import javax.xml.stream.events.Attribute;
-import javax.xml.stream.events.EndElement;
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class BookServiceUsingStAX {
 
-    private static PeriodicPaper periodicPapers;
-    private static PermanentPaper book;
+    private ArrayList<Paper> paperList;
+    private XMLInputFactory inputFactory;
 
-    private ArrayList<PeriodicPaper> periodicPaperList;
-    private ArrayList<PermanentPaper> booksList;
-    private static ArrayList<Paper> papersList;
-
-
-    BookServiceUsingStAX() {
-        periodicPaperList = new ArrayList<PeriodicPaper>();
-        booksList = new ArrayList<PermanentPaper>();
-        papersList = new ArrayList<Paper>();
+    public BookServiceUsingStAX() {
+        inputFactory = XMLInputFactory.newInstance();
     }
 
-    public ArrayList<Paper> readAllPapersWithStAX(String fileName) throws XMLStreamException, IOException {
-        String title = "";
-        String paperType = "";
-        boolean isPeriodicP = false;
-        boolean hasColor = false;
-        int numberOfPages = 0;
-        int zipCode = 0;
-        Paper thePaper = null;
-        PermanentPaper employee = null;
+    public ArrayList<Paper> getPaperList() {
+        return paperList;
+    }
 
-        XMLInputFactory factory = XMLInputFactory.newInstance();
-        XMLStreamReader streamReader = factory.createXMLStreamReader(new FileReader(fileName));
-
-
-        while(streamReader.hasNext())
-        {
-            //Move to next event
-            streamReader.next();
-
-            //Check if its 'START_ELEMENT'
-            if(streamReader.getEventType() == XMLStreamReader.START_ELEMENT)
-            {
-                //employee tag - opened
-                if(streamReader.getLocalName().equalsIgnoreCase("employee")) {
-
-                    //Create new employee object asap tag is open
-                    employee = new PermanentPaper("", "", false, false, 0);
-
-                    //Read attributes within employee tag
-                    if(streamReader.getAttributeCount() > 0) {
-                        String id = streamReader.getAttributeValue(null,"id");
-                       // employee.setId(Integer.valueOf(id));
+    public void buildSetOfPapers(String fileName) {
+        FileInputStream inputStream = null;
+        XMLStreamReader reader = null;
+        String name;
+        try {
+            inputStream = FileInputStream(File(fileName));
+            reader = inputFactory.createXMLStreamReader(inputStream);
+            while (reader.hasNext()) {
+                int type = reader.next();
+                if (type == XMLStreamConstants.START_DOCUMENT) {
+                    name = reader.getLocalName();
+                    if (PaperEnum.valueOf(name.toUpperCase() == PaperEnum.LIBRARY)) {
+                        Paper paper = new Paper();
+                        paperList.add(paper);
                     }
-                }
 
-                //Read name data
-                if(streamReader.getLocalName().equalsIgnoreCase("Title")) {
-                   // employee.setPaperTitle(streamReader.getElementText());
-                    System.out.println(streamReader.getElementText());
-                }
-
-                //Read title data
-                if(streamReader.getLocalName().equalsIgnoreCase("title")) {
-                  //  employee.setTypeOfPaper(streamReader.getElementText());
-                    System.out.println(streamReader.getElementText());
                 }
             }
-
-            //If employee tag is closed then add the employee object to list
-            if(streamReader.getEventType() == XMLStreamReader.END_ELEMENT)
-            {
-                if(streamReader.getLocalName().equalsIgnoreCase("staff")) {
-                    papersList.add(employee);
-                }
+        } catch(XMLStreamException e) {
+            System.err.println("StAX parsing error! \" + ex.getMessage()");
+        } catch (FileNotFoundException e) {
+            System.err.println("File " + fileName + " not found! " + e);
+        } catch (IOException e) {
+            System.err.println("IO exeption " + e);
+        } finally {
+            try {
+                if (inputStream != null) {
+                    inputStream.close();
+            }
+        } catch (IOException e) {
+            System.err.println("Impossible close file " + fileName + " : " + e);
             }
         }
-        //Verify read data
-        System.out.println(papersList.toArray());
-    //}
-        return papersList;
     }
 
-    public ArrayList<Paper> getPapersList() {
-        return papersList;
+    private Paper buildPaper(XMLStreamReader reader) throws XMLStreamException {
+        Paper thePaper = new Paper();
+        thePaper.setPaperTitle(reader.getAttributeValue(null, PaperEnum.TITLE.getValue()));
+        thePaper.setTypeOfPaper(reader.getAttributeValue(null, PaperEnum.TYPE_OF_PAPER.getValue()));
+        String name;
+        while (reader.hasNext()) {
+            int type = reader.next();
+            switch (type) {
+                case XMLStreamConstants.START_ELEMENT:
+                    name = reader.getLocalName();
+                    switch (PaperEnum.valueOf(name.toUpperCase())) {
+                        case TITLE:
+                            thePaper.setPaperTitle(getXMLText(reader));
+                            break;
+                    }
+            }
+        }
+        return null;
     }
+
 }

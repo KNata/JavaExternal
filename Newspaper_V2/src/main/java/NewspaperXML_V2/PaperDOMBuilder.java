@@ -1,4 +1,4 @@
-package Newspaper;
+package NewspaperXML_V2;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -15,14 +15,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class BookShop {
+public class PaperDOMBuilder {
 
     private ArrayList<PeriodicPaper> periodicPaperList;
     private ArrayList<PermanentPaper> booksList;
     private static ArrayList<Paper> papersList;
 
 
-    BookShop() {
+    PaperDOMBuilder() {
         periodicPaperList = new ArrayList<PeriodicPaper>();
         booksList = new ArrayList<PermanentPaper>();
         papersList = new ArrayList<Paper>();
@@ -43,21 +43,23 @@ public class BookShop {
                 Element eElement = (Element) node;
                 boolean isPeriodic = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
                 if (isPeriodic) {
+                   // int periodicPaperID =  Integer.valueOf(eElement.getElementsByTagName("staff id").item(0).getTextContent());
                     String periodicPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
                     String periodicPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
                     boolean isPeriodicP = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
                     boolean hasColor = Boolean.valueOf(eElement.getElementsByTagName("Color").item(0).getTextContent());
                     int numberOfPages = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
                     int zipCode = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
-                    periodicPaper = new PeriodicPaper(periodicPaperTitle, periodicPaperType, isPeriodicP, hasColor, numberOfPages, zipCode);
+                    periodicPaper = new PeriodicPaper(0, periodicPaperTitle, periodicPaperType, isPeriodicP, hasColor, numberOfPages, zipCode);
                     papersList.add(periodicPaper);
                 } else {
-                    String periodicPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
-                    String periodicPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
+                 //   int permanentPaperID =  Integer.valueOf(eElement.getElementsByTagName("staff id").item(0).getTextContent());
+                    String permanentPaperTitle = eElement.getElementsByTagName("Title").item(0).getTextContent();
+                    String permanentPaperType = eElement.getElementsByTagName("TypeofPaper").item(0).getTextContent();
                     boolean isPeriodicP = Boolean.valueOf(eElement.getElementsByTagName("Periodicity").item(0).getTextContent());
                     boolean hasColor = Boolean.valueOf(eElement.getElementsByTagName("Color").item(0).getTextContent());
                     int numberOfPages = Integer.valueOf(eElement.getElementsByTagName("NumberofPages").item(0).getTextContent());
-                    book = new PermanentPaper(periodicPaperTitle, periodicPaperType, isPeriodicP, hasColor, numberOfPages);
+                    book = new PermanentPaper(0, permanentPaperTitle, permanentPaperType, isPeriodicP, hasColor, numberOfPages);
                     papersList.add(book);
                 }
             }
@@ -76,7 +78,7 @@ public class BookShop {
     }
 
 
-    public void createPermanentPapersXML () throws IOException, TransformerException, TransformerConfigurationException,
+    public void createPermanentPapersXML () throws IOException, TransformerException,
             ParserConfigurationException {
         Collections.sort(booksList, Paper.paperComparator);
 
@@ -128,55 +130,55 @@ public class BookShop {
     }
 
     public void createPeriodicPapersList() throws  IOException, ParserConfigurationException, TransformerConfigurationException,
-                TransformerException {
-            Collections.sort(periodicPaperList, Paper.paperComparator);
-            DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
-            DocumentBuilder build = dFact.newDocumentBuilder();
-            Document doc = build.newDocument();
+            TransformerException {
+        Collections.sort(periodicPaperList, Paper.paperComparator);
+        DocumentBuilderFactory dFact = DocumentBuilderFactory.newInstance();
+        DocumentBuilder build = dFact.newDocumentBuilder();
+        Document doc = build.newDocument();
 
-            Element root = doc.createElement("PeriodicPapers");
-            doc.appendChild(root);
+        Element root = doc.createElement("PeriodicPapers");
+        doc.appendChild(root);
 
-            Element details = doc.createElement("Details");
-            root.appendChild(details);
+        Element details = doc.createElement("Details");
+        root.appendChild(details);
 
-            for (PeriodicPaper magazine : periodicPaperList) {
-                Element name = doc.createElement("Title");
-                name.appendChild(doc.createTextNode(String.valueOf(magazine.getPaperTitle())));
-                details.appendChild(name);
+        for (PeriodicPaper magazine : periodicPaperList) {
+            Element name = doc.createElement("Title");
+            name.appendChild(doc.createTextNode(String.valueOf(magazine.getPaperTitle())));
+            details.appendChild(name);
 
-                Element typeOfPaper = doc.createElement("TypeOfPaper");
-                typeOfPaper.appendChild(doc.createTextNode(String.valueOf(magazine.getTypeOfPaper())));
-                details.appendChild(typeOfPaper);
+            Element typeOfPaper = doc.createElement("TypeOfPaper");
+            typeOfPaper.appendChild(doc.createTextNode(String.valueOf(magazine.getTypeOfPaper())));
+            details.appendChild(typeOfPaper);
 
-                Element periodicity = doc.createElement("Periodicity");
-                periodicity.appendChild(doc.createTextNode(String.valueOf(magazine.isPeriodic())));
-                details.appendChild(periodicity);
+            Element periodicity = doc.createElement("Periodicity");
+            periodicity.appendChild(doc.createTextNode(String.valueOf(magazine.isPeriodic())));
+            details.appendChild(periodicity);
 
-                Element color = doc.createElement("Color");
-                color.appendChild(doc.createTextNode(String.valueOf(magazine.isColoful())));
-                details.appendChild(color);
+            Element color = doc.createElement("Color");
+            color.appendChild(doc.createTextNode(String.valueOf(magazine.isColoful())));
+            details.appendChild(color);
 
-                Element numbOfPages = doc.createElement("NumberofPages");
-                numbOfPages.appendChild(doc.createTextNode(String.valueOf(magazine.getNumberOfPages())));
-                details.appendChild(numbOfPages);
+            Element numbOfPages = doc.createElement("NumberofPages");
+            numbOfPages.appendChild(doc.createTextNode(String.valueOf(magazine.getNumberOfPages())));
+            details.appendChild(numbOfPages);
 
-                Element zipIndex = doc.createElement("Zip");
-                zipIndex.appendChild(doc.createTextNode(String.valueOf(magazine.getIndex())));
-                details.appendChild(zipIndex);
-            }
+            Element zipIndex = doc.createElement("Zip");
+            zipIndex.appendChild(doc.createTextNode(String.valueOf(magazine.getZipCode())));
+            details.appendChild(zipIndex);
+        }
 
-                TransformerFactory tranFactory = TransformerFactory.newInstance();
-                Transformer aTransformer = tranFactory.newTransformer();
-                aTransformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-                aTransformer.setOutputProperty(
-                        "{http://xml.apache.org/xslt}indent-amount", "4");
-                aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
-                DOMSource source = new DOMSource(doc);
-                FileWriter fos = new FileWriter("./magazines.xml");
-                StreamResult result = new StreamResult(fos);
-                aTransformer.transform(source, result);
-                System.out.println("File was successfully saved");
+        TransformerFactory tranFactory = TransformerFactory.newInstance();
+        Transformer aTransformer = tranFactory.newTransformer();
+        aTransformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+        aTransformer.setOutputProperty(
+                "{http://xml.apache.org/xslt}indent-amount", "4");
+        aTransformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        DOMSource source = new DOMSource(doc);
+        FileWriter fos = new FileWriter("./magazines.xml");
+        StreamResult result = new StreamResult(fos);
+        aTransformer.transform(source, result);
+        System.out.println("File was successfully saved");
     }
 
     public ArrayList<PeriodicPaper> getPeriodicPaperList() {
