@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8c04b3d-f520-4e91-93b8-d615fe80f0dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewspaperXML_V2/PaperSAXBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewspaperXML_V2/PaperSAXBuilder.java" afterDir="false" />
-    </list>
+    <list default="true" id="a8c04b3d-f520-4e91-93b8-d615fe80f0dc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,7 +18,7 @@
     <session id="1955721984">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -63,7 +61,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/NewspaperXML_V2/PaperStAXBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-659">
+            <state relative-caret-position="-429">
               <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -282,12 +280,12 @@
       <workItem from="1542577883586" duration="462000" />
       <workItem from="1542579960836" duration="1686000" />
       <workItem from="1542625730158" duration="1559000" />
-      <workItem from="1542660387001" duration="928000" />
+      <workItem from="1542660387001" duration="961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11228000" />
+    <option name="totallyTimeSpent" value="11261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -300,7 +298,7 @@
       <window_info id="Favorites" order="4" sideWeight="0.50213677" side_tool="true" weight="0.25377643" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295129" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295129" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295129" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,7 +408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NewspaperXML_V2/PaperStAXBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-659">
+        <state relative-caret-position="-429">
           <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
