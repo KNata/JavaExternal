@@ -1,41 +1,45 @@
 package ThreadsJava;
 
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
+
+import ThreadsJava.Exeptions.ResourсeException;
+
 
 public class Airport {
-
-    public static int TERMINALS = 2;
-    public static int  GATES = 4;
-
-    String nameOfAirport;
-    private ArrayList<Gate> gatesList;
-
-    Airport(String aNameOfAirp) {
-        nameOfAirport = aNameOfAirp;
-
-    }
-
-    public void createGates() {
-        for (int i = 0; i < TERMINALS; i++) {
-            for(int j = 0; j < GATES; j++) {
-                Gate gate = new Gate(i + "-" + j, j, i);
+	
+    private final static int TERMINALS = 3;
+    private final static int GATES = 4;
+    private final Semaphore semaphore = new Semaphore(TERMINALS * GATES, true);
+    private final ArrayList<Gate> gates = new ArrayList<Gate>();
+    
+    public Airport() {
+        for (int i = 0; i < TERMINALS; i++){
+            for (int j = 0; j < GATES; j++){
+                gates.add(new Gate(i,j));
             }
         }
     }
 
-    public Gate getGate () {
-        Gate theGate = null;
-        if (gatesList.size() > 0) {
-            for (int i = 0; i < gatesList.size(); i++) {
-                if (gatesList.get(i).isFree()) {
-                    gatesList.get(i).occupy();
-                    theGate = gatesList.get(i);
+    public Gate getGate(long maxWaitMillis) throws ResourсeException {
+        try {
+            if (semaphore.tryAcquire(maxWaitMillis, TimeUnit.MILLISECONDS)) {
+                for (int i = 0; i < gates.size(); i++){
+                    if (gates.get(i).isFree()){
+                        gates.get(i).occupy();
+                        return gates.get(i);
+                    }
                 }
-
             }
+        } catch (InterruptedException e) {
+            throw new ResourсeException(e);
         }
-        return theGate;
+        throw new ResourсeException(": too much time to waiting");
     }
 
-
+    public void returnGate(Gate gate) {
+        gate.release();
+        semaphore.release();
+    }
 }

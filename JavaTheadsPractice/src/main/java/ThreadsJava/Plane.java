@@ -1,85 +1,64 @@
 package ThreadsJava;
 
-import java.util.concurrent.Semaphore;
+import ThreadsJava.Exeptions.ParametersException;
+import ThreadsJava.Exeptions.ResourсeException;
 
 public class Plane extends Thread {
+	
+    private Airport airport;
+    private int maxDistance;
+    private int capacity;
+    private City route;
 
-    private String nameOfMachine;
-    private String codeOfFlight;
-    private String direction;
-    private int maxCountOfPassengers;
-    private Airport theAirport;
-
-    private final Semaphore semaphore;
-
-
-    Plane(String aNameOfMachine, String aCodeOfFlight, String aDirection, int aMaxCountOfPassengers) {
-        nameOfMachine = aNameOfMachine;
-        codeOfFlight = aCodeOfFlight;
-        direction = aDirection;
-        maxCountOfPassengers = aMaxCountOfPassengers;
-        semaphore = new Semaphore(2, true);
+    public Plane(Airport airport, int maxDistance, int capacity) throws ParametersException {
+       if ((maxDistance < 0) || (capacity < 0)) {
+            throw new ParametersException("Bad parameters input. Try again");
+        }
+        this.airport = airport;
+        this.maxDistance = maxDistance;
+        this.capacity = capacity;
     }
 
-
-    public void run(){
-            Gate theGate = theAirport.getGate();
-            System.out.println("Plane " + this.getNameOfMachine() + "with flight " + this.getCodeOfFlight() + " "
-                + this.getDirection() + "landed in the " + theAirport.nameOfAirport);
-            System.out.println("Plane " + this.getNameOfMachine() + "with flight " + this.getCodeOfFlight() + " "
-                    + this.getDirection() + "deparches from the " + theAirport.nameOfAirport);
-            theGate.returnGate();
-
+    public void run() {
+            try {
+                while(true) {
+                    Gate gate = airport.getGate(maxDistance - route.getDistance());
+                    System.out.println("Plane " + this.getRoute().getRouteID()
+                            + " from " + getRoute().getCity() + " landed:   Terminal "
+                            + gate.getGateTerminalId() + " Gate " + gate.getGateId());
+                    gate.using(capacity);
+                    System.out.println("Plane " + this.getRoute().getRouteID()
+                            + " flying away in " + getRoute().getCity() + ":   Terminal "
+                            + gate.getGateTerminalId()  + " Gate " + gate.getGateId() );
+                    airport.returnGate(gate);
+                }
+            } catch (ResourсeException e) {
+                    System.out.println("Plain " + this.getRoute().getRouteID()
+                        + " from " + getRoute().getCity() + " lost"
+                        + e.getMessage());
+            }
     }
 
-
-
-
-
-
-
-
-
-
-    public String getNameOfMachine() {
-        return nameOfMachine;
+    public void setRoute(City route) {
+        if ((this.getDistantZone()<route.getDistanceZone())||(maxDistance<route.getDistance())) {
+            System.out.println("Plane (capacity: "+ capacity + ",  visibility: " + maxDistance
+            +") will not fly " + route.getCity());
+    } else {
+            this.route = route;
+        }
     }
 
-    public void setNameOfMachine(String nameOfMachine) {
-        this.nameOfMachine = nameOfMachine;
+    public int getDistantZone() {
+        if (maxDistance < 2000) {
+            return 1;
+        } else if ((maxDistance >= 2000) && (maxDistance < 4000)) {
+            return 2;
+        } else {
+            return 3;
+        }
     }
 
-    public String getCodeOfFlight() {
-        return codeOfFlight;
-    }
-
-    public void setCodeOfFlight(String codeOfFlight) {
-        this.codeOfFlight = codeOfFlight;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public int getMaxCountOfPassengers() {
-        return maxCountOfPassengers;
-    }
-
-    public void setMaxCountOfPassengers(int maxCountOfPassengers) {
-        this.maxCountOfPassengers = maxCountOfPassengers;
-    }
-
-    @Override
-    public String toString() {
-        return "Plane{" +
-                "nameOfMachine='" + nameOfMachine + '\'' +
-                ", codeOfFlight='" + codeOfFlight + '\'' +
-                ", direction='" + direction + '\'' +
-                ", maxCountOfPassengers=" + maxCountOfPassengers +
-                '}';
+    public City getRoute() {
+        return route;
     }
 }

@@ -1,53 +1,42 @@
 package ThreadsJava;
 
 public class Gate {
+	
+    private int gateId;
+    private int gateTerminalId;
+    private boolean free;
 
-    private String gateTitle;
-    private int gateID;
-    private int terminalId;
-    private boolean isFree;
-
-    Gate(String aName, int aGateID, int aTerminalId) {
-        gateTitle = aName;
-        gateID = aGateID;
-        terminalId = aTerminalId;
-        isFree = true;
+    public Gate(int gateTerminalId, int gateId) {
+        this.gateId = gateId + 1;
+        this.gateTerminalId = gateTerminalId + 1;
+        this.free = true;
     }
 
-    public String getGateTitle() {
-        return gateTitle;
+    public int getGateId() {
+        return gateId;
     }
 
-    public void setGateTitle(String gateTitle) {
-        this.gateTitle = gateTitle;
+    public int getGateTerminalId() {
+        return gateTerminalId;
     }
 
-    public int getGateID() {
-        return gateID;
+    public boolean isFree(){
+        return free;
     }
 
-    public void setGateID(int gateID) {
-        this.gateID = gateID;
+    public void occupy(){
+        this.free = false;
     }
 
-    public int getTerminalId() {
-        return terminalId;
+    public void release(){
+        this.free = true;
     }
 
-    public void setTerminalId(int terminalId) {
-        this.terminalId = terminalId;
+    public void using(int planeCapacity) {
+        try {
+            Thread.sleep(planeCapacity * 10);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
-    public boolean isFree() {
-        return isFree;
-    }
-
-    public void occupy() {
-        isFree = false;
-    }
-
-    public void returnGate() {
-        isFree = true;
-    }
-
 }
