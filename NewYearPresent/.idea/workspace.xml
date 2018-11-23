@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e613dadb-8c92-4406-8727-53da7e032e09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaTheadsPractice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaTheadsPractice/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/NewYearPresent/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/NewYearPresent/PakingOfficeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/NewYearPresent/PakingOfficeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Newspaper_V2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Newspaper_V2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Newspaper_V2/target/classes/NewspaperXML_V2/PaperDOMBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Newspaper_V2/target/classes/NewspaperXML_V2/PaperDOMBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Newspaper_V2/target/classes/NewspaperXML_V2/PaperSAXBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Newspaper_V2/target/classes/NewspaperXML_V2/PaperSAXBuilder.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,19 +23,21 @@
     <session id="1240062086">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="39" />
+          <entry key="java" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="39" />
+          <entry key="JAVA" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -48,34 +53,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/Helper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="28" column="13" selection-start-line="28" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1716#1723#0" expanded="true" />
-                <element signature="e#3530#3538#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/NewYearPresent/PakingOfficeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-              <folding>
-                <element signature="e#592#599#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,9 +109,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="height" value="702" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -141,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -159,20 +137,20 @@
               <item name="NewYearPresent" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewYearPresent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewYearPresent" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewYearPresent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewYearPresent" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewYearPresent" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="NewYearPresent" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -180,6 +158,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PakingOfficeTest.findNeededCandy">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewYearPresent.App" />
       <module name="NewYearPresent" />
@@ -261,8 +240,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PakingOfficeTest.findNeededCandy" />
         <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.PakingOfficeTest.findNeededCandy" />
         <item itemvalue="Application.Helper" />
       </list>
     </recent_temporary>
@@ -278,6 +257,8 @@
       <option name="presentableId" value="Default" />
       <updated>1542315552662</updated>
       <workItem from="1542315554742" duration="10120000" />
+      <workItem from="1542877722238" duration="99000" />
+      <workItem from="1542986860486" duration="18000" />
     </task>
     <servers />
   </component>
@@ -291,38 +272,43 @@
     <history-entry file="PakingOfficeTest_findNeededCandy - 2018.11.16 at 19h 11m 22s.xml">
       <configuration name="PakingOfficeTest.findNeededCandy" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PakingOfficeTest_findNeededCandy - 2018.11.22 at 11h 09m 07s.xml">
+      <configuration name="PakingOfficeTest.findNeededCandy" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PakingOfficeTest_findNeededCandy - 2018.11.22 at 11h 09m 33s.xml">
+      <configuration name="PakingOfficeTest.findNeededCandy" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10120000" />
+    <option name="totallyTimeSpent" value="10237000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1366" height="702" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1366" height="702" extended-state="0" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" weight="0.30819672" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26393443" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.13278688" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.30819672" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,11 +337,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1952#2129#0" expanded="true" />
-            <element signature="e#2128#2129#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -418,13 +399,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/Exeptions/WrongInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/Exeptions/WrongInput.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/Exeptions/CandyNotFoundExeption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -467,28 +442,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/NewYearPresent/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/NewYearPresent/AppTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/Helper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="345">
           <caret line="28" column="13" selection-start-line="28" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1716#1723#0" expanded="true" />
-            <element signature="e#3530#3538#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -496,10 +456,14 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/NewYearPresent/PakingOfficeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="23" column="30" lean-forward="true" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding>
-            <element signature="e#592#599#0" expanded="true" />
-          </folding>
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/NewYearPresent/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
