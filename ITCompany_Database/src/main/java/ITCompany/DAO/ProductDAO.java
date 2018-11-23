@@ -1,11 +1,8 @@
 package ITCompany.DAO;
 
-
 import java.util.List;
 
-public class PCDao extends AbstractDAO {
-
-
+public class ProductDAO extends AbstractDAO {
     @Override
     public List findAll() {
         return null;

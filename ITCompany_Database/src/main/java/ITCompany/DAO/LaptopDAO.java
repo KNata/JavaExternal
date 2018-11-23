@@ -1,9 +1,8 @@
 package ITCompany.DAO;
 
-
 import java.util.List;
 
-public class PCDao extends AbstractDAO {
+public class LaptopDAO extends AbstractDAO {
 
 
     @Override
