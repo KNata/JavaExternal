@@ -1,15 +1,13 @@
 package ITCompany.DAO;
 
+import ITCompany.Entity.Product;
+
 import java.util.List;
 
 public class ProductDAO extends AbstractDAO {
     @Override
     public List findAll() {
-        return null;
-    }
-
-    @Override
-    public Object findById(Object id) {
+        String sql = "select * from Product";
         return null;
     }
 
@@ -27,4 +25,12 @@ public class ProductDAO extends AbstractDAO {
     public Object update(Object entity) {
         return null;
     }
+
+    public List<Product> showAllProductsExeptPrinters() {
+        String sql = "select pr.maker, pr.model, pr.type, lapt.price, pc.price from Product pr, Laptop lapt, PC pc where not pr.type = 'Printer'";
+        return null;
+    }
+
+
+
 }
