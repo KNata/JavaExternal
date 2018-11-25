@@ -35,5 +35,10 @@ public class ConnectionPool {
         return conn;
     }
 
+    public static void close() throws SQLException {
+        Connection conn = dataSourse.getConnection();
+        conn.close();
+    }
+
 
 }

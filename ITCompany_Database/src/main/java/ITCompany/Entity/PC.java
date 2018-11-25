@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class PC {
 
-    private String unicCode;
+    private int unicCode;
     private String modelOfPC;
-    private String speedOfPC;
+    private int speedOfPC;
     private int sizeOfHardDrive;
     private int ram;
     private String speedOfCD;
-    private int pcPrice;
+    private double pcPrice;
 
-    PC(String anUnicCode, String aModelOfPC, String aSpeedOfPC, int aSizeOfHardDrive, int aRam, String aSpeedOfCD, int aPcPrice) {
+    public PC(int anUnicCode, String aModelOfPC, int aSpeedOfPC, int aSizeOfHardDrive, int aRam, String aSpeedOfCD, double aPcPrice) {
         unicCode = anUnicCode;
         modelOfPC = aModelOfPC;
         speedOfCD = aSpeedOfCD;
@@ -22,11 +22,11 @@ public class PC {
         pcPrice = aPcPrice;
     }
 
-    public String getUnicCode() {
+    public int getUnicCode() {
         return unicCode;
     }
 
-    public void setUnicCode(String unicCode) {
+    public void setUnicCode(int unicCode) {
         this.unicCode = unicCode;
     }
 
@@ -38,11 +38,11 @@ public class PC {
         this.modelOfPC = modelOfPC;
     }
 
-    public String getSpeedOfPC() {
+    public int getSpeedOfPC() {
         return speedOfPC;
     }
 
-    public void setSpeedOfPC(String speedOfPC) {
+    public void setSpeedOfPC(int speedOfPC) {
         this.speedOfPC = speedOfPC;
     }
 
@@ -70,11 +70,11 @@ public class PC {
         this.speedOfCD = speedOfCD;
     }
 
-    public int getPcPrice() {
+    public double getPcPrice() {
         return pcPrice;
     }
 
-    public void setPcPrice(int pcPrice) {
+    public void setPcPrice(double pcPrice) {
         this.pcPrice = pcPrice;
     }
 
@@ -99,14 +99,14 @@ public class PC {
 
     @Override
     public String toString() {
-        return "PC{" +
-                "unicCode='" + unicCode + '\'' +
-                ", modelOfPC='" + modelOfPC + '\'' +
-                ", speedOfPC='" + speedOfPC + '\'' +
-                ", sizeOfHardDrive=" + sizeOfHardDrive +
-                ", ram=" + ram +
-                ", speedOfCD='" + speedOfCD + '\'' +
-                ", pcPrice=" + pcPrice +
+        return "PC { " +
+                " unicCode = '" + unicCode + '\'' +
+                ", modelOfPC = '" + modelOfPC + '\'' +
+                ", speedOfPC = '" + speedOfPC + '\'' +
+                ", sizeOfHardDrive = " + sizeOfHardDrive +
+                ", ram = " + ram +
+                ", speedOfCD ='" + speedOfCD + '\'' +
+                ", pcPrice = " + pcPrice +
                 '}';
     }
 }

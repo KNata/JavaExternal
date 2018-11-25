@@ -2,6 +2,6 @@ package ITCompany.MenuChooser;
 
 public interface Command {
 
-    void execute();
-    
+    void execute() throws ClassNotFoundException;
+
 }

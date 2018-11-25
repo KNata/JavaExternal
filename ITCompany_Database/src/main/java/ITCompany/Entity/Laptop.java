@@ -12,7 +12,7 @@ public class Laptop {
     private String sizeOfScreen;
     private int laptopPrice;
 
-    Laptop(String anUnicCode, String aModelOfLaptop, String aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, String aSizeOfScreen, int aLaptopPrice) {
+    public Laptop(String anUnicCode, String aModelOfLaptop, String aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, String aSizeOfScreen, int aLaptopPrice) {
         unicCode = anUnicCode;
         modelOfLaptop = aModelOfLaptop;
         speedOfLaptop = aSpeedOfLaptop;
