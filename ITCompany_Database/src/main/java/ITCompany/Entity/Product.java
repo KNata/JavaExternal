@@ -8,7 +8,7 @@ public class Product {
     private String modelNumber;
     private String typeOfModel;
 
-    Product(String aMarker, String aModelNumber, String aTypeOfModel ) {
+    public Product(String aMarker, String aModelNumber, String aTypeOfModel ) {
         marker = aMarker;
         modelNumber = aModelNumber;
         typeOfModel = aTypeOfModel;
@@ -54,5 +54,12 @@ public class Product {
         return Objects.hash(marker, modelNumber, typeOfModel);
     }
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "marker='" + marker + '\'' +
+                ", modelNumber='" + modelNumber + '\'' +
+                ", typeOfModel='" + typeOfModel + '\'' +
+                '}';
+    }
 }

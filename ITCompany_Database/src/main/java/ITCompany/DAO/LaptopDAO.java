@@ -1,36 +1,33 @@
 package ITCompany.DAO;
 
-import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.sql.SQLException;
+import ITCompany.Entity.Product;
+
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class LaptopDAO extends AbstractDAO {
 
-
-    private Laptop theLaptop;
-
     @Override
-    public List findAll() {
+    public List findAll() throws ClassNotFoundException {
+        String sql = "select * from Laptop";
         List<Laptop> laptopsList = new ArrayList<Laptop>();
         Connection conn = null;
         Statement stat = null;
-        String sql = "select * from Laptop";
+        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = ConnectionPool.getConnection();
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
-                String unicCode = resultSet.getString("code");
+                int unicCode = resultSet.getInt("code");
                 String laptopModel = resultSet.getString("model");
-                String laptopSpeed = resultSet.getString("speed");
+                int laptopSpeed = resultSet.getInt("speed");
                 int hardDriveSize = resultSet.getInt("hd");
                 int ram = resultSet.getInt("ram");
-                String screenSize = resultSet.getString("screen");
+                int screenSize = resultSet.getInt("screen");
                 int laptopPrice = resultSet.getInt("price");
                 Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
                 laptopsList.add(theLaptop);
@@ -39,7 +36,6 @@ public class LaptopDAO extends AbstractDAO {
         } catch (SQLException e) {
             System.err.println("SQL exeption " + e);
         } finally {
-           // ConnectionPool.close();
             try {
                 conn.close();
             } catch (SQLException e) {
@@ -66,27 +62,27 @@ public class LaptopDAO extends AbstractDAO {
         return null;
     }
 
-
-
-    public List<Laptop> showAllPCManufacturersBySpeedMoreThen() throws SQLException {
+    public HashSet showAllPCManufacturersBySpeedMoreThen() throws ClassNotFoundException {
         String sql = "select pr.maker, pr.type, pr.model, lapt.speed from Product pr inner join Laptop lapt where lapt.speed > 600";
-        List<Laptop> laptopsList = new ArrayList<Laptop>();
+        HashSet productsSet = new HashSet();
         Connection conn = null;
         Statement stat = null;
-        conn = ConnectionPool.getConnection();
-        stat = conn.createStatement();
-        ResultSet resultSet = stat.executeQuery(sql);
-        while (resultSet.next()) {
-            String unicCode = resultSet.getString("code");
-            String laptopModel = resultSet.getString("model");
-            String laptopSpeed = resultSet.getString("speed");
-            int hardDriveSize = resultSet.getInt("hd");
-            int ram = resultSet.getInt("ram");
-            String screenSize = resultSet.getString("screen");
-            int laptopPrice = resultSet.getInt("price");
-            Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
-            laptopsList.add(theLaptop);
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            stat = conn.createStatement();
+            ResultSet resultSet = stat.executeQuery(sql);
+            while (resultSet.next()) {
+                int laptopSpeed = resultSet.getInt("lapt.speed");
+                Laptop theLaptop = new Laptop(0, "", laptopSpeed, 0, 0, 0, 0);
+                productsSet.add(theLaptop);
+                String productMaker = resultSet.getString("pr.maker");
+                String productType = resultSet.getString("pr.type");
+                String productModel = resultSet.getString("pr.model");
+                Product theProduct = new Product(productMaker, productModel, productType);
+                productsSet.add(theProduct);
+                }
+            } catch (SQLException e) {}
+            return productsSet;
         }
-        return laptopsList;
-    }
 }

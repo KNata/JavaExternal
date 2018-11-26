@@ -4,15 +4,15 @@ import java.util.Objects;
 
 public class Laptop {
 
-    private String unicCode;
+    private int unicCode;
     private String modelOfLaptop;
-    private String speedOfLaptop;
+    private int speedOfLaptop;
     private int sizeOfHardDrive;
     private int ram;
-    private String sizeOfScreen;
+    private int sizeOfScreen;
     private int laptopPrice;
 
-    public Laptop(String anUnicCode, String aModelOfLaptop, String aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, String aSizeOfScreen, int aLaptopPrice) {
+    public Laptop(int anUnicCode, String aModelOfLaptop, int aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, int aSizeOfScreen, int aLaptopPrice) {
         unicCode = anUnicCode;
         modelOfLaptop = aModelOfLaptop;
         speedOfLaptop = aSpeedOfLaptop;
@@ -22,11 +22,11 @@ public class Laptop {
         laptopPrice = aLaptopPrice;
     }
 
-    public String getUnicCode() {
+    public int getUnicCode() {
         return unicCode;
     }
 
-    public void setUnicCode(String unicCode) {
+    public void setUnicCode(int unicCode) {
         this.unicCode = unicCode;
     }
 
@@ -38,11 +38,11 @@ public class Laptop {
         this.modelOfLaptop = modelOfLaptop;
     }
 
-    public String getSpeedOfLaptop() {
+    public int getSpeedOfLaptop() {
         return speedOfLaptop;
     }
 
-    public void setSpeedOfLaptop(String speedOfLaptop) {
+    public void setSpeedOfLaptop(int speedOfLaptop) {
         this.speedOfLaptop = speedOfLaptop;
     }
 
@@ -62,11 +62,11 @@ public class Laptop {
         this.ram = ram;
     }
 
-    public String getSizeOfScreen() {
+    public int getSizeOfScreen() {
         return sizeOfScreen;
     }
 
-    public void setSizeOfScreen(String sizeOfScreen) {
+    public void setSizeOfScreen(int sizeOfScreen) {
         this.sizeOfScreen = sizeOfScreen;
     }
 

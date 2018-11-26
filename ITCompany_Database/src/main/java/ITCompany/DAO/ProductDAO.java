@@ -1,36 +1,34 @@
 package ITCompany.DAO;
 
 import ITCompany.DBInteraction.ConnectionPool;
+import ITCompany.Entity.Laptop;
+import ITCompany.Entity.PC;
+import ITCompany.Entity.Printer;
 import ITCompany.Entity.Product;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class ProductDAO extends AbstractDAO {
     @Override
-    public List findAll() {
+    public List findAll() throws ClassNotFoundException {
         String sql = "select * from Product";
         List<Product> productList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
+        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = ConnectionPool.getConnection();
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
-                String unicCode = resultSet.getString("code");
-                String laptopModel = resultSet.getString("model");
-                String laptopSpeed = resultSet.getString("speed");
-                int hardDriveSize = resultSet.getInt("hd");
-                int ram = resultSet.getInt("ram");
-                String screenSize = resultSet.getString("screen");
-                int laptopPrice = resultSet.getInt("price");
-                // Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
-                //  laptopsList.add(theLaptop);
+                String maker = resultSet.getString("maker");
+                String model = resultSet.getString("model");
+                String type = resultSet.getString("type");
+                Product theProduct = new Product(maker, model, type);
+                productList.add(theProduct);
             }
              } catch (SQLException e) {
         } finally {}
@@ -52,30 +50,51 @@ public class ProductDAO extends AbstractDAO {
         return null;
     }
 
-    public List<Product> showAllProductsExeptPrinters() {
+    public HashSet showAllProductsExeptPrinters() throws ClassNotFoundException {
         String sql = "select pr.maker, pr.model, pr.type, lapt.price, pc.price from Product pr, Laptop lapt, PC pc where not pr.type = 'Printer'";
-        return null;
+        HashSet selectedProductList = new HashSet();
+        Connection conn = null;
+        Statement stat = null;
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            stat = conn.createStatement();
+            ResultSet resultSet = stat.executeQuery(sql);
+            while (resultSet.next()) {
+                String productMaker = resultSet.getString("pr.maker");
+                String productModel = resultSet.getString("pr.model");
+                String productType = resultSet.getString("pr.type");
+                Product theProduct = new Product(productMaker, productModel, productType);
+                selectedProductList.add(theProduct);
+                double pcPrice = resultSet.getDouble("pc.price");
+                PC thePC = new PC(0, "", 0, 0, 0, "", pcPrice);
+                selectedProductList.add(thePC);
+                int laptopPrice = resultSet.getInt("lapt.price");
+                Laptop theLaptop = new Laptop(0, "", 0, 0, 0, 0, laptopPrice);
+                selectedProductList.add(theLaptop);
+            }
+        } catch (SQLException e) {
+        }
+        return selectedProductList;
     }
 
-    public List<Product> findLaptopMakersByMeketAsc() throws SQLException {
+    public List<Product> findLaptopMakersByMeketAsc() throws ClassNotFoundException {
         String sql = "select type, maker from Product where type = 'Laptop' order by maker ASC";
         List<Product> laptopsList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
-        conn = ConnectionPool.getConnection();
-        stat = conn.createStatement();
-        ResultSet resultSet = stat.executeQuery(sql);
-        while (resultSet.next()) {
-            String unicCode = resultSet.getString("code");
-            String laptopModel = resultSet.getString("model");
-            String laptopSpeed = resultSet.getString("speed");
-            int hardDriveSize = resultSet.getInt("hd");
-            int ram = resultSet.getInt("ram");
-            String screenSize = resultSet.getString("screen");
-            int laptopPrice = resultSet.getInt("price");
-           // Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
-          //  laptopsList.add(theLaptop);
-        }
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try {
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+                stat = conn.createStatement();
+                ResultSet resultSet = stat.executeQuery(sql);
+                while (resultSet.next()) {
+                    String productType = resultSet.getString("type");
+                    String productMaker = resultSet.getString("maker");
+                    Product theProduct = new Product(productMaker, "", productType);
+                    laptopsList.add(theProduct);
+                }
+            } catch (SQLException e) {}
         return laptopsList;
     }
 
