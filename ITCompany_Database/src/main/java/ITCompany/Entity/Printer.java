@@ -4,13 +4,13 @@ import java.util.Objects;
 
 public class Printer {
 
-    private String unicCode;
+    private int unicCode;
     private String model;
     private String color;
     private String type;
-    private int price;
+    private double price;
 
-    Printer(String anUnicCode, String aModel, String aColor, String aType, int aPrice) {
+    public  Printer(int anUnicCode, String aModel, String aColor, String aType, double aPrice) {
         unicCode = anUnicCode;
         model = aModel;
         color = aColor;
@@ -18,11 +18,11 @@ public class Printer {
         price = aPrice;
     }
 
-    public String getUnicCode() {
+    public int getUnicCode() {
         return unicCode;
     }
 
-    public void setUnicCode(String unicCode) {
+    public void setUnicCode(int unicCode) {
         this.unicCode = unicCode;
     }
 
@@ -50,11 +50,11 @@ public class Printer {
         this.type = type;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

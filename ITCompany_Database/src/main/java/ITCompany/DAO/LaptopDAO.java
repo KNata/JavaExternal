@@ -12,6 +12,8 @@ import java.util.List;
 public class LaptopDAO extends AbstractDAO {
 
 
+    private Laptop theLaptop;
+
     @Override
     public List findAll() {
         List<Laptop> laptopsList = new ArrayList<Laptop>();
@@ -59,7 +61,8 @@ public class LaptopDAO extends AbstractDAO {
     }
 
     @Override
-    public Object update(Object entity) {
+    public Object update(Object theLaptop) {
+
         return null;
     }
 
