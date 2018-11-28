@@ -1,6 +1,7 @@
 package ITCompany.DAO;
 
 
+import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.PC;
 
 import java.sql.*;
@@ -31,6 +32,7 @@ public class PCDao extends AbstractDAO {
                 double price = resultSet.getDouble("price");
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
+                conn.commit();
             }
 
         return pcList;
@@ -73,6 +75,7 @@ public class PCDao extends AbstractDAO {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
+            conn.commit();
         } catch (SQLException e) {
 
         }
@@ -86,7 +89,7 @@ public class PCDao extends AbstractDAO {
         Statement st = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             st = conn.createStatement();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
@@ -95,7 +98,11 @@ public class PCDao extends AbstractDAO {
                 PC thePC = new PC(0, model, pcSpeed, 0, 0, "", 0.0);
                 pcList.add(thePC);
             }
-        } catch (SQLException e) {}
+            conn.commit();
+        } catch (SQLException e) {
+            close(st);
+            close(conn);
+        }
         return pcList;
     }
 
@@ -106,7 +113,7 @@ public class PCDao extends AbstractDAO {
         Statement st = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             st = conn.createStatement();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
@@ -120,7 +127,11 @@ public class PCDao extends AbstractDAO {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
-        } catch (SQLException e) {}
+            conn.commit();
+        } catch (SQLException e) {
+            close(st);
+            close(conn);
+        }
         return pcList;
     }
 
@@ -131,7 +142,7 @@ public class PCDao extends AbstractDAO {
         Statement st = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "root");
+            conn = ConnectionPool.getConnection();
             st = conn.createStatement();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
@@ -141,7 +152,11 @@ public class PCDao extends AbstractDAO {
                 PC thePC = new PC(0, model, pcSpeed, 0, hd, "", 0.0);
                 pcList.add(thePC);
             }
-        } catch(SQLException e) {}
+            conn.commit();
+        } catch(SQLException e) {
+            close(st);
+            close(conn);
+        }
         return pcList;
     }
 
@@ -151,7 +166,7 @@ public class PCDao extends AbstractDAO {
         Connection conn = null;
         Statement st = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "root");
+            conn = ConnectionPool.getConnection();
             st = conn.createStatement();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
@@ -165,7 +180,11 @@ public class PCDao extends AbstractDAO {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
-        } catch (SQLException e) {}
+            conn.commit();
+        } catch (SQLException e) {
+            close(st);
+            close(conn);
+        }
         return pcList;
     }
 

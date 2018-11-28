@@ -1,7 +1,9 @@
 package ITCompany.DAO;
 
+import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.Product;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,6 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 
 public class LaptopDAO extends AbstractDAO {
+
+    private Logger logger;
 
     @Override
     public List findAll() throws ClassNotFoundException {
@@ -18,7 +22,7 @@ public class LaptopDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -32,15 +36,12 @@ public class LaptopDAO extends AbstractDAO {
                 Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
                 laptopsList.add(theLaptop);
             }
-
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println("SQL exeption " + e);
+            logger.error("SQL exeption " + e);
         } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            close(stat);
+            close(conn);
         }
         return laptopsList;
     }
@@ -69,7 +70,7 @@ public class LaptopDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -81,8 +82,14 @@ public class LaptopDAO extends AbstractDAO {
                 String productModel = resultSet.getString("pr.model");
                 Product theProduct = new Product(productMaker, productModel, productType);
                 productsSet.add(theProduct);
-                }
-            } catch (SQLException e) {}
-            return productsSet;
-        }
+            }
+            conn.commit();
+        } catch (SQLException e) {
+//            logger.error(e);
+        } finally {
+            close(stat);
+            close(conn);
+         }
+         return productsSet;
+    }
 }

@@ -19,7 +19,7 @@ public class PrinterDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -31,8 +31,10 @@ public class PrinterDAO extends AbstractDAO {
                 Printer thePrinter = new Printer(code, model, color, type, price);
                 printerList.add(thePrinter);
             }
+            conn.commit();
         } catch (SQLException e) {
-
+            close(stat);
+            close(conn);
         }
         return printerList;
     }
@@ -59,7 +61,7 @@ public class PrinterDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -71,8 +73,10 @@ public class PrinterDAO extends AbstractDAO {
                 Printer thePrinter = new Printer(code, model, color, type, price);
                 printerList.add(thePrinter);
             }
+            conn.commit();
         } catch (SQLException e) {
-
+            close(stat);
+            close(conn);
         }
         return printerList;
     }
@@ -84,7 +88,7 @@ public class PrinterDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -95,7 +99,8 @@ public class PrinterDAO extends AbstractDAO {
                 printerList.add(thePrinter);
             }
         } catch (SQLException e) {
-
+            close(stat);
+            close(conn);
         }
         return printerList;
     }

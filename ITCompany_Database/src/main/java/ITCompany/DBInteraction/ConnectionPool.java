@@ -1,44 +1,39 @@
 package ITCompany.DBInteraction;
 
+import org.apache.log4j.Logger;
+
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.naming.Context;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.MissingResourceException;
-import java.util.Properties;
-import java.util.ResourceBundle;
+
 
 public class ConnectionPool {
 
-    private Connection connection;
-    private static DataSource dataSourse;
+    private static final String DATASOURCE_NAME = "jdbc:mysql://localhost/Labor_SQL";
+    private static DataSource dataSource;
+    private static Logger logger;
 
-    ConnectionPool() {
+    static {
         try {
-            ResourceBundle resourse = ResourceBundle.getBundle("");
-            String url = resourse.getString("host");
-            String user = resourse.getString("user");
-            String password = resourse.getString("password");
-            Properties properties = new Properties();
-            properties.put("user", user);
-            properties.put("password", password);
-            connection = DriverManager.getConnection(url, properties);
-        } catch (MissingResourceException e) {
-            System.err.println("Properties file missing " + e);
-        } catch (SQLException e) {
-            System.err.println("Not obtain connection" + e);
+            Context initContext = new InitialContext();
+            Context envContext = (Context) initContext.lookup("java:comp/env");
+            dataSource = (DataSource) envContext.lookup(DATASOURCE_NAME);
+        } catch (NamingException e) {
+//            logger.error(e);
         }
     }
 
-    public static Connection getConnection() throws SQLException {
-        Connection conn = dataSourse.getConnection();
-        return conn;
-    }
+    private ConnectionPool() {}
 
-    public static void close() throws SQLException {
-        Connection conn = dataSourse.getConnection();
-        conn.close();
+    public static Connection getConnection() throws SQLException {
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+        return connection;
     }
 
 
 }
+

@@ -3,7 +3,6 @@ package ITCompany.DAO;
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.PC;
-import ITCompany.Entity.Printer;
 import ITCompany.Entity.Product;
 
 import java.sql.*;
@@ -20,7 +19,7 @@ public class ProductDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -30,8 +29,12 @@ public class ProductDAO extends AbstractDAO {
                 Product theProduct = new Product(maker, model, type);
                 productList.add(theProduct);
             }
+            conn.commit();
              } catch (SQLException e) {
-        } finally {}
+        } finally {
+            close(stat);
+            close(conn);
+        }
         return productList;
     }
 
@@ -57,7 +60,7 @@ public class ProductDAO extends AbstractDAO {
         Statement stat = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+            conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -73,7 +76,11 @@ public class ProductDAO extends AbstractDAO {
                 Laptop theLaptop = new Laptop(0, "", 0, 0, 0, 0, laptopPrice);
                 selectedProductList.add(theLaptop);
             }
+            conn.commit();
         } catch (SQLException e) {
+        } finally {
+            close(stat);
+            close(conn);
         }
         return selectedProductList;
     }
@@ -85,7 +92,7 @@ public class ProductDAO extends AbstractDAO {
         Statement stat = null;
             Class.forName("com.mysql.cj.jdbc.Driver");
             try {
-                conn = DriverManager.getConnection("jdbc:mysql://localhost/Labor_SQL", "root", "");
+                conn = ConnectionPool.getConnection();
                 stat = conn.createStatement();
                 ResultSet resultSet = stat.executeQuery(sql);
                 while (resultSet.next()) {
@@ -94,7 +101,13 @@ public class ProductDAO extends AbstractDAO {
                     Product theProduct = new Product(productMaker, "", productType);
                     laptopsList.add(theProduct);
                 }
-            } catch (SQLException e) {}
+                conn.commit();
+            } catch (SQLException e) {
+
+            } finally {
+                close(stat);
+                close(conn);
+            }
         return laptopsList;
     }
 
