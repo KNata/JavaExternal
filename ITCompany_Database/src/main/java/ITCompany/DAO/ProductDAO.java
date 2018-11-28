@@ -12,11 +12,12 @@ import java.util.List;
 
 public class ProductDAO extends AbstractDAO {
     @Override
-    public List findAll() throws ClassNotFoundException {
+    public List findAll() throws ClassNotFoundException, SQLException {
         String sql = "select * from Product";
         List<Product> productList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = conn.setSavepoint();
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
@@ -31,6 +32,7 @@ public class ProductDAO extends AbstractDAO {
             }
             conn.commit();
              } catch (SQLException e) {
+            conn.rollback(savepoint);
         } finally {
             close(stat);
             close(conn);
@@ -53,15 +55,17 @@ public class ProductDAO extends AbstractDAO {
         return null;
     }
 
-    public HashSet showAllProductsExeptPrinters() throws ClassNotFoundException {
+    public HashSet showAllProductsExeptPrinters() throws ClassNotFoundException, SQLException {
         String sql = "select pr.maker, pr.model, pr.type, lapt.price, pc.price from Product pr, Laptop lapt, PC pc where not pr.type = 'Printer'";
         HashSet selectedProductList = new HashSet();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 String productMaker = resultSet.getString("pr.maker");
@@ -78,6 +82,8 @@ public class ProductDAO extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
+            conn.rollback(savepoint);
+
         } finally {
             close(stat);
             close(conn);
@@ -85,15 +91,17 @@ public class ProductDAO extends AbstractDAO {
         return selectedProductList;
     }
 
-    public List<Product> findLaptopMakersByMeketAsc() throws ClassNotFoundException {
+    public List<Product> findLaptopMakersByMeketAsc() throws ClassNotFoundException, SQLException {
         String sql = "select type, maker from Product where type = 'Laptop' order by maker ASC";
         List<Product> laptopsList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
-            Class.forName("com.mysql.cj.jdbc.Driver");
+        Savepoint savepoint = null;
+        Class.forName("com.mysql.cj.jdbc.Driver");
             try {
                 conn = ConnectionPool.getConnection();
                 stat = conn.createStatement();
+                savepoint = conn.setSavepoint();
                 ResultSet resultSet = stat.executeQuery(sql);
                 while (resultSet.next()) {
                     String productType = resultSet.getString("type");
@@ -103,7 +111,7 @@ public class ProductDAO extends AbstractDAO {
                 }
                 conn.commit();
             } catch (SQLException e) {
-
+                conn.rollback(savepoint);
             } finally {
                 close(stat);
                 close(conn);

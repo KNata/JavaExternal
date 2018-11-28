@@ -15,15 +15,17 @@ public class LaptopDAO extends AbstractDAO {
     private Logger logger;
 
     @Override
-    public List findAll() throws ClassNotFoundException {
+    public List findAll() throws ClassNotFoundException, SQLException {
         String sql = "select * from Laptop";
         List<Laptop> laptopsList = new ArrayList<Laptop>();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int unicCode = resultSet.getInt("code");
@@ -39,6 +41,7 @@ public class LaptopDAO extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             logger.error("SQL exeption " + e);
+            conn.rollback(savepoint);
         } finally {
             close(stat);
             close(conn);
@@ -63,15 +66,17 @@ public class LaptopDAO extends AbstractDAO {
         return null;
     }
 
-    public HashSet showAllPCManufacturersBySpeedMoreThen() throws ClassNotFoundException {
+    public HashSet showAllPCManufacturersBySpeedMoreThen() throws ClassNotFoundException, SQLException {
         String sql = "select pr.maker, pr.type, pr.model, lapt.speed from Product pr inner join Laptop lapt where lapt.speed > 600";
         HashSet productsSet = new HashSet();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int laptopSpeed = resultSet.getInt("lapt.speed");
@@ -86,6 +91,7 @@ public class LaptopDAO extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
 //            logger.error(e);
+            conn.rollback(savepoint);
         } finally {
             close(stat);
             close(conn);

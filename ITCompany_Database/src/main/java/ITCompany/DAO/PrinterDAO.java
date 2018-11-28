@@ -12,15 +12,17 @@ public class PrinterDAO extends AbstractDAO {
 
 
     @Override
-    public List findAll() throws ClassNotFoundException {
+    public List findAll() throws ClassNotFoundException, SQLException {
         String sql = "select * from Printer";
         List<Printer> printerList = new ArrayList<Printer>();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int code = resultSet.getInt("code");
@@ -33,6 +35,8 @@ public class PrinterDAO extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
+            conn.rollback(savepoint);
+        } finally {
             close(stat);
             close(conn);
         }
@@ -54,15 +58,17 @@ public class PrinterDAO extends AbstractDAO {
         return null;
     }
 
-    public List<Printer> showAllColorPrintersByDesc() throws ClassNotFoundException {
+    public List<Printer> showAllColorPrintersByDesc() throws ClassNotFoundException, SQLException {
         String sql = "select * from Printer where color = 'y' order by price desc";
         List<Printer> printerList = new ArrayList<Printer>();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int code = resultSet.getInt("code");
@@ -75,21 +81,25 @@ public class PrinterDAO extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
+            conn.rollback(savepoint);
+        } finally {
             close(stat);
             close(conn);
         }
         return printerList;
     }
 
-    public List<Printer> showAllPrintersByPriceLessThenSelected() throws ClassNotFoundException {
+    public List<Printer> showAllPrintersByPriceLessThenSelected() throws ClassNotFoundException, SQLException {
         String sql = "select model, type, price from Printer where price < 300 order by type desc";
         List<Printer> printerList = new ArrayList<Printer>();
         Connection conn = null;
         Statement stat = null;
+        Savepoint savepoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
+            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
@@ -99,6 +109,8 @@ public class PrinterDAO extends AbstractDAO {
                 printerList.add(thePrinter);
             }
         } catch (SQLException e) {
+            conn.rollback(savepoint);
+        } finally {
             close(stat);
             close(conn);
         }
