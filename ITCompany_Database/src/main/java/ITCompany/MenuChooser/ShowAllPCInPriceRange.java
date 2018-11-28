@@ -2,6 +2,7 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.PCDao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ShowAllPCInPriceRange implements Command {
@@ -13,7 +14,7 @@ public class ShowAllPCInPriceRange implements Command {
     }
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         System.out.println(pcDao.allPCBySelectedSpeedInPriceRange());
     }
 }

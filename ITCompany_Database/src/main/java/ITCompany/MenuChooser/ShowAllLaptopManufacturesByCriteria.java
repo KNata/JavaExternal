@@ -2,6 +2,8 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.LaptopDAO;
 
+import java.sql.SQLException;
+
 public class ShowAllLaptopManufacturesByCriteria implements Command {
 
     private LaptopDAO laptopDAO;
@@ -11,7 +13,7 @@ public class ShowAllLaptopManufacturesByCriteria implements Command {
     }
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         for (Object obj : laptopDAO.showAllPCManufacturersBySpeedMoreThen()) {
             System.out.println(obj.toString());
         }

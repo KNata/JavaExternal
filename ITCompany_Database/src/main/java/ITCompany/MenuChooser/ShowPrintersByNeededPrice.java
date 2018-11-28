@@ -2,6 +2,8 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.PrinterDAO;
 
+import java.sql.SQLException;
+
 public class ShowPrintersByNeededPrice implements Command {
 
     private PrinterDAO printerDAO;
@@ -11,7 +13,7 @@ public class ShowPrintersByNeededPrice implements Command {
     }
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         System.out.println(printerDAO.showAllPrintersByPriceLessThenSelected());
     }
 }

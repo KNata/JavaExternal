@@ -2,6 +2,8 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.ProductDAO;
 
+import java.sql.SQLException;
+
 public class ShowAllProductsExeptPrinters implements Command {
 
     private ProductDAO productDAO;
@@ -11,7 +13,7 @@ public class ShowAllProductsExeptPrinters implements Command {
     }
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         for(Object obj : productDAO.showAllProductsExeptPrinters()) {
             System.out.println(obj.toString());
         }

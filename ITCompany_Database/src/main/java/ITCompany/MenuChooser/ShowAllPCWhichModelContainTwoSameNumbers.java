@@ -2,6 +2,8 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.PCDao;
 
+import java.sql.SQLException;
+
 public class ShowAllPCWhichModelContainTwoSameNumbers implements Command {
 
     private PCDao pcDao;
@@ -11,7 +13,7 @@ public class ShowAllPCWhichModelContainTwoSameNumbers implements Command {
     }
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         System.out.println(pcDao.showAllPCWhichModelContainTwoSameNumbers());
     }
 }

@@ -2,6 +2,8 @@ package ITCompany.MenuChooser;
 
 import ITCompany.DAO.PrinterDAO;
 
+import java.sql.SQLException;
+
 public class ShowColorPrinters implements Command {
 
     private PrinterDAO printerDAO;
@@ -12,7 +14,7 @@ public class ShowColorPrinters implements Command {
 
 
     @Override
-    public void execute() throws ClassNotFoundException {
+    public void execute() throws ClassNotFoundException, SQLException {
         System.out.println(printerDAO.showAllColorPrintersByDesc());
     }
 }
