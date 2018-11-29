@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/DAO/LaptopDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/DAO/LaptopDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/DAO/PCDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/DAO/PCDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/DAO/PrinterDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/DAO/PrinterDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/DAO/ProductDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/DAO/ProductDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCInPriceRange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCInPriceRange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowColorPrinters.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowColorPrinters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowPrintersByNeededPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ITCompany/MenuChooser/ShowPrintersByNeededPrice.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,34 +36,34 @@
     <session id="1129690416">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="106" />
+          <entry key="java" value="114" />
           <entry key="properties" value="1" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="2" />
+          <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="106" />
+          <entry key="JAVA" value="114" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="2" />
+          <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7512" />
+          <entry key="java" value="8229" />
           <entry key="properties" value="5" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
@@ -58,7 +71,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7512" />
+          <entry key="JAVA" value="8229" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="1" />
@@ -69,109 +82,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/RemoteControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1947#1948#0" expanded="true" />
+                <element signature="e#1975#1976#0" expanded="true" />
+                <element signature="e#2033#2034#0" expanded="true" />
+                <element signature="e#2061#2062#0" expanded="true" />
+                <element signature="e#2118#2119#0" expanded="true" />
+                <element signature="e#2145#2146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+            <state relative-caret-position="426">
+              <caret line="224" column="39" selection-start-line="224" selection-start-column="39" selection-end-line="224" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#217#218#0" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1539#1540#0" expanded="true" />
-                <element signature="e#1567#1568#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1732#1733#0" expanded="true" />
+                <element signature="e#1760#1761#0" expanded="true" />
+                <element signature="e#1814#1815#0" expanded="true" />
+                <element signature="e#1842#1843#0" expanded="true" />
+                <element signature="e#1891#1892#0" expanded="true" />
+                <element signature="e#1918#1919#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -180,8 +159,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="91" column="109" selection-start-line="91" selection-start-column="109" selection-end-line="91" selection-end-column="109" />
+            <state relative-caret-position="441">
+              <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1719#1720#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+                <element signature="e#1834#1835#0" expanded="true" />
+                <element signature="e#1893#1894#0" expanded="true" />
+                <element signature="e#1920#1921#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="122" column="26" lean-forward="true" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1588#1589#0" expanded="true" />
+                <element signature="e#1647#1648#0" expanded="true" />
+                <element signature="e#1674#1675#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,23 +232,24 @@
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
         <option value="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/WrapperConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/ConnectionPool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/RemoteControl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" />
       </list>
     </option>
   </component>
@@ -263,7 +279,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,6 +359,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -399,25 +415,26 @@
       <workItem from="1542986894073" duration="3159000" />
       <workItem from="1543014987174" duration="11722000" />
       <workItem from="1543268193630" duration="5461000" />
-      <workItem from="1543438677823" duration="4084000" />
+      <workItem from="1543438677823" duration="4680000" />
+      <workItem from="1543488522183" duration="837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27915000" />
+    <option name="totallyTimeSpent" value="29348000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26435044" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26812688" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16189112" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27507162" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -474,29 +491,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entitiy.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/DBConnectionPoolResourse.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="8" selection-start-line="3" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties.txt" />
     <entry file="file:///Volumes/Data/Natalia/НАУКМА/3/database_workspace/JDBC_KiselykN/src/JDBC_KiselykN/Program.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/PC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
           <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
-          <folding>
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,12 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
-            <element signature="e#1695#1696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -559,81 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/WrapperConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2581">
-          <caret line="181" column="80" selection-start-line="181" selection-start-column="80" selection-end-line="181" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-            <element signature="e#1653#1654#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="68" column="102" selection-start-line="68" selection-start-column="102" selection-end-line="68" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="91" column="109" selection-start-line="91" selection-start-column="109" selection-end-line="91" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1539#1540#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -651,16 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,6 +625,111 @@
             <element signature="imports" expanded="true" />
             <element signature="e#217#218#0" expanded="true" />
             <element signature="e#257#258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/RemoteControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1947#1948#0" expanded="true" />
+            <element signature="e#1975#1976#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2061#2062#0" expanded="true" />
+            <element signature="e#2118#2119#0" expanded="true" />
+            <element signature="e#2145#2146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="224" column="39" selection-start-line="224" selection-start-column="39" selection-end-line="224" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1842#1843#0" expanded="true" />
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1918#1919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1834#1835#0" expanded="true" />
+            <element signature="e#1893#1894#0" expanded="true" />
+            <element signature="e#1920#1921#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="122" column="26" lean-forward="true" selection-start-line="122" selection-start-column="26" selection-end-line="122" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1647#1648#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
           </folding>
         </state>
       </provider>

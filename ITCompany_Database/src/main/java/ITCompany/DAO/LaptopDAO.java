@@ -10,9 +10,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class LaptopDAO extends AbstractDAO {
+public class LaptopDAO extends AbstractDAO <Integer, Laptop> {
 
-    private Logger logger;
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(LaptopDAO.class);
+    }
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -40,7 +44,7 @@ public class LaptopDAO extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
-            logger.error("SQL exeption " + e);
+            logger.error(e.getMessage());
             conn.rollback(savepoint);
         } finally {
             close(stat);
@@ -50,21 +54,20 @@ public class LaptopDAO extends AbstractDAO {
     }
 
     @Override
-    public boolean delete(Object id) {
-
+    public boolean delete(Integer id) {
         return false;
     }
 
     @Override
-    public boolean create(Object entity) {
+    public boolean create(Laptop entity) {
         return false;
     }
 
     @Override
-    public Object update(Object theLaptop) {
-
+    public Laptop update(Laptop entity) {
         return null;
     }
+
 
     public HashSet showAllPCManufacturersBySpeedMoreThen() throws ClassNotFoundException, SQLException {
         String sql = "select pr.maker, pr.type, pr.model, lapt.speed from Product pr inner join Laptop lapt where lapt.speed > 600";
@@ -90,7 +93,7 @@ public class LaptopDAO extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
-//            logger.error(e);
+            logger.error(e.getMessage());
             conn.rollback(savepoint);
         } finally {
             close(stat);

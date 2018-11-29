@@ -3,12 +3,19 @@ package ITCompany.DAO;
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.Printer;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrinterDAO extends AbstractDAO {
+public class PrinterDAO extends AbstractDAO <Integer, Printer> {
+
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(PrinterDAO.class);
+    }
 
 
     @Override
@@ -36,6 +43,7 @@ public class PrinterDAO extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savepoint);
+            logger.error(e.getMessage());
         } finally {
             close(stat);
             close(conn);
@@ -44,19 +52,20 @@ public class PrinterDAO extends AbstractDAO {
     }
 
     @Override
-    public boolean delete(Object id) {
+    public boolean delete(Integer id) {
         return false;
     }
 
     @Override
-    public boolean create(Object entity) {
+    public boolean create(Printer entity) {
         return false;
     }
 
     @Override
-    public Object update(Object entity) {
+    public Printer update(Printer entity) {
         return null;
     }
+
 
     public List<Printer> showAllColorPrintersByDesc() throws ClassNotFoundException, SQLException {
         String sql = "select * from Printer where color = 'y' order by price desc";
@@ -82,6 +91,7 @@ public class PrinterDAO extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savepoint);
+            logger.error(e.getMessage());
         } finally {
             close(stat);
             close(conn);
@@ -110,6 +120,7 @@ public class PrinterDAO extends AbstractDAO {
             }
         } catch (SQLException e) {
             conn.rollback(savepoint);
+            logger.error(e.getMessage());
         } finally {
             close(stat);
             close(conn);

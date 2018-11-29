@@ -8,14 +8,15 @@ public class ShowAllLaptopManufacturesByCriteria implements Command {
 
     private LaptopDAO laptopDAO;
 
-    ShowAllLaptopManufacturesByCriteria (LaptopDAO aLaptopDAO) {
+    public ShowAllLaptopManufacturesByCriteria (LaptopDAO aLaptopDAO) {
         laptopDAO = aLaptopDAO;
     }
 
     @Override
     public void execute() throws ClassNotFoundException, SQLException {
-        for (Object obj : laptopDAO.showAllPCManufacturersBySpeedMoreThen()) {
-            System.out.println(obj.toString());
-        }
+
+//        for (Laptop laptop : laptopDAO.showAllPCManufacturersBySpeedMoreThen()) {
+//            System.out.println(laptop.toString());
+//        }
     }
 }

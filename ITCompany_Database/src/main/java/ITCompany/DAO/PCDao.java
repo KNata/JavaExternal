@@ -3,12 +3,20 @@ package ITCompany.DAO;
 
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.PC;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PCDao extends AbstractDAO {
+public class PCDao extends AbstractDAO <Integer, PC> {
+
+    private static final Logger logger;
+
+
+    static {
+        logger = Logger.getLogger(PCDao.class);
+    }
 
 
     @Override
@@ -38,6 +46,7 @@ public class PCDao extends AbstractDAO {
                 conn.commit();
             } catch (SQLException d) {
             conn.rollback(savepoint);
+            logger.error(d.getMessage());
         } finally {
                close(st);
                close(conn);
@@ -46,19 +55,20 @@ public class PCDao extends AbstractDAO {
     }
 
     @Override
-    public boolean delete(Object id) {
-        throw new UnsupportedOperationException();
+    public boolean delete(Integer id) {
+        return false;
     }
 
     @Override
-    public boolean create(Object entity) {
-        throw new UnsupportedOperationException();
+    public boolean create(PC entity) {
+        return false;
     }
 
     @Override
-    public Object update(Object entity) {
-        throw new UnsupportedOperationException();
+    public PC update(PC entity) {
+        return null;
     }
+
 
     // res should be 0
     public List<PC> allPCBySelectedSpeedAndPrice() throws ClassNotFoundException, SQLException {
@@ -87,6 +97,7 @@ public class PCDao extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savePoint);
+            logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);
@@ -114,6 +125,7 @@ public class PCDao extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savePoint);
+            logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);
@@ -121,15 +133,17 @@ public class PCDao extends AbstractDAO {
         return pcList;
     }
 
-    public List<PC> showAllPCWhichModelContainTwoSameNumbers() throws ClassNotFoundException{
+    public List<PC> showAllPCWhichModelContainTwoSameNumbers() throws ClassNotFoundException, SQLException{
         String sql = "select * from PC where model like '%11%'";
         List<PC> pcList = new ArrayList<PC>();
         Connection conn = null;
         Statement st = null;
+        Savepoint savePoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
+            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -144,6 +158,9 @@ public class PCDao extends AbstractDAO {
             }
             conn.commit();
         } catch (SQLException e) {
+            conn.rollback(savePoint);
+            logger.error(e.getMessage());
+        } finally {
             close(st);
             close(conn);
         }
@@ -172,6 +189,7 @@ public class PCDao extends AbstractDAO {
             conn.commit();
         } catch(SQLException e) {
             conn.rollback(savePoint);
+            logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);
@@ -204,6 +222,7 @@ public class PCDao extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savePoint);
+            logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);

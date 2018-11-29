@@ -4,13 +4,21 @@ import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.PC;
 import ITCompany.Entity.Product;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class ProductDAO extends AbstractDAO {
+public class ProductDAO extends AbstractDAO <Integer, Product> {
+
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(ProductDAO.class);
+    }
+
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
         String sql = "select * from Product";
@@ -33,6 +41,7 @@ public class ProductDAO extends AbstractDAO {
             conn.commit();
              } catch (SQLException e) {
             conn.rollback(savepoint);
+            logger.error(e.getMessage());
         } finally {
             close(stat);
             close(conn);
@@ -41,19 +50,20 @@ public class ProductDAO extends AbstractDAO {
     }
 
     @Override
-    public boolean delete(Object id) {
+    public boolean delete(Integer id) {
         return false;
     }
 
     @Override
-    public boolean create(Object entity) {
+    public boolean create(Product entity) {
         return false;
     }
 
     @Override
-    public Object update(Object entity) {
+    public Product update(Product entity) {
         return null;
     }
+
 
     public HashSet showAllProductsExeptPrinters() throws ClassNotFoundException, SQLException {
         String sql = "select pr.maker, pr.model, pr.type, lapt.price, pc.price from Product pr, Laptop lapt, PC pc where not pr.type = 'Printer'";
@@ -83,7 +93,7 @@ public class ProductDAO extends AbstractDAO {
             conn.commit();
         } catch (SQLException e) {
             conn.rollback(savepoint);
-
+            logger.error(e.getMessage());
         } finally {
             close(stat);
             close(conn);
@@ -112,6 +122,7 @@ public class ProductDAO extends AbstractDAO {
                 conn.commit();
             } catch (SQLException e) {
                 conn.rollback(savepoint);
+                logger.error(e.getMessage());
             } finally {
                 close(stat);
                 close(conn);
