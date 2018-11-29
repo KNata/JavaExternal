@@ -26,7 +26,7 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        //Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
@@ -45,8 +45,8 @@ public class PCDao extends AbstractDAO <Integer, PC> {
             }
                 conn.commit();
             } catch (SQLException d) {
-            conn.rollback(savepoint);
-            logger.error(d.getMessage());
+           // conn.rollback(savepoint);
+           // logger.error(d.getMessage());
         } finally {
                close(st);
                close(conn);
@@ -76,12 +76,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         List<PC> pcList = new ArrayList<PC>();
         Connection conn = null;
         Statement st = null;
-        Savepoint savePoint = null;
+     //   Savepoint savePoint = null;
         Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
+        //    savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while(resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -94,13 +94,13 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
-            conn.commit();
+    //        conn.commit();
         } catch (SQLException e) {
-            conn.rollback(savePoint);
-            logger.error(e.getMessage());
+//            conn.rollback(savePoint);
+//            logger.error(e.getMessage());
         } finally {
-            close(st);
-            close(conn);
+//            close(st);
+//            close(conn);
         }
         return pcList;
     }
@@ -111,7 +111,7 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savePoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
+       // Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
@@ -124,8 +124,8 @@ public class PCDao extends AbstractDAO <Integer, PC> {
             }
             conn.commit();
         } catch (SQLException e) {
-            conn.rollback(savePoint);
-            logger.error(e.getMessage());
+          //  conn.rollback(savePoint);
+          //  logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);
@@ -197,7 +197,7 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         return pcList;
     }
 
-    private List<PC> showAllPCManufacturersBySelectedSpeed() throws SQLException {
+    public List<PC> showAllPCManufacturersBySelectedSpeed() throws SQLException {
         String sql = "select pr.maker from Product pr inner join Laptop lapt where lapt.speed <= 500";
         List<PC> pcList = new ArrayList<PC>();
         Connection conn = null;
@@ -221,8 +221,8 @@ public class PCDao extends AbstractDAO <Integer, PC> {
             }
             conn.commit();
         } catch (SQLException e) {
-            conn.rollback(savePoint);
-            logger.error(e.getMessage());
+//            conn.rollback(savePoint);
+         //   logger.error(e.getMessage());
         } finally {
             close(st);
             close(conn);
