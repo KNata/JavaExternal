@@ -18,9 +18,10 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
         List<Product> productList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
-//        Savepoint savepoint = conn.setSavepoint();
+        Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
@@ -29,13 +30,22 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
                 String type = resultSet.getString("type");
                 Product theProduct = new Product(maker, model, type);
                 productList.add(theProduct);
+                savepoint = conn.setSavepoint();
             }
-           // conn.rollback(savepoint);
             conn.commit();
              } catch (SQLException e) {
+                if (savepoint == null) {
+                    conn.rollback();
+                } else {
+                    conn.rollback(savepoint);
+                }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return productList;
     }
@@ -68,8 +78,8 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 String productMaker = resultSet.getString("pr.maker");
@@ -83,13 +93,22 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
                 int laptopPrice = resultSet.getInt("lapt.price");
                 Laptop theLaptop = new Laptop(0, "", 0, 0, 0, 0, laptopPrice);
                 selectedProductList.add(theLaptop);
+                savepoint = conn.setSavepoint();
             }
             conn.commit();
-            conn.rollback(savepoint);
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return selectedProductList;
     }
@@ -102,24 +121,31 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
         Savepoint savepoint = null;
             try {
                 conn = ConnectionPool.getConnection();
+                conn.setAutoCommit(false);
                 stat = conn.createStatement();
-                savepoint = conn.setSavepoint();
                 ResultSet resultSet = stat.executeQuery(sql);
                 while (resultSet.next()) {
                     String productType = resultSet.getString("type");
                     String productMaker = resultSet.getString("maker");
                     Product theProduct = new Product(productMaker, "", productType);
                     laptopsList.add(theProduct);
+                    savepoint = conn.setSavepoint();
                 }
                 conn.commit();
-                conn.rollback(savepoint);
             } catch (SQLException e) {
+                if (savepoint == null) {
+                    conn.rollback();
+                } else {
+                    conn.rollback(savepoint);
+                }
             } finally {
-                stat.close();
-                conn.close();
+                if (stat != null) {
+                    stat.close();
+                }
+                if (conn != null) {
+                    conn.close();
+                }
             }
         return laptopsList;
     }
-
-
 }

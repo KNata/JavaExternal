@@ -21,8 +21,8 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int code = resultSet.getInt("code");
@@ -32,13 +32,22 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
                 double price = resultSet.getDouble("price");
                 Printer thePrinter = new Printer(code, model, color, type, price);
                 printerList.add(thePrinter);
+                savepoint = conn.setSavepoint();
             }
-            conn.rollback(savepoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return printerList;
     }
@@ -52,21 +61,29 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 laptopId = resultSet.getInt("code");
             }
             if (laptopId == anId) {
                 isPresent = true;
+                savepoint = conn.setSavepoint();
             }
-            //conn.rollback(savepoint);
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
-        } finally {
-            statement.close();
-            conn.close();
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return isPresent;
     }
@@ -82,17 +99,25 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
                 Savepoint savePoint = null;
                 try {
                     conn = ConnectionPool.getConnection();
+                    conn.setAutoCommit(false);
                     stat = conn.createStatement();
-                    savePoint = conn.setSavepoint();
                     stat.executeUpdate(sql);
                     wasDeleted = true;
-                    //  conn.rollback(savePoint);
+                    savePoint = conn.setSavepoint();
                     conn.commit();
                 } catch (SQLException e) {
-                    System.err.println(e.getMessage());
+                    if (savePoint == null) {
+                        conn.rollback();
+                    } else {
+                        conn.rollback(savePoint);
+                    }
                 } finally {
-                    stat.close();
-                    conn.close();
+                    if (stat != null) {
+                        stat.close();
+                    }
+                    if (conn != null) {
+                        conn.close();
+                    }
                 }
             }
         } else {
@@ -107,20 +132,33 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
     }
 
     @Override
-    public boolean update(int anID, double aPrice) {
+    public boolean update(int anID, double aPrice) throws SQLException, ClassNotFoundException{
         boolean status = false;
         String updateSQL = "UPDATE Printer SET price = '" + aPrice + "' WHERE code = '" + anID + "'";
         Connection conn = null;
         Statement statement = null;
+        Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
             statement.executeUpdate(updateSQL);
             status = true;
-            System.out.println("Done");
-
+            savepoint = conn.setSavepoint();
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
+        } finally {
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return status;
     }
@@ -134,8 +172,8 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int code = resultSet.getInt("code");
@@ -145,13 +183,22 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
                 double price = resultSet.getDouble("price");
                 Printer thePrinter = new Printer(code, model, color, type, price);
                 printerList.add(thePrinter);
+                savepoint = conn.setSavepoint();
             }
             conn.commit();
-            conn.rollback(savepoint);
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return printerList;
     }
@@ -164,8 +211,8 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
@@ -173,13 +220,22 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
                 double price = resultSet.getDouble("price");
                 Printer thePrinter = new Printer(0, model, "", type, price);
                 printerList.add(thePrinter);
+                savepoint = conn.setSavepoint();
             }
-            conn.rollback(savepoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return printerList;
     }

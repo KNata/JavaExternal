@@ -3,20 +3,12 @@ package ITCompany.DAO;
 
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.PC;
-import org.apache.log4j.Logger;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PCDao implements AbstractDAO <Integer, PC> {
 
-    private static final Logger logger;
-
-
-    static {
-        logger = Logger.getLogger(PCDao.class);
-    }
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -25,11 +17,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savepoint = null;
-        //Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savepoint = conn.setSavepoint("Find all PC");
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -41,13 +32,22 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 double price = resultSet.getDouble("price");
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
+                savepoint = conn.setSavepoint("Find all PC");
             }
-            conn.rollback(savepoint);
             conn.commit();
             } catch (SQLException d) {
+                if (savepoint == null) {
+                    conn.rollback();
+                } else {
+                    conn.rollback(savepoint);
+                }
         } finally {
-            st.close();
-            conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
@@ -62,21 +62,30 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 pcId = resultSet.getInt("code");
             }
             if (pcId == anId) {
                 isPresent = true;
+                savepoint = conn.setSavepoint();
             }
-            //conn.rollback(savepoint);
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            statement.close();
-
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return isPresent;
     }
@@ -92,17 +101,26 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 Savepoint savePoint = null;
                 try {
                     conn = ConnectionPool.getConnection();
+                    conn.setAutoCommit(false);
                     stat = conn.createStatement();
                     savePoint = conn.setSavepoint();
                     stat.executeUpdate(sql);
                     wasDeleted = true;
-                    //  conn.rollback(savePoint);
+                    savePoint = conn.setSavepoint("SavePoint");
                     conn.commit();
                 } catch (SQLException e) {
-                    System.err.println(e.getMessage());
+                    if (savePoint == null) {
+                        conn.rollback();
+                    } else {
+                        conn.rollback(savePoint);
+                    }
                 } finally {
-                    stat.close();
-                    conn.close();
+                    if (stat != null) {
+                        stat.close();
+                    }
+                    if (conn != null) {
+                        conn.close();
+                    }
                 }
             }
         } else {
@@ -122,18 +140,28 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         String updateSQL = "UPDATE PC SET price = '" + aPrice + "' WHERE code = '" + anID + "'";
         Connection conn = null;
         Statement statement = null;
+        Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
             statement.executeUpdate(updateSQL);
             status = true;
-            System.out.println("Done");
-
+            savepoint = conn.setSavepoint("SavePoint");
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            statement.close();
-            statement.close();
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return status;
     }
@@ -148,8 +176,8 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while(resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -161,13 +189,22 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 double price = resultSet.getDouble("price");
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
+                savePoint = conn.setSavepoint("SavePoint");
             }
-            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savePoint);
+            }
         } finally {
-           st.close();
-           conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
@@ -178,24 +215,32 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savePoint = null;
-       // Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
                 int pcSpeed = resultSet.getInt("speed");
                 PC thePC = new PC(0, model, pcSpeed, 0, 0, "", 0.0);
                 pcList.add(thePC);
+                savePoint = conn.setSavepoint("SavePoint");
             }
-            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savePoint);
+            }
         } finally {
-            st.close();
-            conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
@@ -208,8 +253,8 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -221,13 +266,22 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 double price = resultSet.getDouble("price");
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
+                savePoint = conn.setSavepoint();
             }
-            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savePoint);
+            }
         } finally {
-            st.close();
-            conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
@@ -240,8 +294,8 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
@@ -249,13 +303,26 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 int hd = resultSet.getInt("hd");
                 PC thePC = new PC(0, model, pcSpeed, 0, hd, "", 0.0);
                 pcList.add(thePC);
+                savePoint = conn.setSavepoint();
             }
-            conn.rollback(savePoint);
             conn.commit();
         } catch(SQLException e) {
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                if (savePoint == null) {
+                    conn.rollback();
+                } else {
+                    conn.rollback(savePoint);
+                }
+            }
         } finally {
-            st.close();
-            conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
@@ -268,8 +335,8 @@ public class PCDao implements AbstractDAO <Integer, PC> {
         Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             st = conn.createStatement();
-            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -281,13 +348,22 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 double price = resultSet.getDouble("price");
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
+                savePoint = conn.setSavepoint();
             }
-            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savePoint);
+            }
         } finally {
-            st.close();
-            conn.close();
+            if (st != null) {
+                st.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return pcList;
     }
