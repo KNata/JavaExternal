@@ -73,7 +73,7 @@ public class App2 {
                     System.out.println("Avaliable PC which model contains '11'");
                     remoteControl.chooseCommand();
                     System.out.println();
-                } else if (choice == 3) { // Pinters
+                } else if (choice == 3) { // Printers
                     remoteControl.setCommand(showAllPrinters);
                     System.out.println("List of avaliable Printers");
                     remoteControl.chooseCommand();

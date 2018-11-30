@@ -18,7 +18,7 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
         List<Product> productList = new ArrayList<Product>();
         Connection conn = null;
         Statement stat = null;
-        Savepoint savepoint = conn.setSavepoint();
+//        Savepoint savepoint = conn.setSavepoint();
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -30,7 +30,7 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
                 Product theProduct = new Product(maker, model, type);
                 productList.add(theProduct);
             }
-            conn.rollback(savepoint);
+           // conn.rollback(savepoint);
             conn.commit();
              } catch (SQLException e) {
         } finally {
