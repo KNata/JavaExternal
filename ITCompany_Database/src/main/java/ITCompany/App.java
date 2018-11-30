@@ -21,12 +21,14 @@ public class App {
 
     public static void main (String[] args) throws ClassNotFoundException, SQLException {
 
-        ProductDAO productDAO = new ProductDAO();
-        List<Product> allProducts = productDAO.findLaptopMakersByMeketAsc();
+        LaptopDAO productDAO = new LaptopDAO();
+        List<Laptop> allProducts = productDAO.findAll();
         System.out.println(allProducts.size());
-        for (Product pr : allProducts) {
+        for (Laptop pr : allProducts) {
             System.out.println(pr.toString());
         }
+
+
 
     }
 }

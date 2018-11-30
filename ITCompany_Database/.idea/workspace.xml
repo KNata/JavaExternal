@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,7 +30,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="188" />
+          <entry key="java" value="190" />
           <entry key="properties" value="2" />
           <entry key="propeties" value="1" />
           <entry key="txt" value="1" />
@@ -41,7 +40,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="188" />
+          <entry key="JAVA" value="190" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="3" />
@@ -49,7 +48,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14010" />
+          <entry key="java" value="14266" />
           <entry key="properties" value="5" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
@@ -57,7 +56,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14010" />
+          <entry key="JAVA" value="14266" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="1" />
@@ -67,35 +66,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="361">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,7 +122,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ITCompany/DBInteraction/ConnectionPoolTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" />
         <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/LaptopDAOTest.java" />
@@ -157,8 +143,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
       </list>
     </option>
   </component>
@@ -408,7 +395,7 @@
       <workItem from="1543438677823" duration="4680000" />
       <workItem from="1543488522183" duration="991000" />
       <workItem from="1543526386621" duration="8404000" />
-      <workItem from="1543589765324" duration="11132000" />
+      <workItem from="1543589765324" duration="12639000" />
     </task>
     <servers />
   </component>
@@ -445,20 +432,20 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49038000" />
+    <option name="totallyTimeSpent" value="50545000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3194864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3194864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16332377" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.24355301" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,16 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="169" column="130" selection-start-line="169" selection-start-column="127" selection-end-line="169" selection-end-column="130" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPC.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -800,6 +777,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -812,18 +799,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="361">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="75" column="47" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+        <state relative-caret-position="433">
+          <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

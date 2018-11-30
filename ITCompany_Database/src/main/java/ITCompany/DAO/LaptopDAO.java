@@ -22,8 +22,8 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int unicCode = resultSet.getInt("code");
@@ -35,13 +35,22 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
                 double laptopPrice = resultSet.getInt("price");
                 Laptop theLaptop = new Laptop(unicCode, laptopModel, laptopSpeed, hardDriveSize, ram, screenSize, laptopPrice);
                 laptopsList.add(theLaptop);
+                savepoint = conn.setSavepoint("SavePoint");
             }
-            conn.rollback(savepoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return laptopsList;
     }
@@ -56,21 +65,30 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
         Savepoint savepoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 laptopId = resultSet.getInt("code");
             }
             if (laptopId == anId) {
                 isPresent = true;
+                savepoint = conn.setSavepoint("SavePoint");
             }
-            //conn.rollback(savepoint);
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            statement.close();
-            conn.close();
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return isPresent;
     }
@@ -86,17 +104,25 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
                 Savepoint savePoint = null;
                 try {
                     conn = ConnectionPool.getConnection();
+                    conn.setAutoCommit(false);
                     stat = conn.createStatement();
-                    savePoint = conn.setSavepoint();
                     stat.executeUpdate(sql);
                     wasDeleted = true;
-                  //  conn.rollback(savePoint);
+                    savePoint = conn.setSavepoint();
                     conn.commit();
                 } catch (SQLException e) {
-                    System.err.println(e.getMessage());
+                    if (savePoint == null) {
+                        conn.rollback();
+                    } else {
+                        conn.rollback(savePoint);
+                    }
                 } finally {
-                    stat.close();
-                    conn.close();
+                    if (stat != null) {
+                        stat.close();
+                    }
+                    if (conn != null) {
+                        conn.close();
+                    }
                 }
             }
         } else {
@@ -149,18 +175,28 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
         String updateSQL = "UPDATE Laptop SET price = '" + aPrice + "' WHERE code = '" + anID + "'";
         Connection conn = null;
         Statement statement = null;
+        Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
             statement = conn.createStatement();
             statement.executeUpdate(updateSQL);
             status = true;
-            System.out.println("Done");
-
+            savePoint = conn.setSavepoint("SavePoint");
+            conn.commit();
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
+            if (savePoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savePoint);
+            }
         } finally {
-            statement.close();
-            conn.close();
+            if (statement != null) {
+                statement.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
         }
         return status;
     }
@@ -175,7 +211,6 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
-            savepoint = conn.setSavepoint();
             ResultSet resultSet = stat.executeQuery(sql);
             while (resultSet.next()) {
                 int laptopSpeed = resultSet.getInt("lapt.speed");
@@ -186,13 +221,22 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
                 String productModel = resultSet.getString("pr.model");
                 Product theProduct = new Product(productMaker, productModel, productType);
                 productsSet.add(theProduct);
+                savepoint = conn.setSavepoint();
             }
-          //  conn.rollback(savepoint);
             conn.commit();
         } catch (SQLException e) {
+            if (savepoint == null) {
+                conn.rollback();
+            } else {
+                conn.rollback(savepoint);
+            }
         } finally {
-            stat.close();
-            conn.close();
+            if (stat != null) {
+                stat.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
          }
          return productsSet;
     }
