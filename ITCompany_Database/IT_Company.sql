@@ -1,8 +1,10 @@
 create database if not exists Labor_SQL;
 use Labor_SQL;
+drop table if exists Labor_SQL ;
+
 
 CREATE TABLE Laptop (
-	code int NOT NULL ,
+	code int NOT NULL,
 	model varchar (50) NOT NULL ,
 	speed smallint NOT NULL ,
 	ram smallint NOT NULL ,

@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PCDao extends AbstractDAO <Integer, PC> {
+public class PCDao implements AbstractDAO <Integer, PC> {
 
     private static final Logger logger;
 
@@ -17,7 +17,6 @@ public class PCDao extends AbstractDAO <Integer, PC> {
     static {
         logger = Logger.getLogger(PCDao.class);
     }
-
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -30,7 +29,7 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
-            savepoint = conn.setSavepoint();
+            savepoint = conn.setSavepoint("Find all PC");
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -43,30 +42,100 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
-                conn.commit();
+            conn.rollback(savepoint);
+            conn.commit();
             } catch (SQLException d) {
-           // conn.rollback(savepoint);
-           // logger.error(d.getMessage());
         } finally {
-               close(st);
-               close(conn);
+            st.close();
+            conn.close();
         }
         return pcList;
     }
 
     @Override
-    public boolean delete(Integer id) {
-        return false;
+    public boolean isTheProductExist(int anId) throws SQLException, ClassNotFoundException {
+        String sql = "select code from PC where code = '" + anId + "'";
+        int pcId = -1;
+        boolean isPresent = false;
+        Connection conn = null;
+        Statement statement = null;
+        Savepoint savepoint = null;
+        try {
+            conn = ConnectionPool.getConnection();
+            statement = conn.createStatement();
+            savepoint = conn.setSavepoint();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                pcId = resultSet.getInt("code");
+            }
+            if (pcId == anId) {
+                isPresent = true;
+            }
+            //conn.rollback(savepoint);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            statement.close();
+
+        }
+        return isPresent;
+    }
+
+    @Override
+    public boolean delete(Integer id) throws SQLException, ClassNotFoundException{
+        boolean wasDeleted = false;
+        if (isTheProductExist(id)) {
+            String sql = "delete from PC where code = '" + id + "'";
+            if (id != -1) {
+                Connection conn = null;
+                Statement stat = null;
+                Savepoint savePoint = null;
+                try {
+                    conn = ConnectionPool.getConnection();
+                    stat = conn.createStatement();
+                    savePoint = conn.setSavepoint();
+                    stat.executeUpdate(sql);
+                    wasDeleted = true;
+                    //  conn.rollback(savePoint);
+                    conn.commit();
+                } catch (SQLException e) {
+                    System.err.println(e.getMessage());
+                } finally {
+                    stat.close();
+                    conn.close();
+                }
+            }
+        } else {
+            System.out.println("Wrong ID");
+        }
+        return wasDeleted;
     }
 
     @Override
     public boolean create(PC entity) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public PC update(PC entity) {
-        return null;
+    public boolean update(int anID, double aPrice) throws SQLException, ClassNotFoundException{
+        boolean status = false;
+        String updateSQL = "UPDATE PC SET price = '" + aPrice + "' WHERE code = '" + anID + "'";
+        Connection conn = null;
+        Statement statement = null;
+        try {
+            conn = ConnectionPool.getConnection();
+            statement = conn.createStatement();
+            statement.executeUpdate(updateSQL);
+            status = true;
+            System.out.println("Done");
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            statement.close();
+            statement.close();
+        }
+        return status;
     }
 
 
@@ -76,12 +145,11 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         List<PC> pcList = new ArrayList<PC>();
         Connection conn = null;
         Statement st = null;
-     //   Savepoint savePoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        Savepoint savePoint = null;
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
-        //    savePoint = conn.setSavepoint();
+            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while(resultSet.next()) {
                 int unicode = resultSet.getInt("code");
@@ -94,13 +162,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
-    //        conn.commit();
+            conn.rollback(savePoint);
+            conn.commit();
         } catch (SQLException e) {
-//            conn.rollback(savePoint);
-//            logger.error(e.getMessage());
         } finally {
-//            close(st);
-//            close(conn);
+           st.close();
+           conn.close();
         }
         return pcList;
     }
@@ -115,6 +182,7 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
+            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
@@ -122,13 +190,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(0, model, pcSpeed, 0, 0, "", 0.0);
                 pcList.add(thePC);
             }
+            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
-          //  conn.rollback(savePoint);
-          //  logger.error(e.getMessage());
         } finally {
-            close(st);
-            close(conn);
+            st.close();
+            conn.close();
         }
         return pcList;
     }
@@ -139,7 +206,6 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savePoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
@@ -156,13 +222,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
+            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
-            conn.rollback(savePoint);
-            logger.error(e.getMessage());
         } finally {
-            close(st);
-            close(conn);
+            st.close();
+            conn.close();
         }
         return pcList;
     }
@@ -173,11 +238,10 @@ public class PCDao extends AbstractDAO <Integer, PC> {
         Connection conn = null;
         Statement st = null;
         Savepoint savePoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             st = conn.createStatement();
-            savePoint = null;
+            savePoint = conn.setSavepoint();
             ResultSet resultSet = st.executeQuery(sql);
             while (resultSet.next()) {
                 String model = resultSet.getString("model");
@@ -186,13 +250,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(0, model, pcSpeed, 0, hd, "", 0.0);
                 pcList.add(thePC);
             }
+            conn.rollback(savePoint);
             conn.commit();
         } catch(SQLException e) {
-            conn.rollback(savePoint);
-            logger.error(e.getMessage());
         } finally {
-            close(st);
-            close(conn);
+            st.close();
+            conn.close();
         }
         return pcList;
     }
@@ -219,13 +282,12 @@ public class PCDao extends AbstractDAO <Integer, PC> {
                 PC thePC = new PC(unicode, model, pcSpeed, ram, hd, cd, price);
                 pcList.add(thePC);
             }
+            conn.rollback(savePoint);
             conn.commit();
         } catch (SQLException e) {
-//            conn.rollback(savePoint);
-         //   logger.error(e.getMessage());
         } finally {
-            close(st);
-            close(conn);
+            st.close();
+            conn.close();
         }
         return pcList;
     }

@@ -9,13 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrinterDAO extends AbstractDAO <Integer, Printer> {
-
-    private static final Logger logger;
-
-    static {
-        logger = Logger.getLogger(PrinterDAO.class);
-    }
+public class PrinterDAO implements AbstractDAO <Integer, Printer> {
 
 
     @Override
@@ -25,7 +19,6 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -40,30 +33,96 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
                 Printer thePrinter = new Printer(code, model, color, type, price);
                 printerList.add(thePrinter);
             }
+            conn.rollback(savepoint);
             conn.commit();
         } catch (SQLException e) {
-            conn.rollback(savepoint);
-            logger.error(e.getMessage());
         } finally {
-            close(stat);
-            close(conn);
+            stat.close();
+            conn.close();
         }
         return printerList;
     }
 
+    public boolean isTheProductExist(int anId) throws SQLException, ClassNotFoundException{
+        String sql = "select code from Printer where code = '" + anId + "'";
+        int laptopId = -1;
+        boolean isPresent = false;
+        Connection conn = null;
+        Statement statement = null;
+        Savepoint savepoint = null;
+        try {
+            conn = ConnectionPool.getConnection();
+            statement = conn.createStatement();
+            savepoint = conn.setSavepoint();
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                laptopId = resultSet.getInt("code");
+            }
+            if (laptopId == anId) {
+                isPresent = true;
+            }
+            //conn.rollback(savepoint);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            statement.close();
+            conn.close();
+        }
+        return isPresent;
+    }
+
     @Override
-    public boolean delete(Integer id) {
-        return false;
+    public boolean delete(Integer id) throws SQLException, ClassNotFoundException{
+        boolean wasDeleted = false;
+        if (isTheProductExist(id)) {
+            String sql = "delete from Printer where code = '" + id + "'";
+            if (id != -1) {
+                Connection conn = null;
+                Statement stat = null;
+                Savepoint savePoint = null;
+                try {
+                    conn = ConnectionPool.getConnection();
+                    stat = conn.createStatement();
+                    savePoint = conn.setSavepoint();
+                    stat.executeUpdate(sql);
+                    wasDeleted = true;
+                    //  conn.rollback(savePoint);
+                    conn.commit();
+                } catch (SQLException e) {
+                    System.err.println(e.getMessage());
+                } finally {
+                    stat.close();
+                    conn.close();
+                }
+            }
+        } else {
+            System.out.println("Wrong ID");
+        }
+        return wasDeleted;
     }
 
     @Override
     public boolean create(Printer entity) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public Printer update(Printer entity) {
-        return null;
+    public boolean update(int anID, double aPrice) {
+        boolean status = false;
+        String updateSQL = "UPDATE Printer SET price = '" + aPrice + "' WHERE code = '" + anID + "'";
+        Connection conn = null;
+        Statement statement = null;
+        try {
+            conn = ConnectionPool.getConnection();
+            statement = conn.createStatement();
+            statement.executeUpdate(updateSQL);
+            status = true;
+            System.out.println("Done");
+
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+        return status;
     }
 
 
@@ -73,7 +132,6 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -89,12 +147,11 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
                 printerList.add(thePrinter);
             }
             conn.commit();
-        } catch (SQLException e) {
             conn.rollback(savepoint);
-            logger.error(e.getMessage());
+        } catch (SQLException e) {
         } finally {
-            close(stat);
-            close(conn);
+            stat.close();
+            conn.close();
         }
         return printerList;
     }
@@ -105,7 +162,6 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -118,12 +174,12 @@ public class PrinterDAO extends AbstractDAO <Integer, Printer> {
                 Printer thePrinter = new Printer(0, model, "", type, price);
                 printerList.add(thePrinter);
             }
-        } catch (SQLException e) {
             conn.rollback(savepoint);
-            logger.error(e.getMessage());
+            conn.commit();
+        } catch (SQLException e) {
         } finally {
-            close(stat);
-            close(conn);
+            stat.close();
+            conn.close();
         }
         return printerList;
     }

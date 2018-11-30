@@ -4,20 +4,13 @@ import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.PC;
 import ITCompany.Entity.Product;
-import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class ProductDAO extends AbstractDAO <Integer, Product> {
-
-    private static final Logger logger;
-
-    static {
-        logger = Logger.getLogger(ProductDAO.class);
-    }
+public class ProductDAO implements AbstractDAO <Integer, Product> {
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -26,7 +19,6 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = conn.setSavepoint();
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -38,31 +30,34 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
                 Product theProduct = new Product(maker, model, type);
                 productList.add(theProduct);
             }
+            conn.rollback(savepoint);
             conn.commit();
              } catch (SQLException e) {
-            conn.rollback(savepoint);
-            logger.error(e.getMessage());
         } finally {
-            close(stat);
-            close(conn);
+            stat.close();
+            conn.close();
         }
         return productList;
     }
 
     @Override
     public boolean delete(Integer id) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public boolean create(Product entity) {
-        return false;
+        throw new UnsupportedOperationException();
     }
 
     @Override
-    public Product update(Product entity) {
-        return null;
+    public boolean update(int anID, double aPrice) {
+        throw new UnsupportedOperationException();
     }
+
+    @Override
+    public boolean isTheProductExist(int anId) throws SQLException, ClassNotFoundException {
+        throw new UnsupportedOperationException();    }
 
 
     public HashSet showAllProductsExeptPrinters() throws ClassNotFoundException, SQLException {
@@ -71,7 +66,6 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
         try {
             conn = ConnectionPool.getConnection();
             stat = conn.createStatement();
@@ -91,12 +85,11 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
                 selectedProductList.add(theLaptop);
             }
             conn.commit();
-        } catch (SQLException e) {
             conn.rollback(savepoint);
-            logger.error(e.getMessage());
+        } catch (SQLException e) {
         } finally {
-            close(stat);
-            close(conn);
+            stat.close();
+            conn.close();
         }
         return selectedProductList;
     }
@@ -107,7 +100,6 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
         Connection conn = null;
         Statement stat = null;
         Savepoint savepoint = null;
-        Class.forName("com.mysql.cj.jdbc.Driver");
             try {
                 conn = ConnectionPool.getConnection();
                 stat = conn.createStatement();
@@ -120,12 +112,11 @@ public class ProductDAO extends AbstractDAO <Integer, Product> {
                     laptopsList.add(theProduct);
                 }
                 conn.commit();
-            } catch (SQLException e) {
                 conn.rollback(savepoint);
-                logger.error(e.getMessage());
+            } catch (SQLException e) {
             } finally {
-                close(stat);
-                close(conn);
+                stat.close();
+                conn.close();
             }
         return laptopsList;
     }

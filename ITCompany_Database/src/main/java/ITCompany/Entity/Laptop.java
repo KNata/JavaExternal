@@ -10,9 +10,9 @@ public class Laptop {
     private int sizeOfHardDrive;
     private int ram;
     private int sizeOfScreen;
-    private int laptopPrice;
+    private double laptopPrice;
 
-    public Laptop(int anUnicCode, String aModelOfLaptop, int aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, int aSizeOfScreen, int aLaptopPrice) {
+    public Laptop(int anUnicCode, String aModelOfLaptop, int aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, int aSizeOfScreen, double aLaptopPrice) {
         unicCode = anUnicCode;
         modelOfLaptop = aModelOfLaptop;
         speedOfLaptop = aSpeedOfLaptop;
@@ -70,11 +70,11 @@ public class Laptop {
         this.sizeOfScreen = sizeOfScreen;
     }
 
-    public int getLaptopPrice() {
+    public double getLaptopPrice() {
         return laptopPrice;
     }
 
-    public void setLaptopPrice(int laptopPrice) {
+    public void setLaptopPrice(double laptopPrice) {
         this.laptopPrice = laptopPrice;
     }
 
