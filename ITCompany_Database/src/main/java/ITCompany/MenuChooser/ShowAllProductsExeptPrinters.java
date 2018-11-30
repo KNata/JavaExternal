@@ -8,14 +8,19 @@ public class ShowAllProductsExeptPrinters implements Command {
 
     private ProductDAO productDAO;
 
-    ShowAllProductsExeptPrinters(ProductDAO aProductDAO) {
+    public ShowAllProductsExeptPrinters(ProductDAO aProductDAO) {
         productDAO = aProductDAO;
     }
 
+
     @Override
     public void execute() throws ClassNotFoundException, SQLException {
-        for(Object obj : productDAO.showAllProductsExeptPrinters()) {
-            System.out.println(obj.toString());
+        if (productDAO.showAllProductsExeptPrinters().size() == 0) {
+            System.out.println("Unfortunately, our IT Company has only Printers");
+        } else {
+            for (Object obj : productDAO.showAllProductsExeptPrinters()) {
+                System.out.println(obj.toString());
+            }
         }
     }
 }

@@ -56,10 +56,10 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "marker='" + marker + '\'' +
-                ", modelNumber='" + modelNumber + '\'' +
-                ", typeOfModel='" + typeOfModel + '\'' +
-                '}';
+        return "Product (" +
+                "marker = '" + marker + '\'' +
+                ", number of model = '" + modelNumber + '\'' +
+                ", type of model = '" + typeOfModel + '\'' +
+                ')';
     }
 }

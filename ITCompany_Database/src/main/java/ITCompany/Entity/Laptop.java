@@ -99,14 +99,14 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return "Laptop{" +
-                "unicCode='" + unicCode + '\'' +
-                ", modelOfLaptop='" + modelOfLaptop + '\'' +
-                ", speedOfLaptop='" + speedOfLaptop + '\'' +
-                ", sizeOfHardDrive=" + sizeOfHardDrive +
-                ", ram=" + ram +
-                ", sizeOfScreen='" + sizeOfScreen + '\'' +
-                ", laptopPrice=" + laptopPrice +
-                '}';
+        return "Laptop (" +
+                "id = '" + unicCode + '\'' +
+                ", model of Laptop = '" + modelOfLaptop + '\'' +
+                ", laptop's speed = '" + speedOfLaptop + '\'' +
+                ", hard drive size = " + sizeOfHardDrive +
+                ", ram = " + ram +
+                ", screen size = '" + sizeOfScreen + '\'' +
+                ", price of laptop = " + laptopPrice +
+                ')';
     }
 }

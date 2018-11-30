@@ -99,14 +99,14 @@ public class PC {
 
     @Override
     public String toString() {
-        return "PC { " +
-                " unicCode = '" + unicCode + '\'' +
-                ", modelOfPC = '" + modelOfPC + '\'' +
-                ", speedOfPC = '" + speedOfPC + '\'' +
-                ", sizeOfHardDrive = " + sizeOfHardDrive +
+        return "PC (" +
+                "id = '" + unicCode + '\'' +
+                ", PC model = '" + modelOfPC + '\'' +
+                ", speed of PC = '" + speedOfPC + '\'' +
+                ", hard drive size = " + sizeOfHardDrive +
                 ", ram = " + ram +
-                ", speedOfCD ='" + speedOfCD + '\'' +
-                ", pcPrice = " + pcPrice +
-                '}';
+                ", speed of CD = '" + speedOfCD + '\'' +
+                ", price = " + pcPrice +
+                ')';
     }
 }

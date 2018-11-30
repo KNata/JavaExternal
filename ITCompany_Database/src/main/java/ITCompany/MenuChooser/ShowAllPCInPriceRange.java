@@ -3,18 +3,23 @@ package ITCompany.MenuChooser;
 import ITCompany.DAO.PCDao;
 
 import java.sql.SQLException;
-import java.util.List;
 
 public class ShowAllPCInPriceRange implements Command {
 
     private PCDao pcDao;
 
-    ShowAllPCInPriceRange(PCDao aPcDao) {
+    public ShowAllPCInPriceRange(PCDao aPcDao) {
         pcDao = aPcDao;
     }
 
     @Override
     public void execute() throws ClassNotFoundException, SQLException {
-        System.out.println(pcDao.allPCBySelectedSpeedInPriceRange());
+        if (pcDao.allPCBySelectedSpeedInPriceRange().size() == 0) {
+            System.out.println("Unfortunately, PCs by requested criteria are not avaliable in out IT Department");
+        } else {
+            for (int i = 0; i < pcDao.allPCBySelectedSpeedInPriceRange().size(); i++) {
+                System.out.println(pcDao.allPCBySelectedSpeedInPriceRange().get(i).toString());
+            }
+        }
     }
 }

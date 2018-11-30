@@ -77,12 +77,12 @@ public class Printer {
 
     @Override
     public String toString() {
-        return "Printer{" +
-                "unicCode='" + unicCode + '\'' +
-                ", model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", type='" + type + '\'' +
-                ", price=" + price +
-                '}';
+        return "Printer (" +
+                "id = '" + unicCode + '\'' +
+                ", model = '" + model + '\'' +
+                ", is color = '" + color + '\'' +
+                ", printer type = '" + type + '\'' +
+                ", price = " + price +
+                ')';
     }
 }
