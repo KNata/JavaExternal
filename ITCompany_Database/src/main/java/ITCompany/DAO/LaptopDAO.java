@@ -3,6 +3,7 @@ package ITCompany.DAO;
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.Product;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,6 +11,12 @@ import java.util.HashSet;
 import java.util.List;
 
 public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
+
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(LaptopDAO.class);
+    }
 
     public LaptopDAO() {}
 
@@ -40,8 +47,10 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -78,8 +87,10 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -112,8 +123,10 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
                     conn.commit();
                 } catch (SQLException e) {
                     if (savePoint == null) {
+                        logger.error(e.getMessage());
                         conn.rollback();
                     } else {
+                        logger.error(e.getMessage());
                         conn.rollback(savePoint);
                     }
                 } finally {
@@ -126,7 +139,7 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
                 }
             }
         } else {
-            System.out.println("Wrong ID");
+            logger.info("Wrong ID");
         }
         return wasDeleted;
     }
@@ -134,38 +147,6 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
 
     @Override
     public boolean create(Laptop entity) {
-     /*   boolean status = false;
-        if (isTheLaptopExist(entity.getUnicCode())) {
-            System.out.println("The item is already exists");
-        } else {
-                int laptopID = entity.getUnicCode();
-                String laptopModel = entity.getModelOfLaptop();
-                int laptopSpeed = entity.getSpeedOfLaptop();
-                int laptopRam = entity.getRam();
-                int laptopHD = entity.getSizeOfHardDrive();
-                int laptopScreen = entity.getSizeOfScreen();
-                double laptopPrice = entity.getLaptopPrice();
-                String sql = "insert into Laptop(code, model, speed, ram, hd, price, screen) values (?,?,?,?,?,?,?)";
-                Connection connection = null;
-                PreparedStatement statement = null;
-                try {
-                    connection = ConnectionPool.getConnection();
-                    statement = connection.prepareStatement(sql);
-                    statement.setInt(1, laptopID);
-                    statement.setString(2, laptopModel);
-                    statement.setInt(3, laptopSpeed);
-                    statement.setInt(4, laptopRam);
-                    statement.setInt(5, laptopHD);
-                    statement.setDouble(6, laptopPrice);
-                    statement.setInt(7, laptopScreen);
-                    statement.executeUpdate();
-                    status = true;
-                    System.err.println("Laptop was successfully added");
-                } catch (SQLException e) {
-                    System.err.println(e.getMessage());
-                }
-        }
-        return status; */
      throw new UnsupportedOperationException();
     }
 
@@ -186,8 +167,10 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
             conn.commit();
         } catch (SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savePoint);
             }
         } finally {
@@ -226,8 +209,10 @@ public class LaptopDAO implements AbstractDAO <Integer, Laptop> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {

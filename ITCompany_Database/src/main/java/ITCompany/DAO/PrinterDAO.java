@@ -1,7 +1,6 @@
 package ITCompany.DAO;
 
 import ITCompany.DBInteraction.ConnectionPool;
-import ITCompany.Entity.Laptop;
 import ITCompany.Entity.Printer;
 import org.apache.log4j.Logger;
 
@@ -11,6 +10,11 @@ import java.util.List;
 
 public class PrinterDAO implements AbstractDAO <Integer, Printer> {
 
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(PrinterDAO.class);
+    }
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -37,8 +41,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -74,8 +80,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }        } finally {
             if (statement != null) {
@@ -107,8 +115,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
                     conn.commit();
                 } catch (SQLException e) {
                     if (savePoint == null) {
+                        logger.error(e.getMessage());
                         conn.rollback();
                     } else {
+                        logger.error(e.getMessage());
                         conn.rollback(savePoint);
                     }
                 } finally {
@@ -148,8 +158,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -188,8 +200,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -225,8 +239,10 @@ public class PrinterDAO implements AbstractDAO <Integer, Printer> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {

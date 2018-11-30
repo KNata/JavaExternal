@@ -1,9 +1,11 @@
 package ITCompany.DAO;
 
+import ITCompany.App;
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.Laptop;
 import ITCompany.Entity.PC;
 import ITCompany.Entity.Product;
+import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,6 +13,12 @@ import java.util.HashSet;
 import java.util.List;
 
 public class ProductDAO implements AbstractDAO <Integer, Product> {
+
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(ProductDAO.class);
+    }
 
     @Override
     public List findAll() throws ClassNotFoundException, SQLException {
@@ -35,8 +43,10 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
             conn.commit();
              } catch (SQLException e) {
                 if (savepoint == null) {
+                    logger.error(e.getMessage());
                     conn.rollback();
                 } else {
+                    logger.error(e.getMessage());
                     conn.rollback(savepoint);
                 }
         } finally {
@@ -98,8 +108,10 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -134,8 +146,10 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
                 conn.commit();
             } catch (SQLException e) {
                 if (savepoint == null) {
+                    logger.error(e.getMessage());
                     conn.rollback();
                 } else {
+                    logger.error(e.getMessage());
                     conn.rollback(savepoint);
                 }
             } finally {

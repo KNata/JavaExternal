@@ -1,13 +1,22 @@
 package ITCompany.DAO;
 
 
+import ITCompany.App;
 import ITCompany.DBInteraction.ConnectionPool;
 import ITCompany.Entity.PC;
+import org.apache.log4j.Logger;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PCDao implements AbstractDAO <Integer, PC> {
+
+    private static final Logger logger;
+
+    static {
+        logger = Logger.getLogger(PCDao.class);
+    }
 
 
     @Override
@@ -37,8 +46,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
             } catch (SQLException d) {
                 if (savepoint == null) {
+                    logger.error(d.getMessage());
                     conn.rollback();
                 } else {
+                    logger.error(d.getMessage());
                     conn.rollback(savepoint);
                 }
         } finally {
@@ -75,8 +86,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -110,8 +123,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                     conn.commit();
                 } catch (SQLException e) {
                     if (savePoint == null) {
+                        logger.error(e.getMessage());
                         conn.rollback();
                     } else {
+                        logger.error(e.getMessage());
                         conn.rollback(savePoint);
                     }
                 } finally {
@@ -124,7 +139,7 @@ public class PCDao implements AbstractDAO <Integer, PC> {
                 }
             }
         } else {
-            System.out.println("Wrong ID");
+            logger.info("Wrong ID");
         }
         return wasDeleted;
     }
@@ -151,8 +166,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savepoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savepoint);
             }
         } finally {
@@ -194,8 +211,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savePoint);
             }
         } finally {
@@ -230,8 +249,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savePoint);
             }
         } finally {
@@ -271,8 +292,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savePoint);
             }
         } finally {
@@ -308,13 +331,11 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch(SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
-                if (savePoint == null) {
-                    conn.rollback();
-                } else {
-                    conn.rollback(savePoint);
-                }
+                logger.error(e.getMessage());
+                conn.rollback(savePoint);
             }
         } finally {
             if (st != null) {
@@ -353,8 +374,10 @@ public class PCDao implements AbstractDAO <Integer, PC> {
             conn.commit();
         } catch (SQLException e) {
             if (savePoint == null) {
+                logger.error(e.getMessage());
                 conn.rollback();
             } else {
+                logger.error(e.getMessage());
                 conn.rollback(savePoint);
             }
         } finally {

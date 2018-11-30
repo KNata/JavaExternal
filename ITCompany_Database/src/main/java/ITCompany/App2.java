@@ -5,6 +5,7 @@ import ITCompany.DAO.PCDao;
 import ITCompany.DAO.PrinterDAO;
 import ITCompany.DAO.ProductDAO;
 import ITCompany.MenuChooser.*;
+import org.apache.log4j.Logger;
 
 import java.sql.SQLException;
 import java.util.Scanner;

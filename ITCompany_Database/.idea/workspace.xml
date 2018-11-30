@@ -2,9 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.propeties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/Gate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/Gate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/App1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/App1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Controller/VechicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Controller/VechicleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/languageEN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/languageEN.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingSAX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingStAX.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingStAX.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookShop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/test-classes/Newspaper/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/test-classes/Newspaper/AppTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,9 +71,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="194" />
+          <entry key="java" value="199" />
           <entry key="properties" value="2" />
-          <entry key="propeties" value="1" />
+          <entry key="properties " value="1" />
+          <entry key="propeties" value="2" />
           <entry key="txt" value="1" />
           <entry key="xml" value="3" />
         </counts>
@@ -41,15 +82,15 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="194" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JAVA" value="199" />
+          <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="14857" />
+          <entry key="java" value="15307" />
           <entry key="properties" value="5" />
           <entry key="txt" value="1" />
           <entry key="xml" value="1" />
@@ -57,7 +98,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14857" />
+          <entry key="JAVA" value="15307" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
           <entry key="XML" value="1" />
@@ -68,46 +109,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="239" column="10" lean-forward="true" selection-start-line="233" selection-start-column="12" selection-end-line="239" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-779">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="49" column="13" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="49" selection-end-column="13" />
+            <state relative-caret-position="5332">
+              <caret line="379" column="43" selection-start-line="379" selection-start-column="43" selection-end-line="379" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="213" column="38" lean-forward="true" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
+            <state relative-caret-position="148">
+              <caret line="244" column="43" selection-start-line="244" selection-start-column="43" selection-end-line="244" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,8 +135,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="150" selection-start-line="150" selection-end-line="150" />
+            <state relative-caret-position="148">
+              <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,8 +195,9 @@
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties " />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" />
@@ -444,7 +450,7 @@
       <workItem from="1543438677823" duration="4680000" />
       <workItem from="1543488522183" duration="991000" />
       <workItem from="1543526386621" duration="8404000" />
-      <workItem from="1543589765324" duration="14594000" />
+      <workItem from="1543589765324" duration="15965000" />
     </task>
     <servers />
   </component>
@@ -481,7 +487,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52500000" />
+    <option name="totallyTimeSpent" value="53871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -494,7 +500,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18194842" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29083094" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -589,9 +595,6 @@
           <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.propeties">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/databaseProperties.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -806,13 +809,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.propeties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties ">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -826,10 +829,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="239" column="10" lean-forward="true" selection-start-line="233" selection-start-column="12" selection-end-line="239" selection-end-column="10" />
+        <state relative-caret-position="-9">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -838,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="44" selection-start-column="12" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="5332">
+          <caret line="379" column="43" selection-start-line="379" selection-start-column="43" selection-end-line="379" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -848,8 +861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="213" column="38" lean-forward="true" selection-start-line="213" selection-start-column="38" selection-end-line="213" selection-end-column="38" />
+        <state relative-caret-position="148">
+          <caret line="244" column="43" selection-start-line="244" selection-start-column="43" selection-end-line="244" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -858,8 +871,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
+        <state relative-caret-position="148">
+          <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
