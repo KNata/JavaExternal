@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.propeties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/Gate.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaTheadsPractice/target/classes/ThreadsJava/Gate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/App1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/App1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Controller/VechicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Controller/VechicleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/EmptyVechicleListExeption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/MyIndexOfBoundExeption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/CustomExeptions/NoCurrentLanguageExeption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/AmfibianCar.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/BetMobile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IFlyvable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/IMovebble.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Interfaces/ISwimmable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Plane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Ship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/SmartVechicles/Model/Vechicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/languageEN.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SmartVechicles_V1/target/classes/languageEN.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/App2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingSAX.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingStAX.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookServiceUsingStAX.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/BookShop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/Paper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PeriodicPaper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/classes/Newspaper/PermanentPaper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../XMLNewspaper/target/test-classes/Newspaper/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../XMLNewspaper/target/test-classes/Newspaper/AppTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +14,7 @@
     <session id="1129690416">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.14" value="2" />
@@ -71,7 +27,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="199" />
+          <entry key="java" value="200" />
           <entry key="properties" value="2" />
           <entry key="properties " value="1" />
           <entry key="propeties" value="2" />
@@ -82,7 +38,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="199" />
+          <entry key="JAVA" value="200" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="3" />
@@ -132,11 +88,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="1692">
               <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -450,7 +418,7 @@
       <workItem from="1543438677823" duration="4680000" />
       <workItem from="1543488522183" duration="991000" />
       <workItem from="1543526386621" duration="8404000" />
-      <workItem from="1543589765324" duration="15965000" />
+      <workItem from="1543589765324" duration="16535000" />
     </task>
     <servers />
   </component>
@@ -487,20 +455,20 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53871000" />
+    <option name="totallyTimeSpent" value="54441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3194864" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3194864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29083094" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19340974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -829,16 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9">
@@ -871,8 +829,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="1692">
           <caret line="151" column="47" selection-start-line="151" selection-start-column="47" selection-end-line="151" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
