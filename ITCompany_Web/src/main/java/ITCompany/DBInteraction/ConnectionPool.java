@@ -18,7 +18,7 @@ public class ConnectionPool {
     static {
         FileInputStream fis = null;
         try {
-            fis = new FileInputStream("/Users/nataliakiselyk/Documents/GitHub/JavaExternal/ITCompany_Database/src/main/resources/databaseProperties.properties");
+            fis = new FileInputStream("/Users/nataliakiselyk/Documents/GitHub/JavaExternal/ITCompany_Web/src/main/resources/databaseProperties.properties");
             property.load(fis);
             ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
             ds.setUrl(property.getProperty("url"));

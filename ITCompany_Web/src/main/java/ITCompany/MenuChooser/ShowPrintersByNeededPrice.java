@@ -16,7 +16,7 @@ public class ShowPrintersByNeededPrice implements Command {
     @Override
     public void execute() throws ClassNotFoundException, SQLException {
         if (printerDAO.showAllColorPrintersByDesc().size() == 0) {
-            System.out.println("Unfortunately, our IT Company has only black and white printers");
+            System.out.println("Unfortunately, our IT Company doesn't own a printers in selected price range");
         } else {
             for (int i = 0; i < printerDAO.showAllColorPrintersByDesc().size(); i++) {
                 System.out.println("Model: " + printerDAO.showAllColorPrintersByDesc().get(i).getModel() + " type: "

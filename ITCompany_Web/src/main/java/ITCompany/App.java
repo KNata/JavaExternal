@@ -23,17 +23,15 @@ public class App {
 
     public static void main (String[] args) throws ClassNotFoundException, SQLException {
 
-        GuestsDAO productDAO = new GuestsDAO();
-        boolean allProducts = productDAO.addUser(new Guest(4, "khomyachok", "1111", "Somebody", "jfhgdj", "user"));
-//        for (Guest pr : allProducts) {
-//            System.out.println(pr.toString());
-//        }
-            System.out.println(allProducts);
-
-        List<Guest> allGuests = productDAO.findAll();
-        for (Guest pr : allGuests) {
-            System.out.println(pr.toString());
+        Laptop theLaptop = new Laptop(11,"00000",400,90,2,333,19000, 1);
+        LaptopDAO theDAO = new LaptopDAO();
+        theDAO.addLaptop(theLaptop);
+        List<Laptop> laptopList = theDAO.findAll();
+        for(Laptop l: laptopList){
+            System.out.println(l.toString());
         }
+//        theDAO.updateCountOfLaptops(theLaptop);
+//        System.out.println("");
 
     }
 }

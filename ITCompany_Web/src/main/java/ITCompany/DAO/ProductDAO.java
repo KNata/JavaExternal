@@ -76,7 +76,16 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
     }
 
     @Override
-    public boolean isTheProductExist(int anId) throws SQLException, ClassNotFoundException {
+    public boolean isTheProductExistByID(int anId) throws SQLException, ClassNotFoundException {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public boolean isTheProductExistByModel(String aModel) throws SQLException, ClassNotFoundException {
+        throw new UnsupportedOperationException();
+    }
+
+public boolean isTheProductExist(int anId) throws SQLException, ClassNotFoundException {
         throw new UnsupportedOperationException();    }
 
 
@@ -98,10 +107,10 @@ public class ProductDAO implements AbstractDAO <Integer, Product> {
                 Product theProduct = new Product(productMaker, productModel, productType);
                 selectedProductList.add(theProduct);
                 double pcPrice = resultSet.getDouble("pc.price");
-                PC thePC = new PC(0, "", 0, 0, 0, "", pcPrice);
+                PC thePC = new PC(0, "", 0, 0, 0, "", pcPrice, 0);
                 selectedProductList.add(thePC);
                 int laptopPrice = resultSet.getInt("lapt.price");
-                Laptop theLaptop = new Laptop(0, "", 0, 0, 0, 0, laptopPrice);
+                Laptop theLaptop = new Laptop(0, "", 0, 0, 0, 0, laptopPrice, 0);
                 selectedProductList.add(theLaptop);
                 savepoint = conn.setSavepoint();
             }

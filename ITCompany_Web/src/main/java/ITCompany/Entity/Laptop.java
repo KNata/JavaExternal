@@ -11,8 +11,9 @@ public class Laptop {
     private int ram;
     private int sizeOfScreen;
     private double laptopPrice;
+    private int countOfLaptopsBySelectedModel;
 
-    public Laptop(int anUnicCode, String aModelOfLaptop, int aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, int aSizeOfScreen, double aLaptopPrice) {
+    public Laptop(int anUnicCode, String aModelOfLaptop, int aSpeedOfLaptop, int aSizeOfHardDrive, int aRam, int aSizeOfScreen, double aLaptopPrice, int aCountOfLaptopsBySelectedModel) {
         unicCode = anUnicCode;
         modelOfLaptop = aModelOfLaptop;
         speedOfLaptop = aSpeedOfLaptop;
@@ -20,6 +21,7 @@ public class Laptop {
         ram = aRam;
         sizeOfScreen = aSizeOfScreen;
         laptopPrice = aLaptopPrice;
+        countOfLaptopsBySelectedModel = aCountOfLaptopsBySelectedModel;
     }
 
     public int getUnicCode() {
@@ -78,6 +80,18 @@ public class Laptop {
         this.laptopPrice = laptopPrice;
     }
 
+    public int getCountOfLaptopsBySelectedModel() {
+        return countOfLaptopsBySelectedModel;
+    }
+
+    public void setCountOfLaptopsBySelectedModel(int countOfLaptopsBySelectedModel) {
+        this.countOfLaptopsBySelectedModel = countOfLaptopsBySelectedModel;
+    }
+
+    public int increaseCountOfLaptopsBySelectedModel() {
+        return this.countOfLaptopsBySelectedModel += 1;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,12 +103,13 @@ public class Laptop {
                 Objects.equals(unicCode, laptop.unicCode) &&
                 Objects.equals(modelOfLaptop, laptop.modelOfLaptop) &&
                 Objects.equals(speedOfLaptop, laptop.speedOfLaptop) &&
-                Objects.equals(sizeOfScreen, laptop.sizeOfScreen);
+                Objects.equals(sizeOfScreen, laptop.sizeOfScreen) &&
+                countOfLaptopsBySelectedModel == laptop.countOfLaptopsBySelectedModel;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(unicCode, modelOfLaptop, speedOfLaptop, sizeOfHardDrive, ram, sizeOfScreen, laptopPrice);
+        return Objects.hash(unicCode, modelOfLaptop, speedOfLaptop, sizeOfHardDrive, ram, sizeOfScreen, laptopPrice, countOfLaptopsBySelectedModel);
     }
 
     @Override
@@ -107,6 +122,7 @@ public class Laptop {
                 ", ram = " + ram +
                 ", screen size = '" + sizeOfScreen + '\'' +
                 ", price of laptop = " + laptopPrice +
+                ", count of laptops = " + countOfLaptopsBySelectedModel +
                 ')';
     }
 }

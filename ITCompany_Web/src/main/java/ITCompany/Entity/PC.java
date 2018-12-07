@@ -11,8 +11,9 @@ public class PC {
     private int ram;
     private String speedOfCD;
     private double pcPrice;
+    private int countOfPC;
 
-    public PC(int anUnicCode, String aModelOfPC, int aSpeedOfPC, int aSizeOfHardDrive, int aRam, String aSpeedOfCD, double aPcPrice) {
+    public PC(int anUnicCode, String aModelOfPC, int aSpeedOfPC, int aSizeOfHardDrive, int aRam, String aSpeedOfCD, double aPcPrice, int aCountOfPC) {
         unicCode = anUnicCode;
         modelOfPC = aModelOfPC;
         speedOfCD = aSpeedOfCD;
@@ -20,6 +21,7 @@ public class PC {
         ram = aRam;
         speedOfPC = aSpeedOfPC;
         pcPrice = aPcPrice;
+        countOfPC = aCountOfPC;
     }
 
     public int getUnicCode() {
@@ -78,6 +80,18 @@ public class PC {
         this.pcPrice = pcPrice;
     }
 
+    public int getCountOfPC() {
+        return countOfPC;
+    }
+
+    public void setCountOfPC(int countOfPC) {
+        this.countOfPC = countOfPC;
+    }
+
+    public int increaseCountOfPC() {
+        return countOfPC++;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -89,12 +103,13 @@ public class PC {
                 Objects.equals(unicCode, pc.unicCode) &&
                 Objects.equals(modelOfPC, pc.modelOfPC) &&
                 Objects.equals(speedOfPC, pc.speedOfPC) &&
-                Objects.equals(speedOfCD, pc.speedOfCD);
+                Objects.equals(speedOfCD, pc.speedOfCD) &&
+                countOfPC == pc.countOfPC;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(unicCode, modelOfPC, speedOfPC, sizeOfHardDrive, ram, speedOfCD, pcPrice);
+        return Objects.hash(unicCode, modelOfPC, speedOfPC, sizeOfHardDrive, ram, speedOfCD, pcPrice, countOfPC);
     }
 
     @Override
@@ -107,6 +122,7 @@ public class PC {
                 ", ram = " + ram +
                 ", speed of CD = '" + speedOfCD + '\'' +
                 ", price = " + pcPrice +
+                ", count of PC = " + countOfPC + '\'' +
                 ')';
     }
 }

@@ -9,13 +9,15 @@ public class Printer {
     private String color;
     private String type;
     private double price;
+    private int countOfPrinters;
 
-    public  Printer(int anUnicCode, String aModel, String aColor, String aType, double aPrice) {
+    public  Printer(int anUnicCode, String aModel, String aColor, String aType, double aPrice, int aCountOfPrinters) {
         unicCode = anUnicCode;
         model = aModel;
         color = aColor;
         type = aType;
         price = aPrice;
+        countOfPrinters = aCountOfPrinters;
     }
 
     public int getUnicCode() {
@@ -58,6 +60,18 @@ public class Printer {
         this.price = price;
     }
 
+    public int getCountOfPrinters() {
+        return countOfPrinters;
+    }
+
+    public void setCountOfPrinters(int countOfPrinters) {
+        this.countOfPrinters = countOfPrinters;
+    }
+
+    public int increasePrinterCount() {
+        return countOfPrinters++;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -67,12 +81,13 @@ public class Printer {
                 Objects.equals(unicCode, printer.unicCode) &&
                 Objects.equals(model, printer.model) &&
                 Objects.equals(color, printer.color) &&
-                Objects.equals(type, printer.type);
+                Objects.equals(type, printer.type) &&
+                countOfPrinters == ((Printer) o).countOfPrinters;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(unicCode, model, color, type, price);
+        return Objects.hash(unicCode, model, color, type, price, countOfPrinters);
     }
 
     @Override
@@ -82,7 +97,8 @@ public class Printer {
                 ", model = '" + model + '\'' +
                 ", is color = '" + color + '\'' +
                 ", printer type = '" + type + '\'' +
-                ", price = " + price +
+                ", price = " + price + '\'' +
+                ", count of printers = " + countOfPrinters + '\'' +
                 ')';
     }
 }
