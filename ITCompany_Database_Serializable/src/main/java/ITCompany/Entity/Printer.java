@@ -1,8 +1,9 @@
 package ITCompany.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Printer {
+public class Printer implements Serializable {
 
     private int unicCode;
     private String model;

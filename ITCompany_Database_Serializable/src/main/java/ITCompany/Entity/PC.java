@@ -1,14 +1,15 @@
 package ITCompany.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class PC {
+public class PC implements Serializable {
 
     private int unicCode;
     private String modelOfPC;
     private int speedOfPC;
     private int sizeOfHardDrive;
-    private int ram;
+    private transient int ram;
     private String speedOfCD;
     private double pcPrice;
 
