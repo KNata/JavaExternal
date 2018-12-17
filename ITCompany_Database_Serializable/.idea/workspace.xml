@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/.idea/ITCompany_Web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/Index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/editProducrPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/homePage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/laptopsPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/loginPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/pcPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/printersPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/productFullInfoPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/productPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/registrationPage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/views/userProfilePage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/DAO/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/DAO/BusDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/DAO/DriverDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/DAO/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Autopark_FinalPoject/src/main/java/Model/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/DAO/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/RemoteControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllListOfLaptops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProducts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/DAO/LaptopDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/DAO/LaptopDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/RemoteControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllListOfLaptops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCInPriceRange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllProducts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowColorPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowPrintersByNeededPrice.class" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1129690416">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="11" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="200" />
+          <entry key="properties" value="2" />
+          <entry key="properties " value="1" />
+          <entry key="propeties" value="2" />
+          <entry key="txt" value="1" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="208" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="15307" />
+          <entry key="properties" value="5" />
+          <entry key="txt" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="15307" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="5" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-882214654">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="22" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1175" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/ITCompany</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entitiy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/DBConnectionPoolResourse.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db.properties.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/WrapperConnector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/RemoteControl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DBInteraction/ConnectionPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/LaptopDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/PCDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/PrinterDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllListOfLaptops.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPrinters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProducts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/PC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Printer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties " />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/Entity/PCTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/PCDaoMockTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/PrinterDAOMockTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ITCompany/DAO/ProductDAOMockTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ITCompany/App2.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1366" />
+    <option name="height" value="768" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="DAO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ITCompany_Database_Serializable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ITCompany_Database_Serializable" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ITCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ITCompany.DAO" />
+      <recent name="ITCompany.Entity" />
+      <recent name="ITCompany.DBInteraction" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ProductDAOMockTest">
+    <configuration name="PrinterDAOMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITCompany_Database_Serializable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ITCompany.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ITCompany.DAO" />
+      <option name="MAIN_CLASS_NAME" value="ITCompany.DAO.PrinterDAOMockTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOMockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITCompany_Database_Serializable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ITCompany.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ITCompany.DAO" />
+      <option name="MAIN_CLASS_NAME" value="ITCompany.DAO.ProductDAOMockTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOMockTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITCompany_Database_Serializable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ITCompany.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ITCompany.DAO" />
+      <option name="MAIN_CLASS_NAME" value="ITCompany.DAO.ProductDAOMockTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOMockTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITCompany_Database_Serializable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ITCompany.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ITCompany.DAO" />
+      <option name="MAIN_CLASS_NAME" value="ITCompany.DAO.ProductDAOMockTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductDAOMockTest.showAllProductsExeptPrinters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ITCompany_Database_Serializable" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ITCompany.DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ITCompany.DAO" />
+      <option name="MAIN_CLASS_NAME" value="ITCompany.DAO.ProductDAOMockTest" />
+      <option name="METHOD_NAME" value="showAllProductsExeptPrinters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.PrinterDAOMockTest" />
+      <item itemvalue="JUnit.ProductDAOMockTest.findAll" />
+      <item itemvalue="JUnit.ProductDAOMockTest.create" />
+      <item itemvalue="JUnit.ProductDAOMockTest.showAllProductsExeptPrinters" />
+      <item itemvalue="JUnit.ProductDAOMockTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductDAOMockTest" />
+        <item itemvalue="JUnit.ProductDAOMockTest.findAll" />
+        <item itemvalue="JUnit.ProductDAOMockTest.showAllProductsExeptPrinters" />
+        <item itemvalue="JUnit.ProductDAOMockTest.create" />
+        <item itemvalue="JUnit.PrinterDAOMockTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc64f2cb-6e41-4550-983e-31a14de9e3b9" name="Default Changelist" comment="" />
+      <created>1542836965437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542836965437</updated>
+      <workItem from="1542836974076" duration="3489000" />
+      <workItem from="1542986894073" duration="3159000" />
+      <workItem from="1543014987174" duration="11722000" />
+      <workItem from="1543268193630" duration="5461000" />
+      <workItem from="1543438677823" duration="4680000" />
+      <workItem from="1543488522183" duration="991000" />
+      <workItem from="1543526386621" duration="8404000" />
+      <workItem from="1543589765324" duration="16535000" />
+      <workItem from="1543778248544" duration="155000" />
+      <workItem from="1544092682001" duration="35000" />
+      <workItem from="1544103256807" duration="883000" />
+      <workItem from="1544561668862" duration="2974000" />
+      <workItem from="1544790912880" duration="686000" />
+      <workItem from="1545039588584" duration="2521000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="PrinterDAOMockTest - 2018.12.17 at 12h 16m 33s.xml">
+      <configuration name="PrinterDAOMockTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_findAll - 2018.12.17 at 12h 17m 04s.xml">
+      <configuration name="ProductDAOMockTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_findAll - 2018.12.17 at 12h 17m 17s.xml">
+      <configuration name="ProductDAOMockTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_findAll - 2018.12.17 at 12h 17m 28s.xml">
+      <configuration name="ProductDAOMockTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_findAll - 2018.12.17 at 12h 17m 39s.xml">
+      <configuration name="ProductDAOMockTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_create - 2018.12.17 at 12h 19m 06s.xml">
+      <configuration name="ProductDAOMockTest.create" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_showAllProductsExeptPrinters - 2018.12.17 at 12h 21m 50s.xml">
+      <configuration name="ProductDAOMockTest.showAllProductsExeptPrinters" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest_findAll - 2018.12.17 at 12h 21m 57s.xml">
+      <configuration name="ProductDAOMockTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest - 2018.12.17 at 12h 22m 56s.xml">
+      <configuration name="ProductDAOMockTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductDAOMockTest - 2018.12.17 at 12h 28m 44s.xml">
+      <configuration name="ProductDAOMockTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="61695000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23791541" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31948423" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32808024" />
+      <window_info anchor="bottom" id="Thumbnails" order="12" weight="0.3295129" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.260574" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3295129" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3295082" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.18624642" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32808024" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entitiy.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/DBConnectionPoolResourse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties.txt" />
+    <entry file="file:///Volumes/Data/Natalia/НАУКМА/3/database_workspace/JDBC_KiselykN/src/JDBC_KiselykN/Program.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="260" column="27" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/lang/ClassNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/Data/Natalia/НАУКМА/3/database_workspace/LibraryImplementation11/src/LibraryImplementation/BookDB.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/WrapperConnector.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar!/com/mysql/cj/jdbc/ConnectionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="1581" selection-start-line="1581" selection-end-line="1581" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/databaseProperties.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" selection-start-line="1" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/sql/SQLException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DBInteraction/ConnectionPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/PrinterDAOTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllListOfLaptops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPrinters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllProducts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.propeties" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties ">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Servlets/HelloWorldServlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DBInteraction/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/RemoteControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/LaptopDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laptopList.txt" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/src.zip!/java/io/FileNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/PC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/PCDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="90" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/PCDaoMockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PCDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/Entity/PCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="20" column="7" selection-start-line="20" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="93" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/LaptopDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/PrinterDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/PrinterDAOMockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ITCompany/DAO/ProductDAOMockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/DAO/ProductDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2171#2172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="62" column="18" selection-start-line="62" selection-start-column="18" selection-end-line="62" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/Entity/Laptop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ITCompany/App2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
