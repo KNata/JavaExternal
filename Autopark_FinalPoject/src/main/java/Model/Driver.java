@@ -4,12 +4,14 @@ import java.util.Objects;
 
 public class Driver {
 
-    private int driverID;
+    private String driverID;
     private String driverName;
-    private int experience;
-    private boolean isOnRoute;
 
-    public int getDriverID() {
+    public static Builder newBuilder() {
+        return new Driver().new Builder();
+    }
+
+    public String getDriverID() {
         return driverID;
     }
 
@@ -17,19 +19,34 @@ public class Driver {
         return driverName;
     }
 
-    public int getExperience() {
-        return experience;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Driver driver = (Driver) o;
+        return driverID == driver.driverID &&
+                Objects.equals(driverName, driver.driverName);
     }
 
-    public boolean isOnRoute() {
-        return isOnRoute;
+    @Override
+    public int hashCode() {
+        return Objects.hash(driverID, driverName);
+    }
+
+    @Override
+    public String toString() {
+        return "Driver (" +
+                "driverID = " + driverID +
+                ", driverName = '" + driverName + '\'' +
+                '}';
     }
 
     public class Builder {
 
-        private Builder() {}
+        private Builder() {
+        }
 
-        public Builder setDriverID(int aDriverID) {
+        public Builder setDriverID(String aDriverID) {
             driverID = aDriverID;
             return this;
         }
@@ -39,48 +56,9 @@ public class Driver {
             return this;
         }
 
-        public Builder setDriverExperience(int aDriverExperience) {
-            aDriverExperience = aDriverExperience;
-            return this;
-        }
-
-        public Builder setDriverWork(boolean anOnRoute) {
-            isOnRoute = anOnRoute;
-            return this;
-        }
 
         public Driver build() {
             return Driver.this;
         }
-    }
-
-    public static Builder newBuilder() {
-        return new Driver().new Builder();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Driver driver = (Driver) o;
-        return driverID == driver.driverID &&
-                experience == driver.experience &&
-                isOnRoute == driver.isOnRoute &&
-                Objects.equals(driverName, driver.driverName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(driverID, driverName, experience, isOnRoute);
-    }
-
-    @Override
-    public String toString() {
-        return "Driver (" +
-                "driverID = " + driverID +
-                ", driverName = '" + driverName + '\'' +
-                ", experience = " + experience +
-                ", isOnRoute = " + isOnRoute +
-                ')';
     }
 }

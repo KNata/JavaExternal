@@ -8,7 +8,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BusDAO implements AbstractDAO<Integer, Bus> {
+
+public class BusDAO implements AbstractDAO<String, Bus> {
 
     private static Logger theLogger;
 
@@ -16,50 +17,82 @@ public class BusDAO implements AbstractDAO<Integer, Bus> {
         theLogger = Logger.getLogger(BusDAO.class);
     }
 
-
     @Override
     public boolean addRecord(Bus anEntity) throws SQLException {
-        boolean added = false;
+        boolean wasAdded = false;
+        String insertSQL = "insert into `mydb`.`Bus` values(?, ?, ?, ?, ?)";
         if (anEntity == null) {
-            added = false;
-        } else if (findByName(anEntity.getBusModel()) != null) {
-            added = false;
+            wasAdded = false;
+        } else if (findByID(anEntity.getBusID()) == null) {
+            wasAdded = true;
         } else {
-            String insertSQL = "insert into Bus values(?,?,?,?,?,)";
+            Connection conn = null;
+            PreparedStatement preparedStatement = null;
+            Savepoint savePoint = null;
+            try {
+                conn = ConnectionPool.getConnection();
+                conn.setAutoCommit(false);
+                preparedStatement = conn.prepareStatement(insertSQL);
+                preparedStatement.setString(1, anEntity.getBusID());
+                preparedStatement.setString(2, anEntity.getBusModel());
+                preparedStatement.setInt(3, anEntity.getMaxCountOfPassagers());
+                preparedStatement.setInt(4, anEntity.getMiles());
+                preparedStatement.setBoolean(5, anEntity.isPassedService());
+                preparedStatement.executeUpdate();
+                wasAdded = true;
+                savePoint = conn.setSavepoint();
+                conn.commit();
+            } catch (SQLException e) {
+                if (savePoint == null) {
+                    conn.rollback();
+                } else {
+                    conn.rollback(savePoint);
+                }
+                theLogger.error(e.getMessage());
+            } finally {
+                if (preparedStatement != null) {
+                    preparedStatement.close();
+                }
+                if (conn != null) {
+                    conn.commit();
+                }
+            }
         }
-        return false;
+        return wasAdded;
     }
 
     @Override
-    public boolean deleteRecord(Integer anID) throws SQLException {
+    public boolean deleteRecord(String anID) throws SQLException {
         boolean wasDeleted = false;
-        if (anID == 0) {
+        String deleteSQL = "delete from `mydb`.`Bus` where `busID` = ?";
+        if (anID == null) {
             wasDeleted = false;
         } else {
-            String deleteSQL = "delete from Bus where busID = '" + anID + "'";
-            Connection connection = null;
-            Statement statement = null;
-            Savepoint savepoint = null;
+            Connection conn = null;
+            PreparedStatement preparedStatement = null;
+            Savepoint savePoint = null;
             try {
-                connection = ConnectionPool.getConnection();
-                statement = connection.createStatement();
-                connection.setAutoCommit(false);
-                statement.execute(deleteSQL);
+                conn = ConnectionPool.getConnection();
+                conn.setAutoCommit(false);
+                preparedStatement = conn.prepareStatement(deleteSQL);
+                preparedStatement.setString(1, anID);
+                preparedStatement.executeUpdate();
                 wasDeleted = true;
-                savepoint = connection.setSavepoint();
-                connection.commit();
+                savePoint = conn.setSavepoint();
+                conn.commit();
             } catch (SQLException e) {
-                if (savepoint == null) {
-                    connection.rollback();
+                if (savePoint == null) {
+                    conn.rollback();
                 } else {
-                    connection.rollback(savepoint);
+                    conn.rollback(savePoint);
                 }
+                theLogger.error(e.getMessage());
             } finally {
-                if (statement != null) {
-                    statement.close();
+                if (preparedStatement != null) {
+                    preparedStatement.close();
                 }
-                if (connection != null) {
-                    connection.close();
+                if (conn != null) {
+                    conn.commit();
                 }
             }
         }
@@ -67,97 +100,87 @@ public class BusDAO implements AbstractDAO<Integer, Bus> {
     }
 
     @Override
-    public List<Bus> findAll() throws SQLException {
-        String selectAllSQL = "Select * from Bus";
+    public ArrayList<Bus> findAll() throws SQLException {
+        String selectAllSQL = "select * from `mydb`.`Bus`";
         ArrayList<Bus> busList = new ArrayList<Bus>();
-        Connection conncection = null;
-        Statement statement = null;
-        Savepoint savepoint = null;
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        Savepoint savePoint = null;
         try {
-            conncection = ConnectionPool.getConnection();
-            conncection.setAutoCommit(false);
-            statement = conncection.createStatement();
-            ResultSet resultSet = statement.executeQuery(selectAllSQL);
+            conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
+            preparedStatement = conn.prepareStatement(selectAllSQL);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String busID = resultSet.getString("busID");
-                String busModel = resultSet.getString("modelName");
-                int maxCountOfPassengers = resultSet.getInt("maxPassengers");
+                String busName = resultSet.getString("busModel");
                 int miles = resultSet.getInt("miles");
-                boolean passedService = resultSet.getBoolean("maintance");
-                int routeID = resultSet.getInt("Route_routeID");
-                int driverID = resultSet.getInt("Driver_driverID");
-                int visitorID = resultSet.getInt("Visitor_visitorID");
-                Bus theBus = Bus.newBuilder().setBusID(busID).setBusModel(busModel).
-                        setmaxCountOfPassagers(maxCountOfPassengers).setMiles(miles).setPassedService(passedService)
-                        .setDriver(new DriverDAO().findByID(driverID)).setRoute(new RouteDAO().findByID(routeID))
-                        .setVisitor(new VisitorDAO().findByID(visitorID)).build();
+                int macCountOfPassengers = resultSet.getInt("maxPassengers");
+                boolean maintence = resultSet.getBoolean("maintance");
+                Bus theBus = Bus.newBuilder().setBusID(busID).setBusModel(busName)
+                        .setmaxCountOfPassagers(macCountOfPassengers).setMiles(miles).setPassedService(maintence).build();
                 busList.add(theBus);
-                savepoint = conncection.setSavepoint();
+                savePoint = conn.setSavepoint();
             }
-            conncection.commit();
+            conn.commit();
         } catch (SQLException e) {
-            if (savepoint != null) {
-                conncection.rollback(savepoint);
-            } else {
-                conncection.rollback();
-            }
-            theLogger.error(e.getMessage());
+//            if (savePoint == null) {
+//                conn.rollback();
+//            } else {
+//                conn.rollback(savePoint);
+//            }
+//            theLogger.error(e.getMessage());
+            System.err.println(e.getMessage());
         } finally {
-            if(statement != null) {
-                statement.close();
+            if (preparedStatement != null) {
+                preparedStatement.close();
             }
-            if (conncection != null) {
-                conncection.close();
+            if (conn != null) {
+                conn.commit();
             }
         }
         return busList;
     }
 
     @Override
-    public Bus findByID(int anID) throws SQLException {
-        if (anID == 0) {
-            // to do something
-        }
+    public Bus findByID(String anID) throws SQLException {
+        String selectAllSQL = "select * from `mydb`.`Bus` where `busID` = ?";
         Bus theBus = null;
-        String selectAllSQL = "select * from Bus b, Driver d, Visitor v where b.busID = '" + anID + "'";
-        Connection conncection = null;
-        Statement statement = null;
-        Savepoint savepoint = null;
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        Savepoint savePoint = null;
         try {
-            conncection = ConnectionPool.getConnection();
-            conncection.setAutoCommit(false);
-            statement = conncection.createStatement();
-            ResultSet resultSet = statement.executeQuery(selectAllSQL);
+            conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
+            preparedStatement = conn.prepareStatement(selectAllSQL);
+            preparedStatement.setString(1, anID);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 String busID = resultSet.getString("busID");
-                String busModel = resultSet.getString("modelName");
-                int maxCountOfPassengers = resultSet.getInt("maxPassengers");
-                int miles = resultSet.getInt("miles");
-                boolean passedService = resultSet.getBoolean("maintance");
-                int routeID = resultSet.getInt("Route_routeID");
-                int driverID = resultSet.getInt("Driver_driverID");
-                int visitorID = resultSet.getInt("Visitor_visitorID");
-                theBus = Bus.newBuilder().setBusID(busID).setBusModel(busModel).
-                        setmaxCountOfPassagers(maxCountOfPassengers).setMiles(miles).setPassedService(passedService)
-                        .setDriver(new DriverDAO().findByID(driverID)).setRoute(new RouteDAO().findByID(routeID))
-                        .setVisitor(new VisitorDAO().findByID(visitorID)).build();
-                savepoint = conncection.setSavepoint();
-
+                if (busID.equals(anID)) {
+                    String busName = resultSet.getString("busModel");
+                    int miles = resultSet.getInt("miles");
+                    int macCountOfPassengers = resultSet.getInt("maxPassengers");
+                    boolean maintence = resultSet.getBoolean("maintance");
+                    theBus = Bus.newBuilder().setBusID(busID).setBusModel(busName)
+                            .setmaxCountOfPassagers(macCountOfPassengers).setMiles(miles).setPassedService(maintence).build();
+                }
             }
-            conncection.commit();
+            savePoint = conn.setSavepoint();
+            conn.commit();
         } catch (SQLException e) {
-            if (savepoint != null) {
-                conncection.rollback(savepoint);
+            if (savePoint == null) {
+                conn.rollback();
             } else {
-                conncection.rollback();
+                conn.rollback(savePoint);
             }
             theLogger.error(e.getMessage());
         } finally {
-            if(statement != null) {
-                statement.close();
+            if (preparedStatement != null) {
+                preparedStatement.close();
             }
-            if (conncection != null) {
-                conncection.close();
+            if (conn != null) {
+                conn.commit();
             }
         }
         return theBus;
@@ -165,88 +188,47 @@ public class BusDAO implements AbstractDAO<Integer, Bus> {
 
     @Override
     public Bus findByName(String aName) throws SQLException {
-        if (aName == null) {
-            return null;
-        }
+        String selectAllSQL = "select * from `mydb`.`Bus` where `busModel` = ?";
         Bus theBus = null;
-        String selectAllSQL = "select * from Bus b, Driver d, Visitor v where b.modelName = '" + aName + "'";
-        Connection conncection = null;
-        Statement statement = null;
-        Savepoint savepoint = null;
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+        Savepoint savePoint = null;
         try {
-            conncection = ConnectionPool.getConnection();
-            conncection.setAutoCommit(false);
-            statement = conncection.createStatement();
-            ResultSet resultSet = statement.executeQuery(selectAllSQL);
+            conn = ConnectionPool.getConnection();
+            conn.setAutoCommit(false);
+            preparedStatement = conn.prepareStatement(selectAllSQL);
+            preparedStatement.setString(1, aName);
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                String busID = resultSet.getString("busID");
-                String busModel = resultSet.getString("modelName");
-                int maxCountOfPassengers = resultSet.getInt("maxPassengers");
-                int miles = resultSet.getInt("miles");
-                boolean passedService = resultSet.getBoolean("maintance");
-                int routeID = resultSet.getInt("Route_routeID");
-                int driverID = resultSet.getInt("Driver_driverID");
-                int visitorID = resultSet.getInt("Visitor_visitorID");
-                theBus = Bus.newBuilder().setBusID(busID).setBusModel(busModel).
-                        setmaxCountOfPassagers(maxCountOfPassengers).setMiles(miles).setPassedService(passedService)
-                        .setDriver(new DriverDAO().findByID(driverID)).setRoute(new RouteDAO().findByID(routeID))
-                        .setVisitor(new VisitorDAO().findByID(visitorID)).build();
-                savepoint = conncection.setSavepoint();
+                String busName = resultSet.getString("busModel");
+                if (busName.equals(aName)) {
+                    String busID = resultSet.getString("busID");
+                    int miles = resultSet.getInt("miles");
+                    int macCountOfPassengers = resultSet.getInt("maxPassengers");
+                    boolean maintence = resultSet.getBoolean("maintance");
+                    theBus = Bus.newBuilder().setBusID(busID).setBusModel(busName)
+                            .setmaxCountOfPassagers(macCountOfPassengers).setMiles(miles).setPassedService(maintence).build();
+                }
             }
-
-            conncection.commit();
+            savePoint = conn.setSavepoint();
+            conn.commit();
         } catch (SQLException e) {
-            if (savepoint != null) {
-                conncection.rollback(savepoint);
+            if (savePoint == null) {
+                conn.rollback();
             } else {
-                conncection.rollback();
+                conn.rollback(savePoint);
             }
+            System.err.println(e.getMessage());
             theLogger.error(e.getMessage());
         } finally {
-            if(statement != null) {
-                statement.close();
+            if (preparedStatement != null) {
+                preparedStatement.close();
             }
-            if (conncection != null) {
-                conncection.close();
+            if (conn != null) {
+                conn.commit();
             }
         }
         return theBus;
-    }
-
-    @Override
-    public boolean isObjectExistsByID(int id) throws SQLException {
-        boolean isExist = false;
-        String selectAllSQL = "Select * from Bus where busID = '" + id + "'";
-        Connection conncection = null;
-        Statement statement = null;
-        Savepoint savepoint = null;
-        try {
-            conncection = ConnectionPool.getConnection();
-            conncection.setAutoCommit(false);
-            statement = conncection.createStatement();
-            ResultSet resultSet = statement.executeQuery(selectAllSQL);
-            while (resultSet.next()) {
-                String busID = resultSet.getString("busID");
-                isExist = true;
-            }
-            savepoint = conncection.setSavepoint();
-            conncection.commit();
-        } catch (SQLException e) {
-            if (savepoint != null) {
-                conncection.rollback(savepoint);
-            } else {
-                conncection.rollback();
-            }
-            theLogger.error(e.getMessage());
-        } finally {
-            if(statement != null) {
-                statement.close();
-            }
-            if (conncection != null) {
-                conncection.close();
-            }
-        }
-        return isExist;
     }
 
     @Override

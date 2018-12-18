@@ -2,28 +2,56 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c834de6-3abc-4259-adfb-2c0e2dd0744d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/AbstractDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DAO/BusDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAO/AbstractDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/BusDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/DriverDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Bus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITCompany_Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/App2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/DAO/AbstractDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/DAO/AbstractDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/RemoteControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/RemoteControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Laptop_Command/ShowAllLaptopManufacturesByCriteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllListOfLaptops.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Laptop_Command/ShowAllListOfLaptops.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/PC_Command/ShowAllPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/PC_Command/ShowAllPCBySpeedAndPrice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/PC_Command/ShowAllPCInPriceRange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/PC_Command/ShowAllPCWhichModelContainTwoSameNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPrinters.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Printer_Command/ShowAllPrinters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Product_Command/ShowAllProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Product_Command/ShowAllProductsExeptPrinters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Printer_Command/ShowColorPrinters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/Servlets/Printer_Command/ShowPrintersByNeededPrice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/RemoteControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllListOfLaptops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCInPriceRange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProducts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowColorPrinters.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/java/ITCompany/MenuChooser/ShowPrintersByNeededPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/App2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/DAO/LaptopDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/DAO/LaptopDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/RemoteControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllLaptopManufacturesByCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllListOfLaptops.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCBySpeedAndPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCInPriceRange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPCWhichModelContainTwoSameNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllProducts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowAllProductsExeptPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowColorPrinters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ITCompany_Web/target/classes/ITCompany/MenuChooser/ShowPrintersByNeededPrice.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,38 +65,57 @@
     <session id="-1118209245">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
-          <entry key="Properties" value="1" />
+          <entry key="JAVA" value="82" />
+          <entry key="Properties" value="3" />
+          <entry key="SQL" value="2" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1652" />
+          <entry key="JAVA" value="10458" />
+          <entry key="Properties" value="16" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAO.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/DriverDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="-1523">
+              <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#92#93#0" expanded="true" />
-                <element signature="e#120#121#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DAO/VisitorDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,9 +127,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit3 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/java/DAO</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -90,15 +144,32 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Destination.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/DestinationDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Bus.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Driver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Route.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Visitor.java" />
+        <option value="$PROJECT_DIR$/src/main/tests/DriverDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/tests/DAO/DriverDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ConnectionPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/tests/DBConnection/ConnectionPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/test/DAO/BusDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPoolTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/databaseProperties.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/BusDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAO/BusDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/DriverDAOTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DAO/DriverDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/RouteDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/VisitorDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DAO/VisitorDAO.java" />
       </list>
     </option>
   </component>
@@ -115,10 +186,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1366" />
-    <option name="height" value="701" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -178,6 +248,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Autopark_FinalPoject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Autopark_FinalPoject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Autopark_FinalPoject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Autopark_FinalPoject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -188,17 +271,34 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="DAO" />
+      <recent name="DBConnection" />
+      <recent name="" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/java/DAO" />
+      <recent name="$PROJECT_DIR$/src/test/DAO" />
+      <recent name="$PROJECT_DIR$/src/main/tests/DAO" />
+      <recent name="$PROJECT_DIR$/src/main/tests/DBConnection" />
+      <recent name="$PROJECT_DIR$/src/main/tests" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,6 +313,104 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JUnit.DriverDAOTest.findByName">
+    <configuration name="DriverDAOTest.addRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autopark_FinalPoject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.DriverDAOTest" />
+      <option name="METHOD_NAME" value="addRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverDAOTest.deleteRecord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autopark_FinalPoject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.DriverDAOTest" />
+      <option name="METHOD_NAME" value="deleteRecord" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverDAOTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autopark_FinalPoject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.DriverDAOTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverDAOTest.findByID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autopark_FinalPoject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.DriverDAOTest" />
+      <option name="METHOD_NAME" value="findByID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DriverDAOTest.findByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autopark_FinalPoject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAO.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAO" />
+      <option name="MAIN_CLASS_NAME" value="DAO.DriverDAOTest" />
+      <option name="METHOD_NAME" value="findByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.DriverDAOTest.addRecord" />
+      <item itemvalue="JUnit.DriverDAOTest.deleteRecord" />
+      <item itemvalue="JUnit.DriverDAOTest.findAll" />
+      <item itemvalue="JUnit.DriverDAOTest.findByID" />
+      <item itemvalue="JUnit.DriverDAOTest.findByName" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DriverDAOTest.findByName" />
+        <item itemvalue="JUnit.DriverDAOTest.findByID" />
+        <item itemvalue="JUnit.DriverDAOTest.findAll" />
+        <item itemvalue="JUnit.DriverDAOTest.deleteRecord" />
+        <item itemvalue="JUnit.DriverDAOTest.addRecord" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -226,35 +424,74 @@
       <workItem from="1543959210676" duration="1871000" />
       <workItem from="1544092181264" duration="257000" />
       <workItem from="1544092666719" duration="4000" />
-      <workItem from="1544265170723" duration="1893000" />
+      <workItem from="1544265170723" duration="2106000" />
+      <workItem from="1544277963019" duration="6570000" />
+      <workItem from="1544287867803" duration="3271000" />
+      <workItem from="1544537015423" duration="989000" />
+      <workItem from="1544958161653" duration="12256000" />
+      <workItem from="1545081441010" duration="108000" />
+      <workItem from="1545081872235" duration="5136000" />
+      <workItem from="1545138442848" duration="5391000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="BusDAOTest_findByName - 2018.12.18 at 16h 17m 47s.xml">
+      <configuration name="BusDAOTest.findByName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusDAOTest_findByName - 2018.12.18 at 16h 19m 18s.xml">
+      <configuration name="BusDAOTest.findByName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusDAOTest_findByName - 2018.12.18 at 16h 20m 11s.xml">
+      <configuration name="BusDAOTest.findByName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusDAOTest_findByName - 2018.12.18 at 16h 21m 25s.xml">
+      <configuration name="BusDAOTest.findByName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_addRecord - 2018.12.18 at 16h 25m 17s.xml">
+      <configuration name="DriverDAOTest.addRecord" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_deleteRecord - 2018.12.18 at 16h 26m 04s.xml">
+      <configuration name="DriverDAOTest.deleteRecord" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_findAll - 2018.12.18 at 16h 27m 17s.xml">
+      <configuration name="DriverDAOTest.findAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_findByID - 2018.12.18 at 16h 27m 28s.xml">
+      <configuration name="DriverDAOTest.findByID" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_findByID - 2018.12.18 at 16h 28m 18s.xml">
+      <configuration name="DriverDAOTest.findByID" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DriverDAOTest_findByName - 2018.12.18 at 16h 28m 24s.xml">
+      <configuration name="DriverDAOTest.findByName" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4025000" />
+    <option name="totallyTimeSpent" value="37959000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28776434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.08882522" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3295129" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295129" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32840723" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32840723" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -272,126 +509,186 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAO.java" />
+    <entry file="file://$PROJECT_DIR$/autopark.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
+        <state relative-caret-position="810">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Bus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/DestinationDAO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Destination.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="427">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/databaseProperties.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Route.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="116" selection-start-line="19" selection-start-column="116" selection-end-line="19" selection-end-column="116" />
+        <state relative-caret-position="1875">
+          <caret line="141" column="18" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/tests/DriverDAOTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/tests/DAO/DriverDAOTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/tests/DBConnection/ConnectionPoolTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/tests/DAO/BusDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/BusDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Bus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="60" column="54" selection-start-line="60" selection-start-column="54" selection-end-line="60" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DAO/AbstractDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="211">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/databaseProperties.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DAO/BusDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="103">
+          <caret line="190" column="56" selection-start-line="190" selection-start-column="56" selection-end-line="190" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#174#175#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/BusDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DBConnection/ConnectionPoolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/DriverDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/RouteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DAO/DriverDAO.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1523">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/VisitorDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="21" />
+          <caret line="12" column="125" selection-start-line="12" selection-start-column="125" selection-end-line="12" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/VisitorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="59" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="59" />
-          <folding>
-            <element signature="e#1665#1666#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DAO/UserDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
           </folding>
         </state>
       </provider>

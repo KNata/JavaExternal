@@ -1,21 +1,11 @@
 package ITCompany;
 
 
-import ITCompany.DAO.GuestsDAO;
 import ITCompany.DAO.LaptopDAO;
-import ITCompany.DAO.PCDao;
-import ITCompany.DAO.ProductDAO;
-import ITCompany.Entity.Guest;
 import ITCompany.Entity.Laptop;
-import ITCompany.Entity.Product;
-import ITCompany.MenuChooser.Command;
-import ITCompany.MenuChooser.RemoteControl;
-import ITCompany.MenuChooser.ShowAllLaptopManufacturesByCriteria;
-import org.apache.log4j.Logger;
 
 
 import java.sql.SQLException;
-import java.util.HashSet;
 import java.util.List;
 
 

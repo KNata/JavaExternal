@@ -16,13 +16,13 @@ import java.util.List;
 public interface AbstractDAO<K, T> {
 
 
-    public abstract List<T> findAll() throws ClassNotFoundException, SQLException;
+    List<T> findAll() throws ClassNotFoundException, SQLException;
    // public abstract List<T> findbyID(K anId) throws ClassNotFoundException, SQLException;
-    public abstract boolean delete(K id) throws SQLException, ClassNotFoundException;
-    public abstract boolean create(T entity) throws SQLException, ClassNotFoundException;
-    public abstract boolean update(int anID, double aPrice) throws SQLException, ClassNotFoundException;
-    public abstract boolean isTheProductExistByID(int anId) throws SQLException, ClassNotFoundException;
-    public abstract boolean isTheProductExistByModel(String aModel) throws SQLException, ClassNotFoundException;
+    boolean delete(K id) throws SQLException, ClassNotFoundException;
+    boolean create(T entity) throws SQLException, ClassNotFoundException;
+    boolean update(int anID, double aPrice) throws SQLException, ClassNotFoundException;
+    boolean isTheProductExistByID(int anId) throws SQLException, ClassNotFoundException;
+    boolean isTheProductExistByModel(String aModel) throws SQLException, ClassNotFoundException;
 
 
 }
